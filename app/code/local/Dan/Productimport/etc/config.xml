@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Dan
+ * @package    Dan_Productimport
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Dan_Productimport>
+            <version>0.1.0</version>
+        </Dan_Productimport>
+    </modules>
+    <admin>
+        <routers>
+			<productimport>
+				<use>admin</use>
+				<args>
+					<module>Dan_Productimport</module>
+					<frontName>productimport</frontName>
+				</args>
+			</productimport>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<productimport module="productimport">
+				<title>Product import</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="productimport">
+						<title>Manage Imports</title>
+						<sort_order>0</sort_order>
+						<action>productimport/adminhtml_productimport</action>
+					</items>
+				</children>
+			</productimport>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Dan_Productimport>
+							<title>Productimport Module</title>
+							<sort_order>10</sort_order>
+						</Dan_Productimport>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<productimport>
+					<file>productimport.xml</file>
+				</productimport>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <productimport>
+                <class>Dan_Productimport_Model</class>
+                <resourceModel>productimport_mysql4</resourceModel>
+            </productimport>
+            <productimport_mysql4>
+                <class>Dan_Productimport_Model_Mysql4</class>
+                <entities>
+                    <productimport>
+                        <table>productimport</table>
+                    </productimport>
+                </entities>
+            </productimport_mysql4>
+        </models>
+        <resources>
+            <productimport_setup>
+                <setup>
+                    <module>Dan_Productimport</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </productimport_setup>
+            <productimport_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </productimport_write>
+            <productimport_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </productimport_read>
+        </resources>
+        <blocks>
+            <productimport>
+                <class>Dan_Productimport_Block</class>
+            </productimport>
+        </blocks>
+        <helpers>
+            <productimport>
+                <class>Dan_Productimport_Helper</class>
+            </productimport>
+        </helpers>
+    </global>
+</config>

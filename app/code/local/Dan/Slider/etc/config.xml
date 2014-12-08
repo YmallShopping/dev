@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Dan
+ * @package    Dan_Slider
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Dan_Slider>
+            <version>0.1.0</version>
+        </Dan_Slider>
+    </modules>
+    <frontend>
+        <routers>
+            <slider>
+                <use>standard</use>
+                <args>
+                    <module>Dan_Slider</module>
+                    <frontName>slider</frontName>
+                </args>
+            </slider>
+        </routers>
+        <layout>
+            <updates>
+                <slider>
+                    <file>slider.xml</file>
+                </slider>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<slider>
+				<use>admin</use>
+				<args>
+					<module>Dan_Slider</module>
+					<frontName>slider</frontName>
+				</args>
+			</slider>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<slider module="slider">
+				<title>Slider</title>
+				<sort_order>71</sort_order>               
+				<children>
+                    <items module="slider">
+                        <title>Manage Sliders</title>
+                        <sort_order>0</sort_order>
+                        <action>slider/adminhtml_slider</action>
+                    </items>
+<!-- 					<layers module="slider">
+						<title>Manage Sliders Captions</title>
+						<sort_order>1</sort_order>
+						<action>slider/adminhtml_layers</action>
+					</layers> -->
+				</children>
+			</slider>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Dan_Slider>
+							<title>Slider Module</title>
+							<sort_order>10</sort_order>
+						</Dan_Slider>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<slider>
+					<file>slider.xml</file>
+				</slider>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <slider>
+                <class>Dan_Slider_Model</class>
+                <resourceModel>slider_mysql4</resourceModel>
+            </slider>
+            <slider_mysql4>
+                <class>Dan_Slider_Model_Mysql4</class>
+                <entities>
+                    <slider>
+                        <table>slider</table>
+                    </slider>
+                    <layers>
+                        <table>slider_layers</table>
+                    </layers>
+                </entities>
+            </slider_mysql4>
+        </models>
+        <events>
+            <http_response_send_before> 
+                <observers> 
+                    <login_redirect> 
+                        <type>singleton</type> 
+                        <class>slider/observer</class> 
+                        <method>loginRedirect</method> 
+                    </login_redirect> 
+                </observers> 
+            </http_response_send_before>   
+        </events>
+        <resources>
+            <slider_setup>
+                <setup>
+                    <module>Dan_Slider</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </slider_setup>
+            <slider_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </slider_write>
+            <slider_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </slider_read>
+        </resources>
+        <blocks>
+            <slider>
+                <class>Dan_Slider_Block</class>
+            </slider>
+            <layers>
+                <class>Dan_Layers_Block</class>
+            </layers>
+        </blocks>
+        <helpers>
+            <slider>
+                <class>Dan_Slider_Helper</class>
+            </slider>
+        </helpers>
+    </global>
+</config>

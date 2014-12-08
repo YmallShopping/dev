@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <productimport_adminhtml_productimport_index>
+        <reference name="content">
+            <block type="productimport/adminhtml_productimport" name="productimport" />
+        </reference>
+    </productimport_adminhtml_productimport_index>
+</layout>

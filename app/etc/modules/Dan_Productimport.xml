@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Dan
+ * @package    Dan_Productimport
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Dan_Productimport>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Dan_Productimport>
+    </modules>
+</config> 
