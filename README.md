@@ -42,7 +42,7 @@ Development environment for SC Ymall Shopping SRL - let's evolve
 	 <li> Template files : "app/design/frontend/ymall/STORE_NAME" </li>
 	 <li> Skin files : "skin/frontend/ymall/STORE_NAME" </li>
 	 <li> <strong>IMPORTANT : 
-	 	- changes may be required to be done in other sections, but only for adding/changing core functionalities. This will need to be discussed prior and approved.
+	 	- changes may be required to be done in other sections, but only for adding/changing core functionalities. This will need to be discussed prior and approved. <br/>
 	 	- if you have inclarities, found your self stuck or just need info on how to proceed contact Dan : on skype -> dan.lucian-ionut or via email.</strong>
 	  </li>
  </ul>
