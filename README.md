@@ -4,7 +4,7 @@ Development environment for SC Ymall Shopping SRL - let's evolve
  <p> <strong>Must have:</strong> </p>
  <ul> 
 	 <li> local server, php, mysql, xampp </li>
-	 <li> magento installed (v.) </li>
+	 <li> magento installed (ask @luci) </li>
 	 <li> latest database (ask @luci) </li>
  </ul>
  
