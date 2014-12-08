@@ -11,7 +11,7 @@ Development environment for SC Ymall Shopping SRL - let's evolve
  <p> <strong>Magento filese and database to install on localhost:</strong> </p>
  <ul> 
 	 <li> magento files : http://data.ymall.ro/dev.zip </li>
-	 <li> magento db : http://data.ymall.ro/ymall.zip </li>
+	 <li> magento db : http://data.ymall.ro/ymall.sql.gz </li>
 	 <li> Access info : user -> ymalldata ; pass -> =%T@5?ehN~Pv </li>
  </ul>
 
