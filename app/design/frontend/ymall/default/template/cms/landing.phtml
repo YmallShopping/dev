@@ -49,10 +49,10 @@
 				Etaj: <strong>Demisol</strong><br/>
 				Loc pe hartă: <span class="highlight">D10</span>
 			</p><br/>
-			<button class="button" onclick="setLocation('<?php echo str_replace('mall/', '', $this->getUrl('essenza')) ?>')"><span><i class="fa fa-arrow-circle-right"></i><span><?php echo $this->__('vizitează') ?></span></span></button>
+			<button class="button" onclick="setLocation('<?php echo $this->getUrl('','essenza'); ?>')"><span><i class="fa fa-arrow-circle-right"></i><span><?php echo $this->__('vizitează') ?></span></span></button>
 		</div>
 
-		<div class="map"><a href="<?php echo str_replace('mall/', '', $this->getUrl('essenza')) ?>" title="Essenza Shopping YMall - Essenza"><img src="<?php echo $this->getSkinUrl('images/landing/map-essenza.png') ?>" alt="Ymall Shopping Map - Essenza" title="Ymall Shopping Map - Essenza"/></a></div>
+		<div class="map"><a href="<?php echo $this->getUrl('','essenza'); ?>" title="Essenza Shopping YMall - Essenza"><img src="<?php echo $this->getSkinUrl('images/landing/map-essenza.png') ?>" alt="Ymall Shopping Map - Essenza" title="Ymall Shopping Map - Essenza"/></a></div>
 	</div>
 </div>
 <div class="footer-container">
