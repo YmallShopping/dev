@@ -9,5 +9,8 @@ Development environment for SC Ymall Shopping SRL - let's evolve
  </ul>
  
  <p><strong>The work flow</strong></p>
- 
-  <p> <strong>The commit names:</strong> Descriptive names to all commits & commit often </p>
+ <ul> 
+	 <li> Create a new branch for every new store </li>
+	 <li> Once the branch is created all changes to that store will be made under the branch. No additional branch will be created for the same store even if we work again on it in a few months. </li>
+ </ul>
+ <p> <strong>The commit names:</strong> Descriptive names to all commits & commit often </p>
