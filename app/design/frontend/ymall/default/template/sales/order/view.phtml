@@ -54,7 +54,7 @@
     //]]>
     </script>
     <?php endif; ?>
-    <?php $_order = $this->getOrder() ?>
+    <?php $_order = $this->getOrder(); ?>
     
     <?php $shipmentCollection = $_order->getShipmentsCollection(); ?>
     <?php if(is_object($_order->getShipmentsCollection()) && count($shipmentCollection)>0): ?>
@@ -72,10 +72,10 @@
                         foreach($shipment->getAllTracks() as $tracknum){
                 ?>
                 <tr>
-                    <td><?php echo $tracknums[]=$tracknum->getTitle() ?></td>
-                    <td><?php echo $tracknums[]=$tracknum->getNumber() ?></td>
+                    <td><?php echo $tracknum->getTitle(); ?></td>
+                    <td><?php echo $tracknum->getNumber(); ?></td>
                 </tr>
-                <?
+                <?php
                         }
                     }
                 ?>
