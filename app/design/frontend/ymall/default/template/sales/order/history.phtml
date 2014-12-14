@@ -30,7 +30,7 @@
     <h1><i class="fa fa-shopping-cart"></i> <?php echo $this->__('My Orders') ?></h1>
 </div>
 <div class="paragraph-msg">
-    <p>După o sesiune spectaculoasă de shopping online mai jos ai comenzile tale</p>
+    <p><?php echo $this->__('După o sesiune spectaculoasă de shopping online mai jos ai comenzile tale.') ?></p>
 </div>
 <?php echo $this->getPagerHtml(); ?>
 <?php if($_orders->getSize()): ?>
@@ -55,7 +55,7 @@
         <?php $_odd = ''; ?>
         <?php foreach ($_orders as $_order): ?>
         <tr>
-            <td class="has-number"><?php echo $_order->getRealOrderId() ?></td>
+            <td class="has-number"><a href="<?php echo $this->getViewUrl($_order) ?>"><?php echo $_order->getRealOrderId() ?></a></td>
             <td class="has-number mobile-hide"><span class="nobr"><?php echo $this->formatDate($_order->getCreatedAtStoreDate()) ?></span></td>
             <td class="mobile-hide"><?php echo $_order->getShippingAddress() ? $this->escapeHtml($_order->getShippingAddress()->getName()) : '&nbsp;' ?></td>
             <td class="has-number"><?php echo $_order->formatPrice($_order->getGrandTotal()) ?></td>

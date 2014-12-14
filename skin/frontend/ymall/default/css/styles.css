@@ -319,7 +319,7 @@ p.required { font-size:10px; text-align:right; color:#f00; }
 /* Page Heading */
 .page-title { padding:0 0 5px; margin:0 0 10px; text-align: center; display: block; clear: both; }
 .page-title h1,
-.page-title h2 { background: #1e1e1e; font-size: 14px; font-family: 'Open Sans', sans-serif; padding: 10px 20px 10px 10px; float: left; clear: both; color: #fff; }
+.page-title h2 { background: #cd2127; font-size: 14px; font-family: 'Open Sans', sans-serif; padding: 10px 20px 10px 10px; float: left; clear: both; color: #fff; }
 .page-title i{ font-style: normal !important; margin-right: 10px; font-size: 18px; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; }
@@ -1661,9 +1661,10 @@ button.btn-cart:hover span span{ background: url(../images/cart-icon.png) right 
 .tracking-table-popup td { padding:1px 8px; }
 
 /* Order Print Pages */
-.page-print .print-head {}
+.page-print .print-head { display: none; }
 .page-print .print-head img { float:left; }
 .page-print .print-head address { float:left; margin-left:15px; }
+.page-print .order-store-logo { display: block; margin-bottom:15px; }
 .page-print .col2-set .col-1,
 .page-print .col2-set .col-2 { padding: 2%; border: 1px solid #c8c8c8; margin-bottom: 25px; width: 45%; }
 

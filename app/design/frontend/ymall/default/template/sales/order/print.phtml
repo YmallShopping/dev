@@ -25,6 +25,11 @@
  */
 ?>
 <?php $_order = $this->getOrder() ?>
+<?php 
+    $_mediaUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'email/logo/'; 
+    $_emailUrl = Mage::getStoreConfig('design/email/logo', $_order->getStoreId()); 
+?>
+<img class="order-store-logo" src="<?php echo $_mediaUrl.$_emailUrl; ?>" alt="">
 <h1><?php echo $this->__('Order #%s', $_order->getRealOrderId()) ?></h1>
 <p class="order-date"><?php echo $this->__('Order Date: %s', $this->formatDate($_order->getCreatedAtStoreDate(), 'long')) ?></p>
 <div class="col2-set">

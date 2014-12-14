@@ -55,11 +55,36 @@
     </script>
     <?php endif; ?>
     <?php $_order = $this->getOrder() ?>
-    <h2 class="table-caption"><?php echo $this->__('Items Ordered') ?>
-        <?php if ($_order->getTracksCollection()->count()) : ?>
-            <span class="separator">|</span> <a href="#" onclick="popWin('<?php echo $this->helper('shipping')->getTrackingPopupUrlBySalesModel($_order) ?>','trackorder','top=0,left=0,width=800,height=600,resizable=yes,scrollbars=yes'); return false;" title="<?php echo $this->__('Track your order') ?>"><?php echo $this->__('Track your order') ?></a>
-        <?php endif; ?>
-    </h2>
+    
+    <?php $shipmentCollection = $_order->getShipmentsCollection(); ?>
+    <?php if(count($shipmentCollection)>0): ?>
+        <h2 class="table-caption"><?php echo $this->__('Informaţii livrare') ?></h2>
+        <table class="data-table">
+                <thead>
+                    <tr>
+                        <th><?php echo $this->__('Curier') ?></th>
+                        <th><?php echo $this->__('Număr AWB') ?></th>
+                    </tr>
+                </thead>
+            <tbody>
+                <?php 
+                    foreach ($shipmentCollection as $shipment){
+                        foreach($shipment->getAllTracks() as $tracknum){
+                ?>
+                <tr>
+                    <td><?php echo $tracknums[]=$tracknum->getTitle() ?></td>
+                    <td><?php echo $tracknums[]=$tracknum->getNumber() ?></td>
+                </tr>
+                <?
+                        }
+                    }
+                ?>
+            </tbody>
+        </table>
+        <br/>
+    <?php endif; ?>
+
+    <h2 class="table-caption"><?php echo $this->__('Items Ordered') ?></h2>  
 
     <?php echo $this->getChildHtml('order_items') ?>
 

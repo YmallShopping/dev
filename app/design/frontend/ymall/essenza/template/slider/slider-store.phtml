@@ -8,7 +8,7 @@
 			    <!-- THE BOXSLIDE EFFECT EXAMPLES WITH LINK ON THE MAIN SLIDE EXAMPLE -->
 			    <?php foreach ($_collection as $_item) : ?>
 			    	<?php $_captions = Mage::getModel('slider/layers')->getCollection()->addFieldToFilter('slider_id',$_item->getId()); ?>
-				    <li data-transition="fade<?php echo $_item->getContent(); ?>" <?php if ($_item->getContent() == 'boxslide') : ?>data-slotamount="7"<?php endif; ?> <?php if ($_item->getUrl()) : ?>data-link="<?php echo $_item->getUrl(); ?>" data-target="_blank"<?php endif; ?>>
+				    <li data-transition="fade<?php echo $_item->getContent(); ?>" <?php if ($_item->getContent() == 'boxslide') : ?>data-slotamount="7"<?php endif; ?> <?php if ($_item->getUrl()) : ?>data-link="<?php echo $_item->getUrl(); ?>" <?php endif; ?>>
 					    <img src="<?php echo $this->getImage($_item,null,null) ?>" alt="<?php echo $_item->getTitle() ?>" />
 					    <?php foreach($_captions as $_caption): ?>
 					    	<div 

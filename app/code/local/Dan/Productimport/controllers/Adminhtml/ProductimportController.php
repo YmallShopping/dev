@@ -252,9 +252,8 @@ class Dan_Productimport_Adminhtml_ProductimportController extends Mage_Adminhtml
 					$_price = trim($value['Pret']);
 					if($value['Special Price']>0){
 						$_specialPrice = $value['Special Price'];
-					} else {
-						$_specialPrice = '';
-					}
+					} 
+					$_specialPrice = '';
 					$_description = trim($value['Descriere']);
 					// $_shortDescription = $value['Product Description'];
 					// $_categories = Mage::getModel('productimport/productimport')->getCatIdsByName(trim($value['Product Category']));

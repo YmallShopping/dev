@@ -1696,9 +1696,10 @@ button.btn-cart:hover span span{ background: url(../images/cart-btn-essenza.png)
 .tracking-table-popup td { padding:1px 8px; }
 
 /* Order Print Pages */
-.page-print .print-head {}
+.page-print .print-head { display: none; }
 .page-print .print-head img { float:left; }
 .page-print .print-head address { float:left; margin-left:15px; }
+.page-print .order-store-logo { display: block; margin-bottom:15px; }
 .page-print .col2-set .col-1,
 .page-print .col2-set .col-2 { padding: 2%; border: 1px solid #c8c8c8; margin-bottom: 25px; width: 45%; }
 
