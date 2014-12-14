@@ -21,7 +21,7 @@
  * @category    design
  * @package     base_default
  * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License  (AFL 3.0)
  */
 ?>
 <?php
@@ -29,7 +29,7 @@
  * @see Mage_Page_Block_Template_Links
  */
 ?>
-<?php $_ymallUrl = 'http://ymall.ro/mall/'; ?>
+<?php $_ymallUrl = $this->getUrl('',array('_store'=>'mall')); ?>
 <?php $_links = $this->getLinks(); ?>
 <?php if(count($_links)>0): ?>
 <ul class="links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
