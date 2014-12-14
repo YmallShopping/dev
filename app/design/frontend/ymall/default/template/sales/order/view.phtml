@@ -57,7 +57,7 @@
     <?php $_order = $this->getOrder() ?>
     
     <?php $shipmentCollection = $_order->getShipmentsCollection(); ?>
-    <?php if(count($shipmentCollection)>0): ?>
+    <?php if(is_object($_order->getShipmentsCollection()) && count($shipmentCollection)>0): ?>
         <h2 class="table-caption"><?php echo $this->__('Informaţii livrare') ?></h2>
         <table class="data-table">
                 <thead>
