@@ -150,7 +150,7 @@
 "Invalid customer data","Datele clientului sunt gresite"
 "Invalid email address","Adresa de e-mail gresita"
 "Invalid email address ""%s""","Adresa de e-mail nevalidă ""%s"""
-"Invalid login or password.","Adresa de e-mail sau parolă nevalidă."
+"Invalid login or password.","Adresa de e-mail sau parolă invalidă."
 "Invalid option id specified for %s (%s), skipping the record","Invalid option id specified for %s (%s), skipping the record"
 "Invalid store specified, skipping the record","Invalid store specified, skipping the record"
 "Items Order","Items Order"
