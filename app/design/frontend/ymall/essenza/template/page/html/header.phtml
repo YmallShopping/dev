@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Magento
  *
@@ -23,9 +24,11 @@
  * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+
 /**
  * @var Mage_Page_Block_Html_Header $this
  */
+
 ?>
 <div class="header-shadow">
     <div class="header-container">
@@ -35,7 +38,6 @@
             <?php else:?>
             <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
             <?php endif?>
-
             <div class="quick-access">
                 <?php echo $this->getChildHtml('cart_header') ?>
                 <div class="my-account-links">
@@ -47,9 +49,12 @@
                     <span class="links-title"><?php echo $this->__('Contul meu') ?></span>
                     <?php echo $this->getChildHtml('topLinks') ?>
                 </div>
-                <div class="stores-list no-display">
-                    <span><?php echo $this->__('Alege Magazinul') ?></span>
-                    <span class="links-title"><?php echo $this->__('Lista magazine') ?></span> 
+                <div class="stores-list top-list"> 
+                    <div class="icon"><i class="fa fa-building"></i></div>
+                    <div class="content">
+                        <span><?php echo $this->__('Alege Magazinul') ?></span>
+                        <span class="links-title"><?php echo $this->__('Lista magazine') ?></span> 
+                    </div>
                     <ul class="links" style="display: none;">
                         <?php
                             $stores = Mage::getModel('core/website')->getCollection();
@@ -60,13 +65,24 @@
                     </ul>
                 </div>
             </div>
-
             <?php echo $this->getChildHtml('topSearch') ?>
-
+            <div class="stores-list mobile-list">
+                <div class="icon"><i class="fa fa-building"></i></div>
+                <div class="content">
+                    <span><?php echo $this->__('Alege Magazinul') ?></span>
+                    <span class="links-title"><?php echo $this->__('Lista magazine') ?></span> 
+                </div>
+                <ul class="links" style="display: none;">
+                    <?php
+                        $stores = Mage::getModel('core/website')->getCollection();
+                        foreach($stores as $store):
+                    ?>
+                        <li class="first"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
             <div id="mobile-nav" style="display:none;"></div>
             <div class="mobile-container" style="display:none;"></div>
-
-
             <?php echo $this->getChildHtml('topContainer'); ?>
         </div>
     </div>

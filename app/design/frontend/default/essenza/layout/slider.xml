@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+	<cms_index_index>
+        <reference name="head">
+			<action method="addItem"><type>skin_js</type><name>rs-plugin/js/jquery.themepunch.plugins.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>rs-plugin/js/jquery.themepunch.revolution.js</name></action>
+            <action method="addCss"><stylesheet>rs-plugin/css/settings.css</stylesheet></action>
+        </reference>
+        <reference name="header">
+            <block type="slider/slider" name="slider" before="-" template="slider/slider.phtml" />
+        </reference>
+        <reference name="after_header">
+            <block type="slider/slider" name="slider" before="-" template="slider/slider-store.phtml" />
+        </reference>		
+	</cms_index_index>
+<!--     <slider_index_index>
+        <reference name="content">
+            <block type="slider/slider" name="slider" template="slider/slider.phtml" />
+        </reference>
+    </slider_index_index> -->
+</layout> 

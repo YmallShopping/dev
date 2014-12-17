@@ -1,0 +1,51 @@
+<?php $_collection = Mage::getModel('slider/slider')->getCollection()->addFieldToFilter('status', array('eq' => 1))->setOrder('position', 'asc'); ?>
+<?php $_count = count($_collection); ?>
+<?php $_storeCode = Mage::app()->getStore()->getCode(); ?>
+<?php if ($_count && $_storeCode!='mall'): ?>
+	<div class="bannercontainer">
+		<div class="banner">
+		    <ul>
+			    <!-- THE BOXSLIDE EFFECT EXAMPLES WITH LINK ON THE MAIN SLIDE EXAMPLE -->
+			    <?php foreach ($_collection as $_item) : ?>
+			    	<?php $_captions = Mage::getModel('slider/layers')->getCollection()->addFieldToFilter('slider_id',$_item->getId()); ?>
+				    <li data-transition="fade<?php echo $_item->getContent(); ?>" <?php if ($_item->getContent() == 'boxslide') : ?>data-slotamount="7"<?php endif; ?> <?php if ($_item->getUrl()) : ?>data-link="<?php echo $_item->getUrl(); ?>" data-target="_blank"<?php endif; ?>>
+					    <img src="<?php echo $this->getImage($_item,null,null) ?>" alt="<?php echo $_item->getTitle() ?>" />
+					    <?php foreach($_captions as $_caption): ?>
+					    	<div 
+					    		class="caption <?php echo $_caption->getLayerAnimation() ?>" 
+					    		style="<?php echo $_caption->getStyle() ?>" 
+					    		data-x="<?php echo $_caption->getDataX() ?>" 
+					    		data-y="<?php echo $_caption->getDataY() ?>" 
+					    		data-speed="<?php echo $_caption->getDataSpeed() ?>" 
+					    		data-start="<?php echo $_caption->getDataStart() ?>" 
+					    		data-easing="<?php echo $_caption->getDataEasing() ?>"
+					    	><?php echo $_caption->getText() ?></div>
+					    <?php endforeach; ?>
+			    	</li>
+				<?php endforeach; ?>
+		    </ul>	
+		    <div class="tp-bannertimer"></div>	
+		</div>
+	</div>
+	<script type="text/javascript">
+		var revapi;
+		jQuery(document).ready(function() {
+			   revapi = jQuery('.banner').revolution(
+				{
+					delay:9000,
+					startwidth:1920,
+					startheight:931,
+					hideThumbs:10,
+					fullWidth:"off",
+					forceFullWidth:"off",
+					autoHeight:"off"
+				});
+
+		});	//ready
+	</script>
+	<style>
+		.bannercontainer { max-width: 1124px; margin: 0 auto; width: 100%; }
+	</style>
+<?php endif; ?>
+<div class="clearer"></div>
+
