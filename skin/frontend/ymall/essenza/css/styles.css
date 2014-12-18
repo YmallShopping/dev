@@ -2614,7 +2614,7 @@ button.btn-cart:hover span span{ background: url(../images/cart-btn-essenza.png)
 
 /* Shipping and Payment methods */
 
-.sp-methods dt { color: #fff; font-family: Arial,sans-serif; font-weight: normal; margin-bottom: 5px; position: relative; text-transform: uppercase; z-index: 0; }
+.sp-methods dt { font-family: Arial,sans-serif; font-weight: normal; margin-bottom: 5px; position: relative; text-transform: uppercase; z-index: 0; }
 
 .sp-methods .price { font-weight:bold; }
 
