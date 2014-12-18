@@ -23,8 +23,8 @@ Development environment for SC Ymall Shopping SRL - let's evolve
 	 <li> 3. import inside the blank database the .sql file you downloaded from the above link </li>
 	 <li> 4. once imported find the "core_config_data" table and inside it you will find(search if you don't see them) 2 records which contain the following link : "http://ymall.ro/" </li>
 	 <li> 5. change the 2 records with the url you will access it on your local host. Example in xampp : http://127.0.0.1/ymall/ </li>
-	 <li> <strong>IMPORTANT : when you change the 2 records in the database the new url allways must have "http://" and at the end of it "/" </strong></li>
-	 <li> <br/><strong>FILES CONFIG</strong> </li>
+	 <li> <strong>IMPORTANT : when you change the 2 records in the database the new url allways must have "http://" and at the end of it "/" </strong><br/></li>
+	 <li> <strong>FILES CONFIG</strong> </li>
 	 <li> 1. inside the magento files under : 'app/etc/' open the 'local.xml' file and add the new -> username, database name, and pass so the magento can connect to your local database. </li>
 	 <li> 2. you are done. </li>
 	 <li> <strong>IMPORTANT : If it's the first time you make this installation, once done, make a git pull from the master branch. The command will be : "git pull origin master" </strong></li>
