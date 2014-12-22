@@ -41,12 +41,17 @@
             <div class="quick-access">
                 <?php echo $this->getChildHtml('cart_header') ?>
                 <div class="my-account-links">
-                    <?php if (Mage::getSingleton('customer/session')->isLoggedIn()): ?>
-                        <span><?php echo substr(Mage::getSingleton('customer/session')->getCustomer()->getName(), 0, 15); ?></span>
-                    <?php else: ?>
-                        <span><?php echo $this->__('Bine ai venit,') ?></span>
-                    <?php endif; ?>
-                    <span class="links-title"><?php echo $this->__('Contul meu') ?></span>
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="links-account">
+                        <?php if (Mage::getSingleton('customer/session')->isLoggedIn()): ?>
+                            <span><?php echo substr(Mage::getSingleton('customer/session')->getCustomer()->getName(), 0, 15); ?></span>
+                        <?php else: ?>
+                            <span><?php echo $this->__('Bine ai venit,') ?></span>
+                        <?php endif; ?>
+                        <span class="links-title"><?php echo $this->__('Contul meu') ?></span>
+                    </div>
                     <?php echo $this->getChildHtml('topLinks') ?>
                 </div>
                 <div class="stores-list top-list"> 

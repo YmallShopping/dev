@@ -109,7 +109,7 @@
         var clickElement = e.target;  // get the dom element clicked.
         var elementClassName = jQuery(clickElement).parent().attr('class'); 
 
-        if(elementClassName != 'quick-access' && elementClassName != 'my-account-links hover' && elementClassName != 'my-account-links' && elementClassName != 'header-cart hover' && elementClassName != 'header-cart' && elementClassName != 'store-link' && elementClassName != 'links store-list' && elementClassName != 'content store-list-content' && elementClassName != 'icon store-list-icon'){
+        if(elementClassName != 'quick-access' && elementClassName != 'my-account-links hover' && elementClassName != 'my-account-links' && elementClassName != 'header-cart hover' && elementClassName != 'header-cart' && elementClassName != 'store-link' && elementClassName != 'links store-list' && elementClassName != 'content store-list-content' && elementClassName != 'icon store-list-icon' && elementClassName != 'icon' && elementClassName != 'summary active' && elementClassName != 'header' && elementClassName != 'links-account'){
             if(jQuery("#cart_review").css('display')=='block'){
                 jQuery("#cart_summary").removeClass('hover');
                 jQuery("#cart_review").slideUp('fast');
