@@ -50,34 +50,34 @@
                     <?php echo $this->getChildHtml('topLinks') ?>
                 </div>
                 <div class="stores-list top-list"> 
-                    <div class="icon"><i class="fa fa-building"></i></div>
-                    <div class="content">
+                    <div class="icon store-list-icon"><i class="fa fa-building"></i></div>
+                    <div class="content store-list-content">
                         <span><?php echo $this->__('Alege Magazinul') ?></span>
                         <span class="links-title"><?php echo $this->__('Lista magazine') ?></span> 
                     </div>
-                    <ul class="links" style="display: none;">
+                    <ul class="links store-list" style="display: none;">
                         <?php
                             $stores = Mage::getModel('core/website')->getCollection();
                             foreach($stores as $store):
                         ?>
-                            <li class="first"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
+                            <li class="store-link"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
             <?php echo $this->getChildHtml('topSearch') ?>
             <div class="stores-list mobile-list">
-                <div class="icon"><i class="fa fa-building"></i></div>
-                <div class="content">
+                <div class="icon store-list-icon"><i class="fa fa-building"></i></div>
+                <div class="content store-list-content">
                     <span><?php echo $this->__('Alege Magazinul') ?></span>
                     <span class="links-title"><?php echo $this->__('Lista magazine') ?></span> 
                 </div>
-                <ul class="links" style="display: none;">
+                <ul class="links store-list" style="display: none;">
                     <?php
                         $stores = Mage::getModel('core/website')->getCollection();
                         foreach($stores as $store):
                     ?>
-                        <li class="first"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
+                        <li class="store-link"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
