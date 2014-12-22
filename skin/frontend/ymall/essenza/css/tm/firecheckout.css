@@ -293,7 +293,7 @@
 .firecheckout-set .newsletter label { position: static; }
 .firecheckout-set .buttons-set { margin: 1em 0 0; }
 .firecheckout-index-index .buttons-set button.button { float: none; }
-#agreements-wrapper { border-bottom: 1px dashed #d8d6d6; padding: 7px 10px; }
+#agreements-wrapper { border: 1px dashed #d8d6d6; border-top: 0; padding: 7px 10px; }
 .firecheckout-set .checkout-agreements { padding: 0; margin: 0; }
 .firecheckout-set .checkout-agreements li { margin: 0; }
 .firecheckout-set .checkout-agreements .agree { padding: 4px 0 4px 0; }
@@ -339,7 +339,7 @@
 .firecheckout-set #checkout-review-table .ugiftcert-remove { float: right; margin: 1px 0 0 2px; }
 .firecheckout-set #review-buttons-container { padding: 8px 6px 6px 0; border: none; margin: 0; text-align: right; }
 
-#checkout-review-table-wrapper { padding: 2%; border: 1px dashed #d8d6d6; border-top: 0; }
+#checkout-review-table-wrapper { padding: 2%; border: 1px dashed #d8d6d6; border-top: 0; border-bottom: 0; }
 .firecheckout-set #checkout-review #checkout-review-table tfoot td { padding: 15px; }
 
 #addresses-review { padding: 10px 10px; border-bottom: 1px dashed #d8d6d6; font-size: 0.95em; line-height: 1.3em; }
