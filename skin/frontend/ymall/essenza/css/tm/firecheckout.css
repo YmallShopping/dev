@@ -2,8 +2,8 @@
 .firecheckout-index-index .page-title { margin-bottom: 10px; zoom: 1; background: none; padding: 0; width: auto; }
 .firecheckout-index-index .page-title:after { content: '.'; display: block; visibility: hidden; height: 0; font-size: 0; clear: both; }
 .firecheckout-index-index .checkout-title h1 { float: left; color: #000; background: none; border: none; font-size: 25px; }
-.firecheckout-login-wrapper { float: right; margin: 3px 0 0 0; background: #1e1e1e; padding: 10px; color: #fff; font-size: 15px; }
-.firecheckout-login-wrapper a { color: #fff; }
+.firecheckout-login-wrapper { float: right; margin: 3px 0 0 0; padding: 10px; color: #000; font-size: 15px; }
+.firecheckout-login-wrapper a { color: #000; }
 .firecheckout-login-wrapper a:hover { text-decoration: underline; }
 .firecheckout-top-container { margin: 10px 0; clear: both; }
 
@@ -30,37 +30,39 @@
     margin-bottom: 20px;
 }
 .firecheckout-section .block-title {
-    background: #1e1e1e;
+    background: #ededed;
     font-size: 12px;
     font-weight: bold;
     padding: 10px 0 10px 8px;
     margin: 0;
-    color: #fff;
+    color: #000000;
     position: relative;
+    border: 1px solid #c8c8c8;
 }
 .firecheckout-section .block-title span { display: inline-block; vertical-align: top; }
 .firecheckout-section .block-title .num {
     padding: 1px 5px;
     margin: 0 10px 0 0;
-    background: #fff;
-    color: #000;
+    background: #000000;
+    color: #fff;
 }
 .firecheckout-set #shipping-method-reset,
 .firecheckout-set #payment-method-reset {
     text-transform: lowercase;
     font-weight: normal;
     text-shadow: 1px 1px 1px #fff;
-    color: #777;
+    color: #000;
     cursor: pointer;
     background: #fff;
-    border-radius: 4px;
     border: 1px dashed #d8d6d6;
-    padding: 0 3px 2px;
+    padding: 3px 5px 3px;
     position: absolute;
-    top: 8px;
+    top: 7px;
     right: 8px;
     margin: 0;
 }
+.firecheckout-set #shipping-method-reset i,
+.firecheckout-set #payment-method-reset i{ margin-right: 5px; }
 .firecheckout-set #shipping-method-reset:hover,
 .firecheckout-set #payment-method-reset:hover { color: #000; }
 .firecheckout-set .block-content { margin: 0; padding: 10px; border: 1px dashed #d8d6d6; border-top: 0; }
@@ -119,7 +121,7 @@
 .firecheckout-set .form-list label { width: auto; }
 .firecheckout-set .form-list .control label { padding-right: 5px; font-weight: bold; }
 .firecheckout-set .form-list .field,
-.firecheckout-set .form-list .input-box { width: 100%; max-width: 100%; }
+.firecheckout-set .form-list .input-box { width: 100%; max-width: 100%; margin-bottom: 5px; }
 .firecheckout-set .form-list .fields .field { clear: none; }
 .firecheckout-set .form-list .fields .field,
 .firecheckout-set .form-list .fields .input-box,
