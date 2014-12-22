@@ -39,7 +39,7 @@
             $height = (int)Mage::getStoreConfig('firecheckout/shopping_cart/image_height');
             $style = 'style="margin-left:' . ($width + 5) . 'px"';
         ?>
-            <div class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize($width, $height); ?>" width="<?php echo $width ?>" height="<?php echo $height; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></div>
+            <div class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize($width, $height); ?>" width="<?php echo $width ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></div>
         <?php endif; ?>
         <h3 class="product-name" <?php echo $style ?>>
             <?php if ($_nameAsLink) : ?>
