@@ -15,7 +15,6 @@ class Dan_Productimport_Block_Adminhtml_Productimport_Edit_Tab_Csv extends Mage_
       foreach ($_collection as $key => $value) {
         foreach ($value as $keyItem => $item) {
           if($keyItem){
-            if($keyItem != 'Item Type' && $keyItem != 'Brand' && $keyItem != 'Gender' && $keyItem != 'Inventory' && $keyItem != 'URL'){
               $fieldset->addField(Mage::getModel('productimport/productimport')->formatForId($keyItem), 'select', array(
                   'label'     => Mage::helper('productimport')->__($keyItem),
                   'name'      => Mage::getModel('productimport/productimport')->formatForId($keyItem),
@@ -30,8 +29,7 @@ class Dan_Productimport_Block_Adminhtml_Productimport_Edit_Tab_Csv extends Mage_
                           'label'     => Mage::helper('productimport')->__('Don\'t Use Value in Import'),
                       ),
                   ),
-              ));            
-            }
+              ));   
           }
         }
         break;

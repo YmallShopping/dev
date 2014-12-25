@@ -19,7 +19,7 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 					$handle = fopen($target_path, "r");
 					$csvData = array();
 
-		  while ( ($data = fgetcsv($handle, 10000, ",") ) !== FALSE )
+		  while ( ($data = fgetcsv($handle, 10000, ";") ) !== FALSE )
 					{
 						$number_of_fields = count($data);
 						if ($current_row == 1) {    //Header line
@@ -53,10 +53,8 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		foreach ($_collection as $key => $value) {
 			foreach ($value as $keyItem => $item) {
 				if($keyItem){
-					if($keyItem != 'Item Type' && $keyItem != 'Brand' && $keyItem != 'Gender' && $keyItem != 'Inventory' && $keyItem != 'URL'){
-						if($data[$this->formatForId($keyItem)] == 1){
-							$_rulesArray[] = $keyItem;
-						}
+					if($data[$this->formatForId($keyItem)] == 1){
+						$_rulesArray[] = $keyItem;
 					}
 				}
 			}
@@ -66,10 +64,14 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		return json_encode($_rulesArray);
     }
 
-    public function generateProductAjax($_website = array(1),$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage = null,$_thumbnail = null,$_size = null)
+    public function generateProductAjax($_website = array(1),$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage = null,$_thumbnail = null,$_size = null,$_colors = null)
     {
     		$_skuSplit = explode('/', $_sku);
     		$_fixedName = str_replace($_skuSplit[0], '', $_name);
+
+    		if(trim($_fixedName) == ''){
+    			$_fixedName = $_name;
+    		}
 
     		$product = Mage::getModel('catalog/product');
 		    $product->setWebsiteIds($_website);
@@ -110,24 +112,40 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 			    $_sizeCollection = explode('|', $_size);
 			    $_sizeArray = array();
 			    foreach ($_sizeCollection as $size) {
-			   		$_sizeArray[] = $this->getAttributeId('marime',trim($size));
+			    	if(trim($size) !='' && trim($size) !=' '){
+			    		$_sizeArray[] = $this->getAttributeId('marime',trim($size));	
+			    	}
 			    }
 			    $_sizeValues = implode(',', $_sizeArray);
 				$product->addData( array('marime' => $_sizeValues) );
 		   	}
+		   
+		   	if($_colors){
+			    $_colorsCollection = explode('|', $_colors);
+			    $_colorsArray = array();
+			    foreach ($_colorsCollection as $_color) {
+			    	if(trim($_color) !='' && trim($_color) !=' '){
+			    		$_colorsArray[] = $this->getAttributeId('culoare',trim($_color));	
+			    	}
+			    }
+			    $_colorsValues = implode(',', $_colorsArray);
+				$product->addData( array('culoare' => $_colorsValues) );
+		   	}
 
 		    $product->setStockData(array(
-		                       'use_config_manage_stock' => 0,
-		                       'manage_stock'=>0,
+		                       'use_config_manage_stock' => 1,
+		                       'manage_stock'=>1,
 		                       'min_sale_qty'=>1,
 		                       'max_sale_qty'=>10000,
-		                       'is_in_stock' => 1
+		                       'is_in_stock' => 1,
+		                       'qty' => 20 //qty
 		                   )
 		    );
-		    // $product->setCategoryIds($_categories);
+		    $product->setCategoryIds($_categories);
 			$product->save();
 
 			$this->createCustomOptions($product->getId(),$_sizeCollection,'Marime');
+			$this->createCustomOptions($product->getId(),$_colorsCollection,'Culoare');
     }
 
     public function updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription)
@@ -212,15 +230,45 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
     	$_collection = Mage::getModel('catalog/category')->getCollection()->addAttributeToSelect('name');
     	$_arrayCats = array();
     	foreach ($_collection as $cat) {
-    		$_arrayCats[$cat->getName()] = $cat->getId();
+    		$_arrayCats[trim($cat->getName())] = $cat->getId();
     	}
 
-    	if(isset($_arrayCats[$_name])){
-    		return $_arrayCats[$_name];
-    	} else {
-    		return array();
+    	$_catIds = array();
+    	$_availableCats = explode('|', $_name);
+    	$_availableCats = array_filter($_availableCats);
+
+    	try {
+	    	if(count($_availableCats)>0){
+		    	foreach ($_availableCats as $avCat) {
+		    		if(isset($_arrayCats[trim($avCat)])){
+		    			$_catIds[]=$_arrayCats[trim($avCat)];
+		    		}
+		    	}
+	    	}
+    	} catch (Exception $e) {
+    		
     	}
+
+    	return $_catIds;
     }
+
+	public function updateAttribute($_attrId = null,$_colors){
+
+    	$i==0;
+    	foreach ($_colors as $_color) { $i++;
+    		$_exits = $this->getAttributeId('culoare',trim($_color));
+    		$option = array();
+
+    		if(!$_exits) {
+    			// Add attribute option value
+				$option['attribute_id'] = $_attrId;
+				$option['value']['option_'.$i][0] = trim($_color);
+
+				$setup = new Mage_Eav_Model_Entity_Setup('core_setup');
+				$setup->addAttributeOption($option);
+    		}
+    	}
+	}
 
 	public function getAttributeId($_attribute, $_title)	{
 		$attributeDetails = Mage::getSingleton("eav/config")->getAttribute("catalog_product", $_attribute);

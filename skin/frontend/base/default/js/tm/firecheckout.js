@@ -1109,7 +1109,7 @@ ShippingMethod.prototype = {
             }
         }
         FireCheckout.Messenger.add(
-            Translator.translate('Please specify shipping method.'),
+            Translator.translate('Te rugăm să specifici metoda de livrare.'),
             'checkout-shipping-method-load',
             'error'
         );

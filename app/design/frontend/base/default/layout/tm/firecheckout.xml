@@ -5,6 +5,7 @@
         <label>Fire Checkout</label>
         <remove name="left"/>
         <remove name="right"/>
+        <remove name="inchoo_socialconnect_checkout"/>
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>

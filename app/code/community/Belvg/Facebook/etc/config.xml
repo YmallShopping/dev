@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ * **************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ * ***************************************
+ * This package designed for Magento COMMUNITY edition
+ * BelVG does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * BelVG does not provide extension support in case of
+ * incorrect edition usage.
+ * **************************************
+ *         DISCLAIMER   *
+ * ***************************************
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ * ****************************************************
+ * @category   Belvg
+ * @package    Belvg_Facebook
+ * @author Pavel Novitsky <pavel@belvg.com>
+ * @copyright  Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ */
+-->
+<config>
+    <frontend>
+        <routers>
+            <facebook>
+                <use>standard</use>
+                <args>
+                    <module>Belvg_Facebook</module>
+                    <frontName>facebook</frontName>
+                </args>
+            </facebook>
+        </routers>
+        <layout>
+            <updates>
+                <facebook>
+                    <file>belvg/facebook.xml</file>
+                </facebook>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Belvg_Facebook before="Mage_Adminhtml">Belvg_Facebook_Adminhtml</Belvg_Facebook>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <facebook>
+                    <file>belvg/facebook.xml</file>
+                </facebook>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <blocks>
+            <facebook>
+                <class>Belvg_Facebook_Block</class>
+            </facebook>
+            <page>
+                <rewrite>
+                    <html_header>Belvg_Facebook_Block_Page_Html_Header</html_header>
+                </rewrite>
+            </page>
+            <adminhtml>
+                <rewrite>
+                    <customer_grid>Belvg_Facebook_Block_Adminhtml_Customer_Grid</customer_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <facebook>
+                <class>Belvg_Facebook_Helper</class>
+            </facebook>
+        </helpers>
+        <models>
+            <facebook>
+                <class>Belvg_Facebook_Model</class>
+                <resourceModel>facebook_resource</resourceModel>
+            </facebook>
+            <facebook_resource>
+                <class>Belvg_Facebook_Model_Resource</class>
+                <deprecatedNode>facebook_mysql4</deprecatedNode>
+                <entities>
+                    <facebook>
+                        <table>belvg_facebook_customer</table>
+                    </facebook>
+                    <likes>
+                        <table>belvg_facebook_likes</table>
+                    </likes>
+                    <comments>
+                        <table>belvg_facebook_comments</table>
+                    </comments>
+                </entities>
+            </facebook_resource>
+        </models>
+        <resources>
+            <facebook_setup>
+                <setup>
+                    <module>Belvg_Facebook</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </facebook_setup>
+            <facebook_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </facebook_write>
+            <facebook_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </facebook_read>
+        </resources>
+    </global>
+    <default>
+        <facebook>
+            <settings>
+                <defimage><![CDATA[images/belvg/fb.gif]]>
+                </defimage>
+            </settings>
+            <like>
+                <enabled>0</enabled>
+                <action>like</action>
+                <faces>0</faces>
+                <width>450</width>
+                <color>light</color>
+                <layout>standard</layout>
+            </like>
+            <send>
+                <enabled>0</enabled>
+                <color>light</color>
+                <font>arial</font>
+            </send>
+            <comments>
+                <enabled>0</enabled>
+                <color>light</color>
+                <posts>5</posts>
+                <width>500</width>
+            </comments>
+            <activity>
+                <enabled>0</enabled>
+                <width>200</width>
+                <height>300</height>
+                <header>1</header>
+                <color>light</color>
+                <font>arial</font>
+                <recommendations>1</recommendations>
+                <maxage>0</maxage>
+            </activity>
+            <wishlist>
+                <enabled>0</enabled>
+                <note><![CDATA[I've added {product} to my wishlist.]]></note>
+            </wishlist>
+            <order>
+                <enabled>0</enabled>
+                <note><![CDATA[I've just bought {product}.]]></note>
+            </order>
+        </facebook>
+    </default>
+</config>

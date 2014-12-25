@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Belvg_Facebook>
+            <active>true</active>
+            <codePool>community</codePool>
+            <version>2.0.0</version>
+            <depends>
+                <Mage_Customer />
+            </depends>
+        </Belvg_Facebook>
+    </modules>
+</config>

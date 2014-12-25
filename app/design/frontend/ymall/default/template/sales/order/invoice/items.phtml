@@ -30,6 +30,7 @@
 <h2 class="sub-title"><?php echo $this->__('Invoice #') ?><?php echo $_invoice->getIncrementId(); ?> <span class="separator">|</span> <a href="<?php echo $this->getPrintInvoiceUrl($_invoice) ?>" onclick="this.target='_blank'" class="link-print"><?php echo $this->__('Print Invoice') ?></a></h2>
 <h3 class="table-caption"><?php echo $this->__('Items Invoiced') ?></h3>
 <table class="data-table" id="my-invoice-table-<?php echo $_invoice->getId(); ?>">
+    <col width="1" />
     <col />
     <col width="1" />
     <col width="1" />
@@ -37,6 +38,7 @@
     <col width="1" />
     <thead>
         <tr>
+            <th><?php echo $this->__('Image') ?></th>
             <th><?php echo $this->__('Product Name') ?></th>
             <th><?php echo $this->__('SKU') ?></th>
             <th class="a-right"><?php echo $this->__('Price') ?></th>

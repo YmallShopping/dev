@@ -19,11 +19,17 @@ class Dan_Productimport_Block_Adminhtml_Productimport_Edit extends Mage_Adminhtm
             'class'     => 'save',
         ), -100);
 
-        // $this->_addButton('import_products', array(
-        //     'label'     => Mage::helper('adminhtml')->__('Import Products'),
-        //     'onclick'   => 'confirmSetLocation(\''.Mage::helper('catalog')->__('Are you sure you want to proceed?').'\', \''.$this->getImportProductsUrl().'\')',
-        //     'class'     => 'import',
-        // ), -110);
+        $this->_addButton('import_products', array(
+            'label'     => Mage::helper('adminhtml')->__('Update Product Attibutes Value'),
+            'onclick'   => 'confirmSetLocation(\''.Mage::helper('catalog')->__('Are you sure you want to proceed?').'\', \''.$this->getImportProductsUrl().'\')',
+            'class'     => 'update',
+        ), -110);
+
+        $this->_addButton('render_products', array(
+            'label'     => Mage::helper('adminhtml')->__('Render Csv'),
+            'onclick'   => 'confirmSetLocation(\''.Mage::helper('catalog')->__('Are you sure you want to proceed?').'\', \''.$this->getRenderProducts().'\')',
+            'class'     => 'render',
+        ), -120);
 
         $this->_formScripts[] = "
             function toggleEditor() {
@@ -51,6 +57,11 @@ class Dan_Productimport_Block_Adminhtml_Productimport_Edit extends Mage_Adminhtm
 
     public function getImportProductsUrl()
     {
-        return $this->getUrl('*/*/importProducts', array('_current'=>true));
+        return $this->getUrl('*/*/updateProductAttributes', array('_current'=>true));
+    }
+
+    public function getRenderProducts()
+    {
+        return $this->getUrl('*/*/renderProductInfo', array('_current'=>true));
     }
 }
