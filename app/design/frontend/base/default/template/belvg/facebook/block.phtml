@@ -1,0 +1,126 @@
+<?php
+
+/**
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ * **************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ * ***************************************
+ * This package designed for Magento COMMUNITY edition
+ * BelVG does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * BelVG does not provide extension support in case of
+ * incorrect edition usage.
+ * **************************************
+ *         DISCLAIMER   *
+ * ***************************************
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ * ****************************************************
+ * @category   Belvg
+ * @package    Belvg_Facebook
+ * @author Pavel Novitsky <pavel@belvg.com>
+ * @copyright  Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ */
+
+/**
+ * @see Belvg_Facebook_Block_Init
+ * @var $this Belvg_Facebook_Block_Init
+ */
+?>
+<div id="fb-root"></div>
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '<?php echo $this->getAppId() ?>', // App ID
+            status: true, // check login status
+            cookie: true, // enable cookies to allow the server to access the session
+            xfbml: true  // parse XFBML
+        });
+
+<?php if ($this->isProductPage()): ?>
+    <?php if ($this->isActiveLike()): ?>
+                FB.Event.subscribe('edge.create',
+                        function(href, widget) {
+                            new Ajax.Request('<?php echo $this->getLikeEventUrl() ?>', {
+                                onSuccess: function(transport) {
+                                    transport.headerJSON
+                                }
+                            });
+                        }
+                );
+
+                FB.Event.subscribe('edge.remove',
+                        function(href, widget) {
+                            new Ajax.Request('<?php echo $this->getLikeDeleteEventUrl() ?>', {
+                                onSuccess: function(transport) {
+                                    transport.headerJSON
+                                }
+                            });
+                        }
+                );
+    <?php endif ?>
+    <?php if ($this->isActiveComments()): ?>
+                FB.Event.subscribe('comment.create',
+                        function(data) {
+                            new Ajax.Request('<?php echo $this->getCommentEventUrl() ?>' + 'comment/' + data.commentID, {
+                                onSuccess: function(transport) {
+                                    transport.headerJSON
+                                }
+                            });
+                        }
+                );
+
+                FB.Event.subscribe('comment.remove',
+                        function(data) {
+                            new Ajax.Request('<?php echo $this->getCommnetDeleteEventUrl() ?>' + 'comment/' + data.commentID, {
+                                onSuccess: function(transport) {
+                                    transport.headerJSON
+                                }
+                            });
+                        }
+                );
+    <?php endif ?>
+<?php endif ?>
+    };
+
+    // Load the SDK Asynchronously
+    (function(d) {
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement('script');
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/<?php echo $this->getLocale() ?>/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+
+    function fblogin() {
+        try {
+            FB.login(function(response) {
+                if (response.status == 'connected') {
+                    var url = '<?php echo $this->getLoginUrl() ?>';
+                    setLocation(url);
+                } else if (response.status === 'not_authorized') {
+                    alert('<?php echo $this->__('Please, approve our application') ?>');
+                } else {
+                    // user is not logged in
+                    window.location.reload();
+                }
+            }, {scope: 'email,user_birthday'});
+        } catch (err) {
+            fblogin();
+        }
+        return false;
+    }
+</script>

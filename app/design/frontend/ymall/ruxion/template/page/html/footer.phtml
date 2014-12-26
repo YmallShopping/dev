@@ -92,28 +92,24 @@
         jQuery(this).toggleClass('hover');
         jQuery("#cart_review").slideToggle('fast');
     });
-    //jQuery("#cart_review").mouseleave(function() { 
-    //	clearMenu('cart');
-    //	jQuery("#cart_summary").toggleClass('hover');
-    //    jQuery("#cart_review").slideToggle('fast');
-    //});
     
     jQuery(".my-account-links").click(function() { 
     	clearMenu('account');
         jQuery(this).toggleClass('hover');
         jQuery(".my-account-links ul.links").slideToggle('fast');
     });
-    //jQuery(".my-account-links ul.links").mouseleave(function() { 
-    //	clearMenu('account');
-    //	jQuery(".my-account-links").toggleClass('hover');
-    //    jQuery(".my-account-links ul.links").slideToggle('fast');
-    //});
+
+    jQuery(".stores-list").click(function() { 
+        clearMenu('stores');
+        jQuery(this).toggleClass('hover');
+        jQuery(".stores-list ul.links").slideToggle('fast');
+    });
 
     jQuery(document).click(function(e){
         var clickElement = e.target;  // get the dom element clicked.
         var elementClassName = jQuery(clickElement).parent().attr('class'); 
-        
-        if(elementClassName != 'quick-access' && elementClassName != 'my-account-links hover' && elementClassName != 'my-account-links' && elementClassName != 'header-cart hover' && elementClassName != 'header-cart'){
+
+        if(elementClassName != 'quick-access' && elementClassName != 'my-account-links hover' && elementClassName != 'my-account-links' && elementClassName != 'header-cart hover' && elementClassName != 'header-cart' && elementClassName != 'store-link' && elementClassName != 'links store-list' && elementClassName != 'content store-list-content' && elementClassName != 'icon store-list-icon' && elementClassName != 'icon' && elementClassName != 'summary active' && elementClassName != 'header' && elementClassName != 'links-account'){
             if(jQuery("#cart_review").css('display')=='block'){
                 jQuery("#cart_summary").removeClass('hover');
                 jQuery("#cart_review").slideUp('fast');
@@ -121,15 +117,15 @@
             if(jQuery(".my-account-links ul.links").css('display')=='block'){
                 jQuery(".my-account-links").removeClass('hover');
                 jQuery(".my-account-links ul.links").slideUp('fast');
+            }           
+            if(jQuery(".stores-list ul.links").css('display')=='block'){
+                jQuery(".stores-list").removeClass('hover');
+                jQuery(".stores-list ul.links").slideUp('fast');
             }
         }
     })
 
-    jQuery(".stores-list").click(function() { 
-    	clearMenu('stores');
-        jQuery(this).toggleClass('hover');
-        jQuery(".stores-list ul.links").slideToggle('fast');
-    });
+
     function clearMenu(type){
     	if(type=='cart'){
 	    	if(jQuery(".my-account-links ul.links").css('display')=='block'){ jQuery(".my-account-links ul.links").hide('fast'); jQuery(".my-account-links").toggleClass('hover'); }

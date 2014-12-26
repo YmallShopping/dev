@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ * **************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ * ***************************************
+ * This package designed for Magento COMMUNITY edition
+ * BelVG does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * BelVG does not provide extension support in case of
+ * incorrect edition usage.
+ * **************************************
+ *         DISCLAIMER   *
+ * ***************************************
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ * ****************************************************
+ * @category   Belvg
+ * @package    Belvg_Facebook
+ * @author Pavel Novitsky <pavel@belvg.com>
+ * @copyright  Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="before_body_end">
+            <block type="facebook/init" name="belvg_facebook_block">
+                <action method="setTemplate" ifconfig="facebook/settings/enabled" ifvalue="1">
+                    <template>belvg/facebook/block.phtml</template>
+                </action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="facebook/activity" name="fb.activity" template="belvg/facebook/activity.phtml" after="-"/>
+        </reference>
+        <reference name="head">
+            <action method="addItem" ifconfig="facebook/settings/enabled" ifvalue="1" >
+                <type>skin_css</type>
+                <name>inchoo_socialconnect/facebook/css/button.css</name>
+            </action>
+        </reference>
+    </default>
+
+    <customer_logged_out>
+        <reference name="top.links">
+            <block type="facebook/links" name="belvg_facebook_link">
+                <action method="setTemplate" ifconfig="facebook/settings/enabled" ifvalue="1">
+                    <template>belvg/facebook/links.phtml</template>
+                </action>
+                <block type="facebook/links_button" name="belvg_facebook_button" template="belvg/facebook/form/button.phtml" />
+            </block>
+            <action method="addLinkBlock" ifconfig="facebook/settings/enabled" ifvalue="1">
+                <blockName>belvg_facebook_link</blockName>
+            </action>
+        </reference>
+    </customer_logged_out>
+
+    <customer_account_login>
+        <reference name="customer_form_login">
+  <!--           <action method="setTemplate" ifconfig="facebook/settings/enabled" ifvalue="1">
+                <template>belvg/facebook/form/customer/login.phtml</template>
+            </action>
+            <block type="persistent/form_remember" name="persistent.remember.me" template="persistent/remember_me.phtml" />
+            <block type="core/template" name="persistent.remember.me.tooltip" template="persistent/remember_me_tooltip.phtml" /> -->
+            <block type="facebook/links_button" name="belvg_facebook_button" template="belvg/facebook/form/button.phtml" />
+            <block type="facebook/links_button" name="belvg_facebook_button_register" template="belvg/facebook/form/button-register.phtml" />
+        </reference>
+    </customer_account_login>
+
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="facebook" ifconfig="facebook/settings/enabled" ifvalue="1">
+                <name>facebook_edit</name>
+                <path>facebook/account/edit/</path>
+                <label>Facebook</label>
+            </action>
+        </reference>
+    </customer_account>
+
+    <facebook_account_edit>
+        <update handle="customer_account"/>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="facebook/account_edit" name="facebook_account_edit" template="belvg/facebook/account/view.phtml" />
+        </reference>
+    </facebook_account_edit>
+
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.login">
+            <action method="setTemplate" ifconfig="facebook/settings/enabled" ifvalue="1">
+                <template>belvg/facebook/form/checkout/login.phtml</template>
+            </action>
+            <block type="persistent/form_remember" name="persistent.remember.me" template="persistent/remember_me.phtml" />
+            <block type="facebook/links_button" name="belvg_facebook_button" template="belvg/facebook/form/button.phtml" />
+        </reference>
+    </checkout_onepage_index>
+
+    <catalog_product_view>
+        <reference name="head">
+            <block type="facebook/like_meta" name="facebook_meta" before="-">
+                <action method="setTemplate" ifconfig="facebook/settings/enabled" ifvalue="1">
+                    <template>belvg/facebook/like/meta.phtml</template>
+                </action>
+            </block>
+        </reference>
+        <reference name="product.info.addto">
+            <action method="setTemplate" ifconfig="facebook/settings/enabled" ifvalue="1">
+                <!-- <template>belvg/facebook/like/product/view/addto.phtml</template> -->
+            </action>
+        </reference>
+        <reference name="product.info">
+            <block type="facebook/comments" name="facebook.comments" template="belvg/facebook/comments.phtml" before="-">
+                <action method="addToParentGroup" ifconfig="facebook/settings/enabled" ifvalue="1">
+                    <group>detailed_info</group>
+                </action>
+            </block>
+        </reference>
+    </catalog_product_view>
+
+    <wishlist_index_index>
+        <reference name="customer.wishlist">
+            <block type="facebook/wishlist_item_column_share" name="facebook.item.share" template="belvg/facebook/wishlist/item/column/share.phtml"/>
+        </reference>
+        <reference name="customer.wishlist.items">
+            <action method="append" ifconfig="facebook/settings/enabled" ifvalue="1">
+                <block>facebook.item.share</block>
+            </action>
+        </reference>
+    </wishlist_index_index>
+
+    <checkout_onepage_success>
+        <reference name="checkout.success">
+            <block type="facebook/checkout_success" name="facebook.success.items" template="belvg/facebook/checkout/items.phtml">
+                <action method="addItemRender">
+                    <type>default</type>
+                    <block>facebook/checkout_item_renderer</block>
+                    <template>belvg/facebook/checkout/onepage/review/item.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </checkout_onepage_success>
+</layout>

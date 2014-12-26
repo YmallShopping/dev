@@ -1109,7 +1109,7 @@ ShippingMethod.prototype = {
             }
         }
         FireCheckout.Messenger.add(
-            Translator.translate('Please specify shipping method.'),
+            Translator.translate('Te rugăm să specifici metoda de livrare.'),
             'checkout-shipping-method-load',
             'error'
         );
@@ -1666,7 +1666,7 @@ FireCheckout.Window.prototype = {
     initialize: function(config) {
         this.config = Object.extend({
             triggers: null,
-            markup: '<div class="content"></div><a href="javascript:void(0)" class="close">×</a>'
+            markup: '<div class="content"></div><a href="javascript:void(0)" class="close"><i class="fa fa-times"></i></a>'
         }, config || {});
         this.config.size = Object.extend({
             width    : 'auto',

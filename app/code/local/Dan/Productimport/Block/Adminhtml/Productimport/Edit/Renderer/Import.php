@@ -54,8 +54,8 @@ class Dan_Productimport_Block_Adminhtml_Productimport_Edit_Renderer_Import exten
 				var updateCount = 0;
 				var deleteCount = 0;
 				var errorCount = 0;
-				function runImport(elCount){
-					new Ajax.Request("'.$this->getUrl('*/*/importProduct', array('_current'=>true)).'el/" + elCount, {
+				function runImport(){
+					new Ajax.Request("'.$this->getUrl('*/*/importProduct', array('_current'=>true)).'", {
 					  	onSuccess: function(response) {
 						  	var responseVals = response.responseText.evalJSON();
 						  	if(responseVals.success > 0){
@@ -76,13 +76,12 @@ class Dan_Productimport_Block_Adminhtml_Productimport_Edit_Renderer_Import exten
 						  	}				    
 					  	},
 					  	onFailure: function(response) {
-							runImport(elCount);
+							runImport();
 						},
 						onComplete: function(response) {
 							var responseVals = response.responseText.evalJSON();
 							if(response.status == 200 && responseVals.finish != "true"){
-						  		var newCount = elCount + 1;
-						  		runImport(newCount);
+						  		runImport();
 						  	}
 						  	if(responseVals.finish == "true"){
 								$("finish").update("The import action is completed!");

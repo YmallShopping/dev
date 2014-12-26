@@ -174,9 +174,14 @@
             </ul>
             <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
         </div>
-        <div class="buttons-set">            
-            <button type="submit" title="<?php echo $this->__('Submit') ?>" class="button"><span><i class="fa fa-chevron-circle-right"></i><span><?php echo $this->__('Să evoluăm') ?></span></span></button>
-            <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>" class="back-link"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+        <div class="buttons-set">      
+            <div class="left">
+                <button type="submit" title="<?php echo $this->__('Submit') ?>" class="button"><span><i class="fa fa-chevron-circle-right"></i><span><?php echo $this->__('Să evoluăm') ?></span></span></button>
+                <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>" class="back-link"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+            </div>      
+            <div class="right">
+                <?php echo $this->getChildHtml('inchoo_socialconnect_register'); ?>
+            </div>            
         </div>
         <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
             <input name="context" type="hidden" value="checkout" />
