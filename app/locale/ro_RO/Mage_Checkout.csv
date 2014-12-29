@@ -226,7 +226,7 @@
 "Use Billing Address","Foloseste adresa de facturare"
 "We are processing your order and you will soon receive an email with details of the order. Once the order has shipped you will receive another email with a link to track its progress.","Comanda este procesata si vei primi un email cu detaliile acesteia. De indata ce vom livra, iti vom trimite un e-mail cu informatiile de urmarire a comenzii."
 "You have no items in your shopping cart.","Nu ai niciun produs în coş."
-"You will receive an order confirmation email with details of your order and a link to track its progress.","Vei primi un e-mail de confirmare a comenzii şi un numar de urmărire a acesteia."
+"You will receive an order confirmation email with details of your order and a link to track its progress.","Vei primi un e-mail de confirmare a comenzii şi AWB-ul corespunzător comenzii."
 "Your Checkout Progress","Stadiul de finalizare a comenzii:"
 "Your order # is: %s.","Comanda: %s"
 "Your order # is: <a href=""%s"">%s</a>","Comanda: <a href=""%s"">%s</a>"
