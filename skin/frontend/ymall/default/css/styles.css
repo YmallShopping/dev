@@ -449,7 +449,7 @@ strong.highlight { color: #cd2127; }
 .header .quick-access .ac-header{ float:right; }
 .header .my-account-links { position: relative; padding: 0 10px 14px 10px; float: right; margin-right: 10px; border-right: 1px solid #d0d0d0; cursor: pointer; }
 .header .my-account-links .links-account { float: left; }
-.header .my-account-links .icon { float: left; width: 52px; height: 52px; text-align: center; line-height: 52px; border: 5px solid #fff; background: #2f2f2f;  font-size: 26px; color: #fff; margin-right: 10px;
+.header .my-account-links .icon { float: left; width: 52px; height: 52px; text-align: center; line-height: 52px; border: 5px solid #fff; background: #2f2f2f;  font-size: 26px; color: #fff; margin-right: 10px; overflow: hidden;
 	-webkit-border-radius: 70px; 
 	-moz-border-radius: 70px;
 	-ms-border-radius: 70px;

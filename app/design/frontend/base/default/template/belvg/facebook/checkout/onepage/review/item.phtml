@@ -33,7 +33,7 @@
 ?>
 <?php $_item = $this->getItem()?>
 <tr>
-    <td class="a-center v-middle"><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize(75); ?>" width="75" height="75" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></a></td>
+    <td class="a-center v-middle"><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize(75); ?>" style="width:75px !important;" width="75" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></a></td>
     <td class="v-middle">
         <h3 class="product-name"><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-name"><?php echo $this->htmlEscape($this->getProductName()) ?></a></h3>
         <?php if ($_options = $this->getOptionList()):?>

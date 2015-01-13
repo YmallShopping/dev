@@ -60,7 +60,8 @@
 
 ?>
 
-<?php $_ymallUrl = $this->getUrl('',array('_store'=>'mall')); ?>
+<?php $_ymallUrl = $this->getUrl('',array('_store'=>'mall','_secure'=>'true')); ?>
+<?php $_baseUrl = Mage::getBaseUrl('web', true).Mage::app()->getStore()->getCode().'/'; ?>
 
 <?php $_links = $this->getLinks(); ?>
 
@@ -76,7 +77,7 @@
 
         <?php else: ?>
 
-            <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo str_replace(Mage::getBaseUrl(), $_ymallUrl, $_link->getUrl()) ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+            <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo str_replace($_baseUrl, $_ymallUrl, $_link->getUrl()) ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
 
         <?php endif;?>
 

@@ -35,7 +35,7 @@
 <?php if(count($_collection)): ?>
 <div class="box-collateral box-up-sell category-products">
     <div class="page-title">
-        <h2><i class="fa fa-bullhorn"></i> <?php echo $this->__('You may also be interested in the following product(s)') ?></h2>
+        <h2><i class="fa fa-bullhorn"></i> <?php echo $this->__('%s îţi mai recomandă:',Mage::app()->getStore()->getName()) ?></h2>
     </div>
     <ul class="products-grid">
     <?php $i=0; foreach ($_collection as $_product): $i++; ?>
@@ -46,7 +46,7 @@
             <?php echo $this->getPriceHtml($_product, true) ?>
             <div class="actions">
                 <?php if($_product->isSaleable()): ?>
-                    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                    <button type="button" title="<?php echo $this->__('Adaugă în coş') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Adaugă în coş') ?></span><span class="icon"><i class="fa fa-shopping-cart"></i></span></span></button>
                 <?php else: ?>
                     <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
                 <?php endif; ?>

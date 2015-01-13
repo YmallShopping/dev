@@ -1,47 +1,46 @@
 <?php
 /**
- * Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE_AFL.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     base_default
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @category    Bubble
+ * @package     Bubble_AttributeOptionPro
+ * @version     1.1.2
+ * @copyright   Copyright (c) 2014 BubbleShop (https://www.bubbleshop.net)
  */
 ?>
 <?php
 /**
  * Template for filter items block
  *
- * @see Mage_Catalog_Block_Layer_Filter
+ * @see Mage_Catalog_Block_Layer_Filter_Abstract
  */
 ?>
-
 <ol>
-<?php foreach ($this->getItems() as $_item): ?>
-    <li>
-        <?php if ($_item->getCount() > 0): ?>
-        <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getLabel() ?></a>
-        <?php else: echo $_item->getLabel() ?>
-        <?php endif; ?>
-        <?php if ($this->shouldDisplayProductCount()): ?>
-        <span class="product-count"> <?php echo $_item->getCount() ?></span>
-        <?php endif; ?>
-    </li>
-<?php endforeach ?>
+    <?php foreach ($this->getItems() as $_item): ?>
+    	<?php $_img = $this->helper('bubble_aop')->getAttributeOptionImage($_item->getValue()); ?>
+        <li <?php if ($_img){ echo 'class="has-image"'; } ?>>
+            <?php $_images = explode(';', $_img) ?>
+            <?php if ($_item->getCount() > 0): ?>
+                <?php if ($_img): ?>
+                    <a href="<?php echo $this->urlEscape($_item->getUrl()); ?>">
+                        <?php if (count($_images)>1): ?>
+                        	<div class="image-box">
+	                            <?php foreach($_images as $_image): ?>
+	                                <img width="<?php echo 100/count($_images) ?>%" src="<?php echo $this->escapeHtml($_image); ?>" alt="<?php echo $_item->getLabel(); ?>" title="<?php echo $_item->getLabel(); ?>" />
+	                            <?php endforeach; ?>
+                        	</div>
+                        <?php else: ?>
+                        	<div class="image-box">
+                            	<img width="100%" src="<?php echo $this->escapeHtml($_images[0]); ?>" alt="<?php echo $_item->getLabel(); ?>" title="<?php echo $_item->getLabel(); ?>" />
+                            </div>
+                        <?php endif; ?>
+                    </a>
+                <?php else: ?>
+                    <a href="<?php echo $this->urlEscape($_item->getUrl()); ?>"><?php echo $_item->getLabel(); ?></a>
+                <?php endif; ?>
+            <?php else: echo $_item->getLabel(); ?>
+            <?php endif; ?>
+            <?php if ($this->shouldDisplayProductCount() && !$_img): ?>
+                <span class="product-count"> <?php echo $_item->getCount() ?></span>
+            <?php endif; ?>
+        </li>
+    <?php endforeach ?>
 </ol>

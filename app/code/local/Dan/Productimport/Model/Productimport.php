@@ -66,12 +66,12 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 
     public function generateProductAjax($_website = array(1),$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage = null,$_thumbnail = null,$_size = null,$_colors = null)
     {
-    		$_skuSplit = explode('/', $_sku);
-    		$_fixedName = str_replace($_skuSplit[0], '', $_name);
+    		// $_skuSplit = explode('/', $_sku);
+    		// $_fixedName = str_replace($_skuSplit[0], '', $_name);
 
-    		if(trim($_fixedName) == ''){
-    			$_fixedName = $_name;
-    		}
+    		// if(trim($_fixedName) == ''){
+    		// 	$_fixedName = $_name;
+    		// }
 
     		$product = Mage::getModel('catalog/product');
 		    $product->setWebsiteIds($_website);
@@ -79,7 +79,7 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		    $product->setTypeId('simple');
 		    $product->setCreatedAt(strtotime('now'));
 		    $product->setSku($_sku);
-		    $product->setName($_fixedName);
+		    $product->setName($_name);
 		    $product->setWeight(0);
 		    $product->setStatus(1);
 		    $product->setTaxClassId(0);
@@ -97,7 +97,7 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		    		$_imgCount++;
 					$image_url  = $_img; //get external image url from csv
 					$image_type = substr(strrchr($image_url,"."),1); //find the image extension
-					$filename   = $this->formatForId($_fixedName) .'.'.$image_type; //give a new name, you can modify as per your requirement
+					$filename   = $this->formatForId($_name) .'.'.$image_type; //give a new name, you can modify as per your requirement
 					$filepath   = Mage::getBaseDir('media') . DS . 'import'. DS . $filename; //path for temp storage folder: ./media/import/
 					file_put_contents($filepath, file_get_contents(trim($image_url))); //store the image from external url to the temp storage folder
 					if($_imgCount==1){
@@ -145,10 +145,10 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 			$product->save();
 
 			$this->createCustomOptions($product->getId(),$_sizeCollection,'Marime');
-			$this->createCustomOptions($product->getId(),$_colorsCollection,'Culoare');
+			// $this->createCustomOptions($product->getId(),$_colorsCollection,'Culoare');
     }
 
-    public function updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription)
+    public function updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_size,$_colors)
     {
 		$product = $_product;
 
@@ -181,6 +181,21 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 			$product->setShortDescription($_shortDescription);
 			$product->getResource()->saveAttribute($product, 'short_description');
 		}
+
+		if($_colors){
+		    $_colorsCollection = explode('|', $_colors);
+		    $_colorsArray = array();
+		    foreach ($_colorsCollection as $_color) {
+		    	if(trim($_color) !='' && trim($_color) !=' '){
+		    		$_colorsArray[] = $this->getAttributeId('culoare',trim($_color));	
+		    	}
+		    }
+		    $_colorsValues = implode(',', $_colorsArray);
+
+			$product->setCuloare($_colorsValues);
+			$product->getResource()->saveAttribute($product, 'culoare');
+	   	}
+
     }    
 
     public function createCustomOptions($_productId,$_optionsArray,$_optionName){
@@ -255,17 +270,27 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 	public function updateAttribute($_attrId = null,$_colors){
 
     	$i==0;
-    	foreach ($_colors as $_color) { $i++;
-    		$_exits = $this->getAttributeId('culoare',trim($_color));
+    	foreach ($_colors as $_key => $_color) { $i++;
+    		$_exits = $this->getAttributeId('culoare',trim($_key));
     		$option = array();
 
     		if(!$_exits) {
     			// Add attribute option value
 				$option['attribute_id'] = $_attrId;
-				$option['value']['option_'.$i][0] = trim($_color);
+				$option['value']['option_'.$i][0] = trim($_key);
 
 				$setup = new Mage_Eav_Model_Entity_Setup('core_setup');
 				$setup->addAttributeOption($option);
+    		} else {
+    			$resource = Mage::getSingleton('core/resource');
+    			$write = $resource->getConnection('core_write');
+    			$optionTable = $resource->getTableName('eav_attribute_option');
+
+				$data = array(
+                   'sort_order'         => 0,
+                   'image'              => trim($_color),
+                );
+                $write->update($optionTable, $data, $write->quoteInto('option_id=?', $_exits));
     		}
     	}
 	}

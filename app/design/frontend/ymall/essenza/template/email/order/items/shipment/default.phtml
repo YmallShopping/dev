@@ -25,7 +25,11 @@
  */
 ?>
 <?php $_item = $this->getItem() ?>
+<?php $_product = Mage::getModel('catalog/product')->load($_item->getProductId()); ?>
 <tr>
+    <td align="center" valign="middle" style="font-size:11px; padding:3px 0; border-bottom:1px dotted #CCCCCC;">
+        <img src="<?php echo (string)Mage::helper('catalog/image')->init($_product, 'thumbnail')->resize(100); ?>" width="100" alt="">
+    </td>
     <td align="left" valign="top" style="font-size:11px; padding:3px 9px;">
         <strong><?php echo $this->escapeHtml($_item->getName()) ?></strong>
         <?php if ($this->getItemOptions()): ?>

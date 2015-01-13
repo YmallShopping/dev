@@ -45,7 +45,7 @@ class Belvg_Facebook_Block_Checkout_Item_Renderer extends Mage_Checkout_Block_Ca
         $title = $_product->getName();
         $url = $_product->getProductUrl();
         $image_url = $this->helper('catalog/image')->init($_product, 'thumbnail');
-        $description = $this->helper('facebook')->getOrderDescription($title);
+        $description = strip_tags($this->helper('facebook')->getOrderDescription($title));
 
         return $this->helper('facebook')->getShareUrl($title, $url, $image_url, $description);
     }

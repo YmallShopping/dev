@@ -41,11 +41,18 @@
         <?php if($this->canShowOptions()): ?>
             <dl id="narrow-by-list">
                 <?php $_filters = $this->getFilters() ?>
-                <?php foreach ($_filters as $_filter): ?>
-                <?php if($_filter->getItemsCount()): ?>
-                    <dt><?php echo $this->__($_filter->getName()) ?></dt>
-                    <dd><?php echo $_filter->getHtml() ?></dd>
-                <?php endif; ?>
+                <?php foreach ($_filters as $code => $_filter): ?>
+                    <?php if($_filter->getItemsCount()): ?>
+                        <?php if ($_filter->getAttributeModel() && $_img = $this->helper('bubble_aop')->getAttributeImage($_filter->getAttributeModel())): ?>
+                            <dt style="background: none; padding-left: 4px; padding-bottom: 2px;">
+                                <img src="<?php echo $_img; ?>" alt="<?php echo $this->__($_filter->getName()) ?>" style="vertical-align: middle;" />
+                                <span style="vertical-align: middle;"><?php echo $this->__($_filter->getName()) ?></span>
+                            </dt>
+                        <?php else: ?>
+                            <dt><?php echo $this->__($_filter->getName()) ?></dt>
+                        <?php endif; ?>
+                        <dd id="<?php echo strtolower($_filter->getName()) ?>"><?php echo $_filter->getHtml() ?></dd>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </dl>
             <script type="text/javascript">decorateDataList('narrow-by-list')</script>

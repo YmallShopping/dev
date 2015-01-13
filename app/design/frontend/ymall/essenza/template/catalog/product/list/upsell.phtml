@@ -35,7 +35,7 @@
 <?php if(count($_collection)): ?>
 <div class="box-collateral box-up-sell category-products">
     <div class="page-title">
-        <h2><i class="fa fa-bullhorn"></i> <?php echo $this->__('You may also be interested in the following product(s)') ?></h2>
+        <h2><i class="fa fa-bullhorn"></i> <?php echo $this->__('%s îţi mai recomandă:',Mage::app()->getStore()->getName()) ?></h2>
     </div>
     <ul class="products-grid">
     <?php $i=0; foreach ($_collection as $_product): $i++; ?>

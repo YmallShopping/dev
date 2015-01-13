@@ -41,6 +41,6 @@
 <meta property="og:title" content="<?php echo $this->getProductName(); ?>"/>
 <meta property="og:image" content="<?php echo $this->getProductImage(); ?>"/>
 <meta property="og:url" content="<?php echo $this->getProductUrl(); ?>"/>
-<meta property="og:description" content="<?php echo $this->getProductDescription(); ?>"/>
+<meta property="og:description" content="<?php echo strip_tags($this->getProductDescription()); ?>"/>
 <meta property="og:type" content="product"/>
 <?php endif?>

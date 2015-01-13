@@ -455,7 +455,7 @@ strong.highlight { color: #cd2127; }
 .header .quick-access .ac-header{ float:right; }
 .header .my-account-links { position: relative; padding: 0 10px 14px 10px; float: right; margin-right: 10px; border-right: 1px solid #d0d0d0; cursor: pointer; }
 .header .my-account-links .links-account { float: left; }
-.header .my-account-links .icon { float: left; width: 52px; height: 52px; text-align: center; line-height: 52px; border: 5px solid #fff; background: #2f2f2f;  font-size: 26px; color: #fff; margin-right: 10px;
+.header .my-account-links .icon { float: left; width: 52px; height: 52px; text-align: center; line-height: 52px; border: 5px solid #fff; background: #2f2f2f;  font-size: 26px; color: #fff; margin-right: 10px; overflow: hidden; 
 	-webkit-border-radius: 70px; 
 	-moz-border-radius: 70px;
 	-ms-border-radius: 70px;
@@ -656,12 +656,28 @@ strong.highlight { color: #cd2127; }
 .block-layered-nav dd { margin:0 0 10px; padding-bottom: 10px; border-bottom: 1px solid #d5d5d5; }
 .block-layered-nav dd.last { margin: 0; padding-bottom: 0; border-bottom: 0; }
 .block-layered-nav dd a{ color:#272b2c; text-decoration:none; display: block; padding-right: 18px; }
-.block-layered-nav dd li{ padding:3px 15px 3px 15px; color:#505050; margin-bottom: 3px; position: relative; }
+.block-layered-nav dd li{ padding:3px 15px 3px 15px; color:#505050; margin-bottom: 3px; position: relative; clear: both; }
 .block-layered-nav dd li:hover{ background:url(../images/red-arrow-right.png) 4px center no-repeat; color:#0e3178; }
 .block-layered-nav dd li:hover a{ color:#000; font-weight: bold; }
 .block-layered-nav dd.last { background:none; }
 .block-layered-nav dd li .product-count { background: none repeat scroll 0 0 #fff; border: 1px solid #c7c5c5; color: #3c3c3c; float: right; font-size: 12px; padding: 3px 6px 1px 5px; margin: 0 0 0 0; font-family: 'Open Sans', sans-serif; position: absolute; top: 5px; right: 10px; }
 .block-layered-nav dd li:hover .product-count { color: #000; font-weight: bold; }
+
+/* Color Section */
+.block-layered-nav dd#culoare ol { padding: 0 7px; }
+.block-layered-nav dd li .image-box { float: left; width: 30px; overflow: hidden; border: 2px solid transparent;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	-ms-border-radius: 40px;
+	-o-border-radius: 40px;
+	border-radius: 40px;
+}
+.block-layered-nav dd li .image-box img { float: left; height: 30px; }
+.block-layered-nav dd li .image-box:hover { border: 2px solid #c7c5c5; }
+.block-layered-nav dd li.has-image { float: left; clear: none; padding: 4px; margin-bottom: 0; }
+.block-layered-nav dd li.has-image a { padding: 0; }
+.block-layered-nav dd li.has-image:hover { background: none; }
+
 .block-layered-nav .currently { margin:0 0 10px; padding: 0 10px 10px; border-bottom: 1px solid #d5d5d5; }
 .block-layered-nav .currently li { padding:6px 24px 6px 0; position:relative; z-index:1; line-height:1.5; color: #cd2127; }
 .block-layered-nav .currently .label { font-weight:bold; padding-left:12px; background:url(../images/red-arrow-right.png) 4px center no-repeat; display:inline-block; vertical-align:top; }

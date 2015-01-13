@@ -42,7 +42,11 @@
                 <?php echo $this->getChildHtml('cart_header') ?>
                 <div class="my-account-links">
                     <div class="icon">
-                        <i class="fa fa-user"></i>
+                        <?php if ($fb_id = Mage::getModel('facebook/facebook')->hasFbAccount(Mage::getSingleton('customer/session')->getCustomer())): ?>
+                            <img src="https://graph.facebook.com/<?php echo $fb_id ?>/picture" />
+                        <?php else: ?>
+                            <i class="fa fa-user"></i>
+                        <?php endif; ?>
                     </div>
                     <div class="links-account">
                         <?php if (Mage::getSingleton('customer/session')->isLoggedIn()): ?>
