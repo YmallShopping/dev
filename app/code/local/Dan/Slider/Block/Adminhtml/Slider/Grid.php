@@ -32,6 +32,17 @@ class Dan_Slider_Block_Adminhtml_Slider_Grid extends Mage_Adminhtml_Block_Widget
           'align'     =>'left',
           'index'     => 'title',
       ));
+      
+        if (!Mage::app()->isSingleStoreMode()) {
+            $this->addColumn('store_id', array(
+                'header'        => Mage::helper('cms')->__('Store View'),
+                'index'         => 'store_id',
+                'type'          => 'store',
+                'store_all'     => false,
+                'store_view'    => true,
+                'sortable'      => true
+            ));
+        }
 
 	  /*
       $this->addColumn('content', array(

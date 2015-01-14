@@ -1,4 +1,7 @@
-<?php $_collection = Mage::getModel('slider/slider')->getCollection()->addFieldToFilter('status', array('eq' => 1))->setOrder('position', 'asc'); ?>
+<?php 
+	$storeId = Mage::app()->getStore()->getId();
+	$_collection = Mage::getModel('slider/slider')->getCollection()->addFieldToFilter('status', array('eq' => 1))->addFieldToFilter('store_id', array('id' => array(0,$storeId)))->setOrder('position', 'asc');
+?>
 <?php $_count = count($_collection); ?>
 <?php $_storeCode = Mage::app()->getStore()->getCode(); ?>
 <?php if ($_count && $_storeCode!='mall'): ?>
@@ -40,7 +43,6 @@
 					forceFullWidth:"off",
 					autoHeight:"off"
 				});
-
 		});	//ready
 	</script>
 	<style>
@@ -48,4 +50,3 @@
 	</style>
 <?php endif; ?>
 <div class="clearer"></div>
-

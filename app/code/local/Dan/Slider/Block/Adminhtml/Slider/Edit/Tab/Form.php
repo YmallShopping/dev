@@ -19,13 +19,23 @@ class Dan_Slider_Block_Adminhtml_Slider_Edit_Tab_Form extends Mage_Adminhtml_Blo
           'label'     => Mage::helper('slider')->__('Slider Image'),
           'required'  => false,
           'name'      => 'image',
-	  ));
+	    ));
 	 
       $fieldset->addField('url', 'text', array(
           'label'     => Mage::helper('slider')->__('Slider Url'),
           'required'  => false,
           'name'      => 'url',
       ));	
+
+      $field = $fieldset->addField('store_id', 'select', array(
+        'name'      => 'store_id',
+        'label'     => Mage::helper('cms')->__('Store View'),
+        'title'     => Mage::helper('cms')->__('Store View'),
+        'required'  => true,
+        'values'    => Mage::getSingleton('adminhtml/system_store')->getStoreValuesForForm(false, true),
+      ));
+      $renderer = $this->getLayout()->createBlock('adminhtml/store_switcher_form_renderer_fieldset_element');
+      $field->setRenderer($renderer);
 
       $fieldset->addField('position', 'text', array(
           'label'     => Mage::helper('slider')->__('Position'),
