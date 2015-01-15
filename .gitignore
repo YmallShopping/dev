@@ -5,9 +5,9 @@ imagini/
 includes/
 lib/
 media/
-!media/ruxion1.jpg
-!media/ruxion2.jpg
-!media/ruxion3.jpg
+!/media/ruxion1.jpg
+!/media/ruxion2.jpg
+!/media/ruxion3.jpg
 pkginfo/
 shell/
 var/
