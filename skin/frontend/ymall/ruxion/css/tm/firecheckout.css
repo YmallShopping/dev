@@ -31,7 +31,7 @@
     margin-bottom: 20px;
 }
 .firecheckout-section .block-title {
-    background: #ededed;
+    background: #f4efeb;
     font-size: 12px;
     font-weight: bold;
     padding: 10px 0 10px 8px;
@@ -44,7 +44,7 @@
 .firecheckout-section .block-title .num {
     padding: 1px 5px;
     margin: 0 10px 0 0;
-    background: #000000;
+    background: #8d5332;
     color: #fff;
 }
 .firecheckout-set #shipping-method-reset,
