@@ -14,10 +14,10 @@
 
 #vertnav li:hover > .vertnav-cat,
 #vertnav li.active > .vertnav-cat,
-#vertnav li.open > .vertnav-cat { background:url(../images/red-arrow-right.png) 4px center no-repeat; }
+#vertnav li.open > .vertnav-cat { }
 #vertnav li:hover > .vertnav-cat a,
 #vertnav li.active > .vertnav-cat a,
-#vertnav li.open > .vertnav-cat a { color:#000000; font-weight: bold; }
+#vertnav li.open > .vertnav-cat a { color:#d96708;  }
 
 #vertnav .product-count {
 	background: none repeat scroll 0 0 #fff;
