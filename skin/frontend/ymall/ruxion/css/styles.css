@@ -752,7 +752,7 @@ strong.highlight { color: #cd2127; }
 /* View Type: Grid */
 .products-grid { position:relative; list-style-type: none !important; padding: 0 !important; }
 .products-grid.last { border-bottom:0; }
-.products-grid li.item {float: left;width: 27%;padding: 15px 2% 0;border: 1px solid #dedddd;margin: 0 2% 2% 0; background: #fdf4ee;}
+.products-grid li.item {float: left;width: 27%;padding: 15px 2% 0;border: 1px solid #dedddd;margin: 0 2% 2% 0; background: #f6efeb;}
 .products-grid li.item:nth-child(4n+4) {  }
 .products-grid .product-image { display:block; width:100%; margin:0 0 10px; }
 .products-grid .product-image img{ display:block; width:100%; border:1px dashed #dedddd; }
@@ -1141,7 +1141,7 @@ button.btn-cart:hover span{ background: #9e5f3b; color:#fff; }
 .cart-table tfoot td {  }
 .cart-table tfoot td button.btn-continue { float: left; }
 .cart-table tfoot td button.button span { background: #af8973; color: #fff; }
-.cart-table tfoot td button.button:hover span { background: #2f2f2f; }
+.cart-table tfoot td button.button:hover span { background: #8d5332; }
 .cart-table tfoot td button.button span i { float: left; font-size: 20px; margin: 6px 5px 0 0; }
 /* Shopping Cart Collateral boxes */
 .cart .cart-collaterals { width: 40%; margin-bottom: 25px; padding: 0; float: right; position: relative; }
@@ -1703,14 +1703,14 @@ button.btn-cart:hover span{ background: #9e5f3b; color:#fff; }
     display: block;
     width: 100%;
     position: relative;
-    border: 1px solid #8b5131;
-    background-color: #af8973;
+    border: 1px solid #e6d9d1;
+    background-color: #f6efeb;
   }
   .product-collateral .toggle-tabs li {
     float: left;
-    border-right: 1px solid #8b5131;
+    border-right: 1px solid #e6d9d1;
     border-left: 1px solid transparent;
-    color: #fff;
+    color: #000;
   }
   .product-collateral .toggle-tabs li > span {
     -moz-user-select: none;
@@ -1737,6 +1737,7 @@ button.btn-cart:hover span{ background: #9e5f3b; color:#fff; }
   .product-collateral .toggle-tabs li.current span,
   .product-collateral .toggle-tabs li:hover span {
     color: #fff;
+    background-color: #9d6948;
   }
   .product-collateral .toggle-tabs li:first-child {
     border-left: none;
@@ -1757,7 +1758,7 @@ button.btn-cart:hover span{ background: #9e5f3b; color:#fff; }
     width: 94.01%;
     display: none;
     padding: 15px 3%;
-    border: 1px solid #cccccc;
+    border: 1px solid #e6d9d1;
     border-top: 0;
   }
   .product-collateral > dl > dd.current {
