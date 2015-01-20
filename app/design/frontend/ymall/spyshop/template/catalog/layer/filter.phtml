@@ -1,0 +1,46 @@
+<?php
+/**
+ * @category    Bubble
+ * @package     Bubble_AttributeOptionPro
+ * @version     1.1.2
+ * @copyright   Copyright (c) 2014 BubbleShop (https://www.bubbleshop.net)
+ */
+?>
+<?php
+/**
+ * Template for filter items block
+ *
+ * @see Mage_Catalog_Block_Layer_Filter_Abstract
+ */
+?>
+<ol>
+    <?php foreach ($this->getItems() as $_item): ?>
+    	<?php $_img = $this->helper('bubble_aop')->getAttributeOptionImage($_item->getValue()); ?>
+        <li <?php if ($_img){ echo 'class="has-image"'; } ?>>
+            <?php $_images = explode(';', $_img) ?>
+            <?php if ($_item->getCount() > 0): ?>
+                <?php if ($_img): ?>
+                    <a href="<?php echo $this->urlEscape($_item->getUrl()); ?>">
+                        <?php if (count($_images)>1): ?>
+                        	<div class="image-box">
+	                            <?php foreach($_images as $_image): ?>
+	                                <img width="<?php echo 100/count($_images) ?>%" src="<?php echo $this->escapeHtml($_image); ?>" alt="<?php echo $_item->getLabel(); ?>" title="<?php echo $_item->getLabel(); ?>" />
+	                            <?php endforeach; ?>
+                        	</div>
+                        <?php else: ?>
+                        	<div class="image-box">
+                            	<img width="100%" src="<?php echo $this->escapeHtml($_images[0]); ?>" alt="<?php echo $_item->getLabel(); ?>" title="<?php echo $_item->getLabel(); ?>" />
+                            </div>
+                        <?php endif; ?>
+                    </a>
+                <?php else: ?>
+                    <a href="<?php echo $this->urlEscape($_item->getUrl()); ?>"><?php echo $_item->getLabel(); ?></a>
+                <?php endif; ?>
+            <?php else: echo $_item->getLabel(); ?>
+            <?php endif; ?>
+            <?php if ($this->shouldDisplayProductCount() && !$_img): ?>
+                <span class="product-count"> <?php echo $_item->getCount() ?></span>
+            <?php endif; ?>
+        </li>
+    <?php endforeach ?>
+</ol>

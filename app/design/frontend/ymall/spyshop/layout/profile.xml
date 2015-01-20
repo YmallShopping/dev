@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="root">
+            <!-- <block type="profile/profile" name="testimonials" template="profile/testimonials_pages.phtml"/> -->
+<!-- 			<block type="profile/profile" name="news" template="profile/news_pages.phtml"/>-->
+			<block type="core/template" name="videos" template="block/videos.phtml"/> 
+        </reference>
+    </default>
+    <profile_news_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="profile/profile" name="profile" template="profile/news.phtml"/>
+        </reference>
+    </profile_news_index>
+    <profile_news_read>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="profile/profile" name="profile" template="profile/readnews.phtml"/>
+        </reference>
+    </profile_news_read>
+    
+    <profile_testimonials_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="profile/profile" name="profile" template="profile/testimonials.phtml"/>
+        </reference>
+    </profile_testimonials_index>
+    
+    <profile_pressarticles_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="profile/profile" name="profile" template="profile/pressarticles.phtml"/>
+        </reference>
+    </profile_pressarticles_index>
+    <profile_pressarticles_read>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="profile/profile" name="profile" template="profile/readpressarticle.phtml"/>
+        </reference>
+    </profile_pressarticles_read>
+    
+    <profile_pressreleases_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="profile/profile" name="profile" template="profile/pressreleases.phtml"/>
+        </reference>
+    </profile_pressreleases_index>
+    <profile_pressreleases_read>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="profile/profile" name="profile" template="profile/readpressrelease.phtml"/>
+        </reference>
+    </profile_pressreleases_read>
+</layout>
