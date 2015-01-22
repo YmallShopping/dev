@@ -64,7 +64,7 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		return json_encode($_rulesArray);
     }
 
-    public function generateProductAjax($_website = array(1),$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage = null,$_thumbnail = null,$_size = null,$_colors = null)
+    public function generateProductAjax($_website = array(1),$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage = null,$_thumbnail = null,$_size = null,$_colors = null,$_status = 1)
     {
     		// $_skuSplit = explode('/', $_sku);
     		// $_fixedName = str_replace($_skuSplit[0], '', $_name);
@@ -87,6 +87,7 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		    $product->setPrice($_price);
 		    $product->setSpecialPrice($_specialPrice);
 		    $product->setDescription($_description);
+		    $product->setMetaDescription(strip_tags($_description));
 		    $product->setShortDescription($_shortDescription);
 
 		    $product->setMediaGallery (array('images'=>array (), 'values'=>array ()));
@@ -142,13 +143,14 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		                   )
 		    );
 		    $product->setCategoryIds($_categories);
+		    $product->setStatus($_status);
 			$product->save();
 
 			$this->createCustomOptions($product->getId(),$_sizeCollection,'Marime');
 			// $this->createCustomOptions($product->getId(),$_colorsCollection,'Culoare');
     }
 
-    public function updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_size,$_colors)
+    public function updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_size,$_colors,$_status = 1)
     {
 		$product = $_product;
 
@@ -176,6 +178,9 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 		if($_description!==''){
 			$product->setDescription($_description);
 			$product->getResource()->saveAttribute($product, 'description');
+
+			$product->setMetaDescription(strip_tags($_description));
+			$product->getResource()->saveAttribute($product, 'meta_description');
 		}    		
 		if($_shortDescription!==''){
 			$product->setShortDescription($_shortDescription);
@@ -195,6 +200,9 @@ class Dan_Productimport_Model_Productimport extends Mage_Core_Model_Abstract
 			$product->setCuloare($_colorsValues);
 			$product->getResource()->saveAttribute($product, 'culoare');
 	   	}
+
+	   	$product->setData('status', $_status);
+		$product->getResource()->saveAttribute($product, 'status'); 
 
     }    
 

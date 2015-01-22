@@ -316,7 +316,7 @@ class Dan_Productimport_Adminhtml_ProductimportController extends Mage_Adminhtml
 			$_error=0;
 			$_update=0;
 			$_delete=0;
-			$_end = 5;
+			$_end = 150;
 
 			//Only update existing products
 			if($_csv->getImportType() == 1){
@@ -356,17 +356,20 @@ class Dan_Productimport_Adminhtml_ProductimportController extends Mage_Adminhtml
 				$_size = trim($value['Marime']);
 				$_colors = trim($value['Culori']);
 
+				$_status = 1;
+				if(trim($value['Stare'])=='inactiv'){ $_status = 2; }
+
 				//Handle import
 				try {
 					// Import new products and update existing ones
 					if($_csv->getImportType() == 0){
 						if(in_array($_sku, $_existingProductsSku)){
 							$_product = Mage::getModel('catalog/product')->getCollection()->addAttributeToSelect('*')->addFieldToFilter('sku',$_sku)->getFirstItem();
-							Mage::getModel('productimport/productimport')->updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_size,$_colors);
+							Mage::getModel('productimport/productimport')->updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_size,$_colors,$_status);
 							$_update++;
 						} else {
 							if($_sku){
-								Mage::getModel('productimport/productimport')->generateProductAjax($_website,$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage,$_thumbnail,$_size,$_colors);
+								Mage::getModel('productimport/productimport')->generateProductAjax($_website,$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage,$_thumbnail,$_size,$_colors,$_status);
 								// Mage::log('Sku '.$_sku.' was succesfully added at # : '.now(), null, 'importsuccesslog.log');
 								$_success++;
 							}
@@ -376,14 +379,14 @@ class Dan_Productimport_Adminhtml_ProductimportController extends Mage_Adminhtml
 					if($_csv->getImportType() == 1){
 						if(in_array($_sku, $_existingProductsSku)){
 							$_product = Mage::getModel('catalog/product')->getCollection()->addAttributeToSelect('*')->addFieldToFilter('sku',$_sku)->getFirstItem();
-							Mage::getModel('productimport/productimport')->updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_size,$_colors);
+							Mage::getModel('productimport/productimport')->updateProductAjax($_product,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_size,$_colors,$_status);
 							$_update++;
 						}							
 					}
 					//Only Import new products
 					if($_csv->getImportType() == 2 && $_sku){
 						if(!in_array($_sku, $_existingProductsSku)){
-							Mage::getModel('productimport/productimport')->generateProductAjax($_website,$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage,$_thumbnail,$_size,$_colors);
+							Mage::getModel('productimport/productimport')->generateProductAjax($_website,$_sku,$_name,$_price,$_specialPrice,$_description,$_shortDescription,$_categories,$_baseImage,$_thumbnail,$_size,$_colors,$_status);
 							// Mage::log('Sku '.$_sku.' was succesfully added at # : '.now(), null, 'importsuccesslog.log');
 							$_success++;
 						}							

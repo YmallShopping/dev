@@ -7,6 +7,10 @@
 		<div class="store-logo">
 			<h3><a href="<?php echo $this->getUrl('') ?>"><img src="<?php echo $this->getSkinUrl('images/logos/ruxion_logo.png') ?>" alt=""></a></h3>
 		</div>
+		<div class="category-menu">
+			<span><?php echo $this->__('Categorii de produse') ?><i class="fa fa-caret-down"></i></span>
+			<?php echo $this->getChildHtml('topMenu') ?>
+		</div>
 		<div class="mobile-menu"><?php echo $this->__('Meniu') ?></div>
 		<div class="menu">
 			<ul class="menu-links">
@@ -14,7 +18,7 @@
 				<li><a href="<?php echo $this->getUrl('despre-noi') ?>"><?php echo $this->__('Despre noi') ?></a></li>
 				<li><a href="<?php echo $this->getUrl('contacts') ?>"><?php echo $this->__('Contact') ?></a></li>
 			</ul>
-			<?php echo $this->getChildHtml('topMenu') ?>
+			
 		</div>
 	</div>
 </div>

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Magento
  *
@@ -24,11 +23,9 @@
  * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-
 /**
  * @var Mage_Page_Block_Html_Header $this
  */
-
 ?>
 <div class="header-shadow">
     <div class="header-container">
@@ -87,7 +84,7 @@
                     <?php
                         $stores = Mage::getModel('core/website')->getCollection();
                         foreach($stores as $store):
-                            if($store->getName()!='YMALL' && $store->getName()!='Ruxion Stil'):
+                            if($store->getName()!='YMALL'):
                     ?>
                         <li class="store-link"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
                         <?php endif; ?>
