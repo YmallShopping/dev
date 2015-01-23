@@ -142,13 +142,14 @@
 
 				Loc pe hartă: <span class="highlight">D4</span><br/>
 
-				Status: <span class="highlight">Inactiv</span>
+				Status: <span class="highlight">Activ</span>
 
-			</p>
+			</p> <br/>
+			<button class="button" onclick="setLocation('<?php echo $this->getUrl('',array('_store'=>'spyshop')) ?>')"><span><i class="fa fa-arrow-circle-right"></i><span><?php echo $this->__('vizitează') ?></span></span></button>
 
 		</div>
 
-		<div class="map"><a href="javascript:void(0)" title="Spy Shop Shopping YMall - Spy Shop"><img src="<?php echo $this->getSkinUrl('images/landing/map-spyshop.png') ?>" alt="Ymall Shopping Map - Spy Shop" title="Ymall Shopping Map - Spy Shop"/></a></div>
+		<div class="map"><a href="<?php echo $this->getUrl('',array('_store'=>'spyshop')) ?>" title="Spy Shop Shopping YMall - Spy Shop"><img src="<?php echo $this->getSkinUrl('images/landing/map-spyshop.png') ?>" alt="Ymall Shopping Map - Spy Shop" title="Ymall Shopping Map - Spy Shop"/></a></div>
 
 	</div>
 
