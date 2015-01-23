@@ -40,7 +40,7 @@
             </action>
         </reference>
         <reference name="left">
-            <block type="vertnav/navigation" name="catalog.vertnav" template="vertnav/left.phtml" after="topSearch" />
+            <block type="vertnav/navigation" name="catalog.vertnav" template="vertnav/left.phtml" before="-" />
         </reference>
         <reference name="left">
             <action method="unsetChild" ifconfig="catalog/vertnav/hide_vertnav">

@@ -68,7 +68,7 @@
                         <?php
                             $stores = Mage::getModel('core/website')->getCollection();
                             foreach($stores as $store):
-                                if($store->getName()!='YMALL' && $store->getName()):
+                                if($store->getName()!='YMALL' && $store->getName()!='Ruxion Stil'):
                         ?>
                             <li class="store-link"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
                             <?php endif; ?>
@@ -87,12 +87,12 @@
                     <?php
                         $stores = Mage::getModel('core/website')->getCollection();
                         foreach($stores as $store):
-                            if($store->getName()!='YMALL' && $store->getName()):
+                            if($store->getName()!='YMALL' && $store->getName()!='Ruxion Stil'):
                     ?>
                         <li class="store-link"><a title="Contul meu" href="<?php echo Mage::app()->getStore($store->getId())->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>"><?php echo $store->getName() ?></a></li>
                         <?php endif; ?>
                     <?php endforeach; ?>
-               </ul> 
+                </ul>
             </div>
             <div id="mobile-nav" style="display:none;"></div>
             <div class="mobile-container" style="display:none;"></div>
