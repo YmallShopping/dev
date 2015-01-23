@@ -8,7 +8,7 @@
 			<action method="addItem"><type>skin_js</type><name>rs-plugin/js/jquery.themepunch.revolution.js</name></action>
             <action method="addCss"><stylesheet>rs-plugin/css/settings.css</stylesheet></action>
         </reference>
-        <reference name="header">
+        <reference name="content">
             <block type="slider/slider" name="slider" before="-" template="slider/slider.phtml" />
         </reference>
         <reference name="after_header">
