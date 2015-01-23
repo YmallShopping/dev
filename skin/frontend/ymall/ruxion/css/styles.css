@@ -958,8 +958,8 @@ strong.highlight { color: #cd2127; }
 .product-view .no-rating { float: right; width: 40%; line-height: 1.1; }
 .product-view .ratings .rating-box { float: right; margin: 0 0 3px;}
 .product-view .ratings .rating-links { clear: both; }
-.product-view .product-name { font-family: 'Open Sans', sans-serif; color: #1a1a1a; font-weight: lighter; font-size: 25px; text-transform: uppercase; float: left; width: 60%; }
-.product-view .product-name h1 { font-family: 'Open Sans', sans-serif; color: #9e5f3b; font-weight: lighter; font-size: 25px; text-transform: uppercase; }
+.product-view .product-name { font-family: 'Open Sans', sans-serif; color: #1a1a1a; font-weight: lighter; font-size: 25px; float: left; width: 60%; }
+.product-view .product-name h1 { font-family: 'Open Sans', sans-serif; color: #9e5f3b; font-weight: lighter; font-size: 25px; }
 .product-view .short-description { line-height: 1.2;  }
 .product-view .short-description h2 { color: #1a1a1a; display: block; font-family: "Open Sans",sans-serif; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
 .product-view .short-description strong { font-weight: normal; color: #2DA6D2; }

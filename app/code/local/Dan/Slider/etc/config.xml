@@ -68,10 +68,16 @@
 				</all>
 				<admin>
 					<children>
-						<Dan_Slider>
+						<slider>
 							<title>Slider Module</title>
 							<sort_order>10</sort_order>
-						</Dan_Slider>
+                            <children>
+                                <items module="slider">
+                                    <title>Manage Sliders</title>
+                                    <sort_order>0</sort_order>
+                                </items>
+                            </children>
+						</slider>
 					</children>
 				</admin>
 			</resources>

@@ -2,6 +2,19 @@
 
 class Dan_Slider_Block_Adminhtml_Slider_Edit_Tab_Form extends Mage_Adminhtml_Block_Widget_Form
 {
+
+  protected function _getStoreRestrictions(){
+
+      $_store = Mage::getSingleton('admin/session')->getUser()->getUsername();
+      $_storeId = Mage::app()->getStore($_store)->getId();
+
+      if($_storeId!=1){
+          return $_storeId;
+      }
+
+      return false;
+  }
+
   protected function _prepareForm()
   {
       $form = new Varien_Data_Form();
@@ -27,15 +40,20 @@ class Dan_Slider_Block_Adminhtml_Slider_Edit_Tab_Form extends Mage_Adminhtml_Blo
           'name'      => 'url',
       ));	
 
-      $field = $fieldset->addField('store_id', 'select', array(
-        'name'      => 'store_id',
-        'label'     => Mage::helper('cms')->__('Store View'),
-        'title'     => Mage::helper('cms')->__('Store View'),
-        'required'  => true,
-        'values'    => Mage::getSingleton('adminhtml/system_store')->getStoreValuesForForm(false, true),
-      ));
-      $renderer = $this->getLayout()->createBlock('adminhtml/store_switcher_form_renderer_fieldset_element');
-      $field->setRenderer($renderer);
+      if(!$this->_getStoreRestrictions()){
+
+        $field = $fieldset->addField('store_id', 'select', array(
+          'name'      => 'store_id',
+          'label'     => Mage::helper('cms')->__('Store View'),
+          'title'     => Mage::helper('cms')->__('Store View'),
+          'required'  => true,
+          'values'    => Mage::getSingleton('adminhtml/system_store')->getStoreValuesForForm(false, true),
+        ));
+        $renderer = $this->getLayout()->createBlock('adminhtml/store_switcher_form_renderer_fieldset_element');
+        $field->setRenderer($renderer);
+
+      }
+
 
       $fieldset->addField('position', 'text', array(
           'label'     => Mage::helper('slider')->__('Position'),

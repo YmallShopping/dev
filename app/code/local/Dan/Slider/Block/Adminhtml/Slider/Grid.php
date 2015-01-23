@@ -11,9 +11,26 @@ class Dan_Slider_Block_Adminhtml_Slider_Grid extends Mage_Adminhtml_Block_Widget
       $this->setSaveParametersInSession(true);
   }
 
+  protected function _getStoreRestrictions(){
+
+      $_store = Mage::getSingleton('admin/session')->getUser()->getUsername();
+      $_storeId = Mage::app()->getStore($_store)->getId();
+
+      if($_storeId!=1){
+          return $_storeId;
+      }
+
+      return false;
+  }
+
   protected function _prepareCollection()
   {
-      $collection = Mage::getModel('slider/slider')->getCollection();
+      if(!$this->_getStoreRestrictions()){
+          $collection = Mage::getModel('slider/slider')->getCollection();
+      } else {
+          $collection = Mage::getModel('slider/slider')->getCollection()->addFieldToFilter('store_id',$this->_getStoreRestrictions());
+      }
+
       $this->setCollection($collection);
       return parent::_prepareCollection();
   }
@@ -33,7 +50,7 @@ class Dan_Slider_Block_Adminhtml_Slider_Grid extends Mage_Adminhtml_Block_Widget
           'index'     => 'title',
       ));
       
-        if (!Mage::app()->isSingleStoreMode()) {
+        if (!Mage::app()->isSingleStoreMode() && !$this->_getStoreRestrictions()) {
             $this->addColumn('store_id', array(
                 'header'        => Mage::helper('cms')->__('Store View'),
                 'index'         => 'store_id',

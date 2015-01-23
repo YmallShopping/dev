@@ -49,6 +49,18 @@ class Dan_Slider_Adminhtml_SliderController extends Mage_Adminhtml_Controller_ac
 	public function newAction() {
 		$this->_forward('edit');
 	}
+
+	protected function _getStoreRestrictions(){
+
+	  $_store = Mage::getSingleton('admin/session')->getUser()->getUsername();
+	  $_storeId = Mage::app()->getStore($_store)->getId();
+
+	  if($_storeId!=1){
+	      return $_storeId;
+	  }
+
+	  return false;
+	}
  
 	public function saveAction() {
 		if ($data = $this->getRequest()->getPost()) {
@@ -89,6 +101,9 @@ class Dan_Slider_Adminhtml_SliderController extends Mage_Adminhtml_Controller_ac
 				unset($data['image']);
 			}
 	  			
+	  		if($this->_getStoreRestrictions()){
+	  			$data['store_id'] = $this->_getStoreRestrictions();
+	  		}
 	  			
 			$model = Mage::getModel('slider/slider');		
 			$model->setData($data)

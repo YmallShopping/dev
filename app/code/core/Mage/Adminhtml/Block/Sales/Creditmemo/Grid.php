@@ -40,6 +40,18 @@ class Mage_Adminhtml_Block_Sales_Creditmemo_Grid extends Mage_Adminhtml_Block_Wi
         $this->setDefaultDir('DESC');
     }
 
+    protected function _getStoreRestrictions(){
+
+        $_store = Mage::getSingleton('admin/session')->getUser()->getUsername();
+        $_storeId = Mage::app()->getStore($_store)->getId();
+
+        if($_storeId!=1){
+            return $_storeId;
+        }
+
+        return false;
+    }
+
     /**
      * Retrieve collection class
      *
@@ -52,7 +64,12 @@ class Mage_Adminhtml_Block_Sales_Creditmemo_Grid extends Mage_Adminhtml_Block_Wi
 
     protected function _prepareCollection()
     {
-        $collection = Mage::getResourceModel($this->_getCollectionClass());
+        if(!$this->_getStoreRestrictions()){
+            $collection = Mage::getResourceModel($this->_getCollectionClass());
+        } else {
+            $collection = Mage::getResourceModel($this->_getCollectionClass())->addFieldToFilter('store_id',$this->_getStoreRestrictions());
+        }
+        
         $this->setCollection($collection);
         return parent::_prepareCollection();
     }

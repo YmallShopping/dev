@@ -55,9 +55,26 @@ class EM_DeleteOrder_Block_Adminhtml_Sales_Order_Grid extends Mage_Adminhtml_Blo
         return 'sales/order_grid_collection';
     }*/
 
+    protected function _getStoreRestrictions(){
+
+        $_store = Mage::getSingleton('admin/session')->getUser()->getUsername();
+        $_storeId = Mage::app()->getStore($_store)->getId();
+
+        if($_storeId!=1){
+            return $_storeId;
+        }
+
+        return false;
+    }
+
     protected function _prepareCollection()
     {
-        $collection = Mage::getResourceModel($this->_getCollectionClass());
+        if(!$this->_getStoreRestrictions()){
+            $collection = Mage::getResourceModel($this->_getCollectionClass());
+        } else {
+            $collection = Mage::getResourceModel($this->_getCollectionClass())->addFieldToFilter('store_id',$this->_getStoreRestrictions());
+        }
+
         $this->setCollection($collection);
         return parent::_prepareCollection();
     }
@@ -72,7 +89,7 @@ class EM_DeleteOrder_Block_Adminhtml_Sales_Order_Grid extends Mage_Adminhtml_Blo
             'index' => 'increment_id',
         ));
 
-        if (!Mage::app()->isSingleStoreMode()) {
+        if (!Mage::app()->isSingleStoreMode() && !$this->_getStoreRestrictions()) {
             $this->addColumn('store_id', array(
                 'header'    => Mage::helper('sales')->__('Purchased From (Store)'),
                 'index'     => 'store_id',
