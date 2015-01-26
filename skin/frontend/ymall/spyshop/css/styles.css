@@ -961,7 +961,7 @@ strong.highlight { color: #cd2127; }
 .product-view .ratings .rating-links { clear: both; }
 .product-view .product-name { font-family: Arial, sans-serif; color: #1a1a1a; font-weight: lighter; font-size: 25px; text-transform: uppercase; float: left; width: 100%; }
 .product-view .product-name h1 { font-family: Arial , sans-serif; color: #000;  font-weight:bold; font-size: 22px; text-transform: uppercase; }
-.product-view .short-description { line-height: 1.2;  }
+.product-view .short-description { line-height: 1.2; margin: 10px 0; }
 .product-view .short-description h2 { color: #1a1a1a; display: block; font-family: "Open Sans",sans-serif; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
 .product-view .short-description strong { font-weight: normal; color: #2DA6D2; }
 .product-view .availability { display: block; clear: both; font-size: 19px;
@@ -1032,7 +1032,7 @@ button.btn-cart:hover span{ background: #000000; }
 .information-boxes li { float: left; color: #5a5959; border: 1px dashed #dedddd; padding: 2px 6px 2px 6px; margin-right: 10px; position: relative; cursor: pointer; min-width: 28px; text-align: center; }
 .information-boxes li:hover { color: #000000; border: 1px dashed #000000; }
 .information-boxes li .notice-box { background: #5a5959; color: #fff; font-size: 10px; padding: 3px 2px; position: absolute; top: -10px; right: -7px; z-index: 10; }
-.information-boxes li:hover .notice-box { background: #cd2127; }
+.information-boxes li:hover .notice-box { background: #b0c84c; }
 
 .information-boxes li .tooltip { display: none; background: #fff; border: 1px solid #8c8c8c; position: absolute; z-index: 12; top: 52px; width: 200px; left: 0; margin-left: -90px; padding: 10px; font-size: 13px; }
 .information-boxes li:hover .tooltip { display: block; }
