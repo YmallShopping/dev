@@ -31,21 +31,29 @@
     margin-bottom: 20px;
 }
 .firecheckout-section .block-title {
-    background: #ededed;
+    background: #3A3A3A;
     font-size: 12px;
     font-weight: bold;
-    padding: 10px 0 10px 8px;
+    padding: 5px 0 7px 8px;
     margin: 0;
-    color: #000000;
+    color: #FFFFFF;
     position: relative;
-    border: 1px solid #c8c8c8;
+    
 }
-.firecheckout-section .block-title span { display: inline-block; vertical-align: top; }
+.firecheckout-section .block-title span { display: inline-block; vertical-align: middle; }
 .firecheckout-section .block-title .num {
-    padding: 1px 5px;
-    margin: 0 10px 0 0;
-    background: #000000;
-    color: #fff;
+    background: none repeat scroll 0 0 #A6BC49;
+border-radius: 13px;
+color: #FFFFFF;
+font-size: 17px;
+height: 27px;
+line-height: 21px;
+margin-right: 8px;
+padding: 2px 0 0;
+text-align: center;
+width: 27px;
+border: 0 none;
+
 }
 .firecheckout-set #shipping-method-reset,
 .firecheckout-set #payment-method-reset {
