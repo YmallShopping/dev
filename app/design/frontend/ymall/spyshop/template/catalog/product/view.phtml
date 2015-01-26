@@ -44,20 +44,22 @@
             <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
             <input type="hidden" name="related_product" id="related-products-field" value="" />
         </div>
+        <div class="top-section">
+                <div class="product-name">
+                    <h1><span itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span></h1>
+                </div>
+                <!--?php// echo $this->getReviewsSummaryHtml($_product, false, true)?--> 
+                <div class="sku"><?php echo $this->__('cod: ') ?><span itemprop="sku"><?php echo $_helper->productAttribute($_product, $_product->getSku(), 'sku') ?></span></div>
+        </div>
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
         </div>
          <div class="product-shop itemscope itemtype="http://data-vocabulary.org/Product">
          	<meta itemprop="url" content="<?php echo $_product->getUrlModel()->getUrl($_product, array('_ignore_category'=>true)); ?>" />
-            <div class="top-section">
-                <div class="product-name">
-                    <h1><span itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span></h1>
-                </div>
-                <!--?php// echo $this->getReviewsSummaryHtml($_product, false, true)?--> 
-            </div>
+            
             <?php echo $this->getChildHtml('product_type_data') ?>
             <?php echo $this->getTierPriceHtml() ?>
-            <div class="sku"><?php echo $this->__('cod: ') ?><span itemprop="sku"><?php echo $_helper->productAttribute($_product, $_product->getSku(), 'sku') ?></span></div>
+            
             <div class="clearer"></div>
             <div class="add-to-box">
                 <?php if($_product->isSaleable()): ?>
@@ -67,7 +69,7 @@
                     <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
                 <?php endif; ?>
                 <?php echo $this->getChildHtml('addto') ?>
-                <?php echo $this->getChildHtml('alert_urls') ?>
+                <?php /* echo $this->getChildHtml('alert_urls') */ ?>
             </div>
             <div class="clearer"></div>            
             <?php echo $this->getChildHtml('extrahint') ?>
