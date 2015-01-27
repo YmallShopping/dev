@@ -62,6 +62,7 @@ Default layout, loads most of the pages
                 <action method="addItem"><type>skin_js</type><name>js/jquery-1.8.2.min.js</name><params/></action>
                 <action method="addItem"><type>skin_js</type><name>js/jquery.scrollTo.min.js</name><params/></action>
                 <action method="addItem"><type>skin_js</type><name>js/jquery-noconflict.js</name><params/></action>
+                <action method="addItem"><type>skin_js</type><name>js/navtop.js</name><params/></action>
 
                 <action method="addItem"><type>skin_js</type><name>fancybox/lib/jquery.mousewheel-3.0.6.pack.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>fancybox/source/jquery.fancybox.pack.js</name></action>
@@ -72,12 +73,13 @@ Default layout, loads most of the pages
 
             <block type="core/text_list" name="after_body_start" as="after_body_start" translate="label">
                 <label>Page Top</label>
+                <block type="page/html_cookieNotice" name="global_cookie_notice" as ="global_cookie_notice" template="page/html/cookienotice.phtml" before="-" />
             </block>
 
             <block type="core/text_list" name="after_body" as="after_body" translate="label">
                 <label>After Body</label>
             </block>
-
+            
             <block type="page/html_notices" name="global_notices" as="global_notices" template="page/html/notices.phtml" />
 
             <block type="page/html_header" name="header" as="header">
@@ -133,7 +135,7 @@ Default layout, loads most of the pages
 
             <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">
                 <label>Page Bottom</label>
-                <block type="page/html_cookieNotice" name="global_cookie_notice" as ="global_cookie_notice" template="page/html/cookienotice.phtml" before="-" />
+                
             </block>
         </block>
 
