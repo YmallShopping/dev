@@ -253,10 +253,12 @@ Product view
                     <action method="addToParentGroup"><group>detailed_info</group></action>
                     <action method="setTitle" translate="value"><value>Description</value></action>
                 </block>
+                <!--
                 <block type="core/template" name="product.deliveri" as="additional" template="catalog/product/view/cmsblock.phtml">
                     <action method="addToParentGroup"><group>detailed_info</group></action>
                     <action method="setTitle" translate="value"><value>Detalii de livrare</value></action>
-                </block>
+                </block> -->
+                
 <!--                 <block type="review/product_view_list" name="review_tab" template="review/product/view/list.phtml">
                     <action method="addToParentGroup"><group>detailed_info</group></action>
                     <action method="setTitle" translate="value"><value>Reviews</value></action>
