@@ -953,7 +953,7 @@ line-height: 20px; color: #4b4b4b; }
 .product-image-popup .nav { margin:0 100px; text-align:center; }
 .product-image-popup .image { display:block; }
 .product-image-popup .image-label {}
-/* Product Shop */
+/* Product Shop */ 
 .product-view .product-shop { float:right; width: 57%; }
 .product-view .top-section {  float: left; width: 100%; clear: both; padding-bottom: 5px; margin-bottom: 10px;  }
 .product-view .ratings { margin: 0; float: right; color: #454545; font-size: 12px; }
