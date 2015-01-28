@@ -26,8 +26,8 @@
 * { margin:0; padding:0; }
 body { background:#fff; background-size: 100% auto; font:15px/1.35 Candara, Arial, Helvetica, sans-serif; color:#2b2b2b; text-align:center; overflow-x: hidden; }
 img           { border:0; vertical-align:top; max-width: 100%; }
-a             { color:#696969; text-decoration:none; }
-a:hover       { color: #000; }
+a             { text-decoration:none; color: #333333;}
+a:hover       { color: #a6bc49; }
 :focus        { outline:0; }
 /* Headings */
 h1            { font-size:20px; font-weight:normal; line-height:1.15; }
@@ -559,8 +559,11 @@ strong.highlight { color: #cd2127; }
 .store-menu .store-logo { float: left; margin: 0 10px 0 20px ; }
 .store-tagline {display:block;margin: 50px 0 0 0;}
 .store-menu .menu { float: right; font-size: 15px; position: absolute; top: 50%; margin-top: -8px; right: 20px; }
-.store-menu .menu li { float: left; margin-left: 15px; }
-.store-menu .menu a { color: #333333; font-size:12px; font-weight:bold; }
+.store-menu .menu li { float: left; }
+.store-menu .menu li:hover { background-color: #424141; }
+.store-menu .menu li:hover a {color: #ffffff; border-color: #424141;}
+.store-menu .menu a { /* color: #333333; */ font-size:12px; font-weight:bold; border-right: 1px solid #D6D5D5; height: 24px; display: inline-block; padding: 0 10px; line-height: 24px; margin-top: 3px;}
+.store-menu .menu li:last-child a {border-right: 0;}
 .mobile-menu { color: #ffffff; float: right; background: url(../images/store-menu-icon.png) left center no-repeat; padding-left: 35px; height: 19px; line-height: 19px; display: none; cursor: pointer; font-size: 15px; text-transform: uppercase;  position: absolute; top: 50%; margin-top: -9px; right: 20px; }
 /* Mobile Nav */
 .mobile-container {  }
