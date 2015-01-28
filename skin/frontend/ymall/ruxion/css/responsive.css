@@ -13,6 +13,9 @@
 	.search-block .form-search button.button span { width: 100%; padding: 0; }
 	.header .stores-list.top-list { display: none; }
 	.header .stores-list.store-list { display: block; }
+
+	.page { padding: 184px 0 0 0; }
+
 	.cart form { width: 100%; }
 	.cart .cart-collaterals { width: 100%; }
 	/* Footer */
@@ -25,6 +28,8 @@
 	.col1-layout .products-grid li.item:nth-child(3n+3) { margin-right: 0; float: right; }
 
 	.footer .block .title { font-size: 50px; }
+	.page { padding: 0; }
+	.header-shadow { position: static; }
 }
 @media only screen and (min-width: 0) and (max-width: 845px) { 
 	.header .stores-list.top-list { display: none; }
