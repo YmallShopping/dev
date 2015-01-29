@@ -1007,7 +1007,7 @@ button.btn-cart:hover span{ background: #000000; }
 .product-options dt .qty-holder { float:right; }
 .product-options dt .qty-holder label { vertical-align:middle; }
 .product-options dt .qty-disabled { background:none; border:0; padding:3px; color:#000; }
-.product-options dd { margin: 0 0 10px; }
+.product-options dd { margin: 0 0 10px; overflow: auto; }
 .product-options dl.last dd.last {}
 .product-options dd input.input-text { width:98%; }
 .product-options dd input.datetime-picker { width:150px; }
@@ -1035,6 +1035,13 @@ button.btn-cart:hover span{ background: #000000; }
 .information-boxes li .tooltip { display: none; background: #fff; border: 1px solid #8c8c8c; position: absolute; z-index: 12; top: 52px; width: 200px; left: 0; margin-left: -90px; padding: 10px; font-size: 13px; }
 .information-boxes li:hover .tooltip { display: block; }
 .information-boxes li .tooltip:after { content: ""; position: absolute; width: 0; height: 0; border-width: 5px; border-style: solid; border-color: transparent transparent #8c8c8c transparent; top: -10px; left: 105px; }
+
+.product-view .associated-colors { float: left; clear: both; }
+.product-view .associated-colors .color-options { float: left; clear: both; }
+.product-view .associated-colors .color-options a { border: 2px solid transparent; display: inline-block; margin-bottom: 4px; }
+.product-view .associated-colors .color-options a.active,
+.product-view .associated-colors .color-options a:hover { border: 2px solid #ddd; }
+.product-view .associated-colors .more { float: right; cursor: pointer; clear: both; }
 
 /* Grouped Product */
 .product-view .grouped-items-table {}
