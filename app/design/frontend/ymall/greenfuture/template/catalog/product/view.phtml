@@ -1,0 +1,323 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view">
+    <div class="product-essential">
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <?php echo $this->getBlockHtml('formkey') ?>
+        <div class="no-display">
+            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+            <input type="hidden" name="related_product" id="related-products-field" value="" />
+        </div>
+        <div class="product-img-box">
+            <?php echo $this->getChildHtml('media') ?>
+        </div>
+         <div class="product-shop">
+            <div class="top-section">
+                <div class="product-name">
+                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                </div>
+                <!--?php// echo $this->getReviewsSummaryHtml($_product, false, true)?--> 
+            </div>
+            <?php echo $this->getChildHtml('product_type_data') ?>
+            <?php echo $this->getTierPriceHtml() ?>
+            <div class="sku"><?php echo $this->__('cod: ') ?><?php echo $_helper->productAttribute($_product, $_product->getSku(), 'sku') ?></div>
+            <div class="clearer"></div>
+            <div class="add-to-box">
+                <?php if($_product->isSaleable()): ?>
+                    <?php echo $this->getChildHtml('addtocart') ?>
+                <?php endif; ?>
+                <?php if ($this->canEmailToFriend()): ?>
+                    <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+                <?php endif; ?>
+                <?php echo $this->getChildHtml('addto') ?>
+                <?php echo $this->getChildHtml('alert_urls') ?>
+            </div>
+            <div class="clearer"></div>            
+            <?php echo $this->getChildHtml('extrahint') ?>
+            <?php echo $this->getChildHtml('extra_buttons') ?>
+
+            <?php 
+            	$_sku = explode('/', $_product->getSku());
+            	$_skuMatch = '';
+            	if(count($_sku)>1){
+            		$_collection = Mage::getModel('catalog/product')->getCollection()->addAttributeToSelect('*')->addFieldToFilter('sku', array('like'=>$_sku[0].'%'));
+            		$_skuMatch = $_sku[0];
+            		Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($_collection);
+            	} else {
+            		$_collection = Mage::getModel('catalog/product')->getCollection()->addAttributeToSelect('*')->addFieldToFilter('sku', array('like'=>$_sku.'%'));
+            		$_skuMatch = $_sku;
+            		Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($_collection);
+            	}
+            	if(count($_collection)>1):
+            ?>
+				<div class="associated-colors product-options">
+					<dl>
+            			<dt><label class="required"><?php echo $this->__('Alege Culoarea') ?></label></dt>
+            			<dd>
+							<?php $i=0; $j=0; $_minus=0; foreach ($_collection as $_color) : ?>
+								<?php $_skuCheck = explode('/', $_color->getSku()); ?>
+								<?php if($_skuCheck[0] == $_skuMatch): ?>
+							        <?php if ($i++%5==0): $j++; ?>
+							        <div class="color-options <?php if($j>2 && count($_collection)>10){ echo 'toggle'; } ?>" <?php if($j>2 && count($_collection)>10){ echo 'style="display:none;"'; } ?>>
+							        <?php endif ?>
+										<a href="<?php echo $_color->getUrlInStore(array('_ignore_category' => true)); ?>" title="<?php echo $this->stripTags($this->getImageLabel($_color, 'small_image'), null, true) ?>" class="product-image <?php if($_color->getId()==$_product->getId()){ echo 'active'; } ?>"><img src="<?php echo $this->helper('catalog/image')->init($_color, 'small_image')->resize(50,50); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_color, 'small_image'), null, true) ?>" /></a>
+							        <?php if ($i%5==0): ?>
+							        </div>
+							        <?php endif ?>
+								<?php else: $_minus++; endif; ?> 
+							<?php endforeach; ?>	
+						</dd>
+						<dd><?php if((count($_collection)-$_minus)>10): ?><span id="more-c" class="more" onclick="showColorOptions()"><?php echo $this->__('mai multe...') ?></span><?php endif; ?></dd>
+					</dl>
+				</div>
+				<div class="clearer"></div>
+				<script>
+					function showColorOptions(){
+						jQuery('.color-options.toggle').toggle('fast');
+						var text = jQuery('#more-c').text();
+						jQuery('#more-c').text( text == "mai multe..." ? "mai puţine..." : "mai multe...");
+					}
+				</script>
+			<?php endif; ?>
+
+            <?php if(!$_product->isGrouped()): ?>
+                <div class="qty-container">
+                    <label for="qty"><?php echo $this->__('Qty') ?></label>
+                    <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
+                </div>
+            <?php endif; ?>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+            <?php endif;?>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+            <?php endif;?>
+            <div class="clearer"></div>
+            <?php if ($_product->getShortDescription()):?>
+                <div class="short-description">
+                    <h2><?php echo $this->__('Quick Overview') ?></h2>
+                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                </div>
+            <?php endif;?>
+            
+            <ul class="information-boxes">
+                <li class="first">
+                    <i class="fa fa-truck"></i>
+                    <div class="notice-box">25lei</div>
+                    <div class="tooltip">
+                        Taxă transport Fan Courier.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-clock-o"></i>
+                    <div class="notice-box">5zile</div>
+                    <div class="tooltip">
+                        Livrare Fan Courier 5 zile lucrătoare.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-shield"></i>
+                    <div class="notice-box">30zile</div>
+                    <div class="tooltip">
+                        Acest produs are garanţie 30 de zile.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-building-o"></i>
+                    <div class="tooltip">
+                        Produs livrat de Essenza Shoes.
+                    </div>
+                </li>
+                <li class="last">
+                    <i class="fa fa-tachometer"></i>
+                    <div class="notice-box">14zile</div>
+                    <div class="tooltip">
+                        Poţi înapoia timp de 14 zile produsul.
+                    </div>
+                </li>
+            </ul>
+            <?php echo $this->getChildHtml('other');?>
+        </div>        
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+                if (url) {
+                   form.action = url;
+                }
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {
+                }
+                this.form.action = oldUrl;
+                if (e) {
+                    throw e;
+                }
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(productAddToCartForm);
+        productAddToCartForm.submitLight = function(button, url){
+            if(this.validator) {
+                var nv = Validation.methods;
+                delete Validation.methods['required-entry'];
+                delete Validation.methods['validate-one-required'];
+                delete Validation.methods['validate-one-required-by-name'];
+                // Remove custom datetime validators
+                for (var methodName in Validation.methods) {
+                    if (methodName.match(/^validate-datetime-.*/i)) {
+                        delete Validation.methods[methodName];
+                    }
+                }
+                if (this.validator.validate()) {
+                    if (url) {
+                        this.form.action = url;
+                    }
+                    this.form.submit();
+                }
+                Object.extend(Validation.methods, nv);
+            }
+        }.bind(productAddToCartForm);
+    //]]>
+    </script>
+    </div>
+    <div class="product-collateral gd-toggle-content tabs">
+        <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
+            <dl id="collateral-tabs" class="collateral-tabs">
+                <?php foreach ($detailedInfoGroup as $alias => $html):?>
+                        <dt class="tab"><span>
+                            <?php if($alias=='description'): ?>
+                                <i class="fa fa-pencil-square-o"></i>
+                            <?php endif; ?>
+                            <?php if($alias=='additional'): ?>
+                                <i class="fa fa-truck"></i>
+                            <?php endif; ?>
+                            <?php if($alias=='review_tab'): ?>
+                                <i class="fa fa-star"></i>
+                            <?php endif; ?>
+                            <?php echo $this->escapeHtml($this->getChildData($alias, 'title')) ?>
+                        </span></dt>
+                        <dd class="tab-container">
+                            <div class="tab-content"><?php echo $html ?></div>
+                        </dd>
+                <?php endforeach;?>
+            </dl>
+        <?php endif; ?>
+        <?php echo $this->getChildHtml('upsell_products') ?>
+        <?php echo $this->getChildHtml('product_additional_data') ?>
+    </div>
+</div>
+    <script type="text/javascript">
+    //<![CDATA[
+        //set the width of facebook comments on load/resize
+        // jQuery(window).resize(function() {
+        //     jQuery(".fb-comments").attr("data-width", jQuery(".tab-container.current").width());
+        //     FB.XFBML.parse(jQuery(".tab-container.current").width()[0]);
+        // });
+        // Event.observe(window, 'load', function() {
+        //     jQuery(".fb-comments").attr("data-width", jQuery(".tab-container.current").width());
+        //     FB.XFBML.parse(jQuery(".tab-container.current").width()[0]);          
+        // });
+        jQuery('.gd-toggle-content').each(function () {
+            var wrapper = jQuery(this);
+            var hasTabs = wrapper.hasClass('tabs');
+            var hasAccordion = wrapper.hasClass('accordion');
+            var startOpen = wrapper.hasClass('open');
+            var dl = wrapper.children('dl:first');
+            var dts = dl.children('dt');
+            var panes = dl.children('dd');
+            var groups = new Array(dts, panes);
+            //Create a ul for tabs if necessary.
+            if (hasTabs) {
+                var ul = jQuery('<ul class="toggle-tabs"></ul>');
+                dts.each(function () {
+                    var dt = jQuery(this);
+                    var li = jQuery('<li></li>');
+                    li.html(dt.html());
+                    ul.append(li);
+                });
+                ul.insertBefore(dl);
+                var lis = ul.children();
+                groups.push(lis);
+            }
+            //Add "last" classes.
+            var i;
+            for (i = 0; i < groups.length; i++) {
+                groups[i].filter(':last').addClass('last');
+            }
+            function toggleClasses(clickedItem, group) {
+                var index = group.index(clickedItem);
+                var i;
+                for (i = 0; i < groups.length; i++) {
+                    groups[i].removeClass('current');
+                    groups[i].eq(index).addClass('current');
+                }
+            }
+            //Toggle on tab (dt) click.
+            dts.on('click', function (e) {
+                //They clicked the current dt to close it. Restore the wrapper to unclicked state.
+                if (jQuery(this).hasClass('current') && wrapper.hasClass('accordion-open')) {
+                    wrapper.removeClass('accordion-open');
+                } else {
+                    //They're clicking something new. Reflect the explicit user interaction.
+                    wrapper.addClass('accordion-open');
+                }
+                toggleClasses(jQuery(this), dts);
+            });
+            //Toggle on tab (li) click.
+            if (hasTabs) {
+                lis.on('click', function (e) {
+                    toggleClasses(jQuery(this), lis);
+                });
+                //Open the first tab.
+                lis.eq(0).trigger('click');
+            }
+            //Open the first accordion if desired.
+            if (startOpen) {
+                dts.eq(0).trigger('click');
+            }
+        });
+    //]]>
+    </script>
