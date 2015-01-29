@@ -1,0 +1,116 @@
+/* Footer ================================================================================ */
+.footer { z-index: 10; width: 100%; padding: 20px 0 30px; max-width: 1124px; margin: 0 auto; color: #3f3f3f; font-family: Candara, sans-serif; }
+.footer .left { width: 35%; }
+.footer .left .logo { display: block; margin-top: 30px; clear: both; }
+.footer .left .logo img { width: 250px; }
+.footer .right { width: 20%; display: none; }
+.footer p { text-align:right; }
+.footer ul { float: left; margin-right: 10%; margin-top: 10px; }
+.footer ul li { font-size: 15px; margin-bottom: 2px; display: block; }
+.footer ul li.title { font-size: 17px; color: #1f1f1f; font-weight: bold; margin-bottom: 10px; }
+.footer ul li a { text-decoration: none; color: #3f3f3f; padding: 0; display: block; }
+.footer ul li a span { color: #cd2127; }
+.footer ul li a:hover { text-decoration: underline; }
+/* Social Icons */
+.footer ul.social { float: right; clear: none; }
+.footer ul.social a { color: transparent !important; }
+.footer ul.social li { border-right: 0; padding: 0; margin: 0; }
+.footer ul.social li.title { width: 100%; clear: both; color: #fff; font-family: Candara, sans-serif; font-size: 18px; padding-bottom: 10px; border-right: 0; }
+.footer ul.social li.youtube a { display: block; background: url(../images/youtube-icon.png) center center no-repeat; width: 37px; height: 37px; }
+.footer ul.social li.twitter a { display: block; background: url(../images/twitter-icon.png) center center no-repeat; width: 37px; height: 37px; }
+.footer ul.social li.facebook a { display: block; background: url(../images/facebook-icon.png) center center no-repeat; width: 37px; height: 37px; }
+.footer ul.social li.linkedin a { display: block; background: url(../images/linkedin-icon.png) center center no-repeat; width: 37px; height: 37px; }
+.footer ul.social li.youtube:hover a { opacity: 0.8; }
+.footer ul.social li.twitter:hover a { opacity: 0.8; }
+.footer ul.social li.facebook:hover a { opacity: 0.8; }
+.footer ul.social li.linkedin:hover a { opacity: 0.8; }
+.footer .block { float: right; border: 0; width: 60%; position: relative; margin-bottom: 0; }
+.footer .block .title { font-size: 40px; color: #202d67; font-family: Candara, sans-serif; font-weight: 600; letter-spacing: -2px; padding-bottom: 5px; width: 100%; }
+.footer .block .title span { color: #cd2127; }
+.footer .block .subtitle { color: #0d0d0d; font-family: Candara, sans-serif; font-size: 15px; display: block; margin-bottom: 10px; width: 60%; }
+.footer .block .block-content { padding: 0; }
+.footer .block .block-content .input-box { float: left; width: 41%; }
+.footer .block .block-content .input-box input.input-text { background: #fff; border: 1px solid #d1d9ec; height: 26px; margin: -1px 0 0 0; padding-left: 2%; padding-right: 2%; width: 96%; }
+.footer .block .block-content .actions { float: left; width: 30%; }
+.footer .block .block-content .actions button.button { float: left; }
+.footer .block .block-content .actions button.button span { padding: 0; margin: 0; background: url(../images/landing/button-newsletter.png) no-repeat; width: 108px; height: 36px; }
+.footer .block .block-content .actions button.button span span { display: none; }
+.footer .block .block-content .actions button.button:hover span { opacity: 0.8; }
+.footer-container { width: 100%; padding: 0; margin: 0; background: #ededed; border-top: 1px solid #d0d0d0; }
+.footer-container .bottom-container { text-align:center; }
+.footer-container address { text-align:center; color: #3f3f3f; font-family: 'Open Sans',Arial, sans-serif; font-size: 12px; width: 100%; max-width: 1124px; padding: 10px 0 20px; text-align: center; border-top: 1px solid #d8d7d6; margin: 0 auto; }
+/* ======================================================================================= */
+
+/* Clears ================================================================================ */
+.sorter .limiter:after,
+.breadcrumbs:after,
+.store-menu-container:after,
+.store-menu:after,
+.stores-container:after,
+.stores-container .stores-content:after,
+.stores-container .stores-content .store-lists:after,
+.store-list li .info:after,
+.clearer:after,
+.header-shadow:after,
+.header-container:after,
+.header-container .top-container:after,
+.header:after,
+.header .quick-access:after,
+#nav:after,
+.main:after,
+.footer:after,
+.footer-container .bottom-container:after,
+.col-main:after,
+.col2-set:after,
+.col3-set:after,
+.col4-set:after,
+.search-autocomplete li:after,
+.block .block-content:after,
+.block .actions:after,
+.block li.item:after,
+.block-poll li:after,
+.block-layered-nav .currently li:after,
+.page-title:after,
+.products-grid:after,
+.products-list li.item:after,
+.box-account .box-head:after,
+.dashboard .box .box-title:after,
+.box-reviews li.item:after,
+.box-tags li.item:after,
+.pager:after,
+.sorter:after,
+.ratings:after,
+.add-to-box:after,
+.add-to-cart:after,
+.product-essential:after,
+.product-collateral:after,
+.product-view .product-img-box .more-views ul:after,
+.product-view .product-shop .short-description:after,
+.product-view .box-description:after,
+.product-view .box-tags .form-add:after,
+.product-options .options-list li:after,
+.product-options-bottom:after,
+.product-review:after,
+.cart:after,
+.cart-collaterals:after,
+.cart .crosssell li.item:after,
+.opc .step-title:after,
+.checkout-progress:after,
+.multiple-checkout .place-order:after,
+.group-select li:after,
+.form-list li:after,
+.form-list .field:after,
+.buttons-set:after,
+.page-print .print-head:after,
+.advanced-search-summary:after,
+.gift-messages-form .item:after,
+.scroll-footer:after,
+.cart .discount:after,
+.cart .shipping:after,
+.nav-container:after,
+.scroll-footer .sfooter-content:after,
+.block:after,
+.permanent-header:after,
+.permanent-header-content:after,
+.send-friend .form-list li p:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+/* ======================================================================================= */

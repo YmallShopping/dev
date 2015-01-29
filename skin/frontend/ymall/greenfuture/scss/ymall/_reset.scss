@@ -1,0 +1,54 @@
+/* Reset ================================================================================= */
+* { margin:0; padding:0; }
+body { background:#fff; background-size: 100% auto; font:15px/1.35 Candara, Arial, Helvetica, sans-serif; color:#2b2b2b; text-align:center; overflow-x: hidden; }
+img           { border:0; vertical-align:top; max-width: 100%; }
+a             { color:#696969; text-decoration:none; }
+a:hover       { color: #000; }
+:focus        { outline:0; }
+/* Headings */
+h1            { font-size:20px; font-weight:normal; line-height:1.15; }
+h2            { font-size:18px; font-weight:normal; line-height:1.25; }
+h3            { font-size:16px; font-weight:bold; line-height:1.25; }
+h4            { font-size:14px; font-weight:bold; }
+h5            { font-size:12px; font-weight:bold; }
+h6            { font-size:11px; font-weight:bold; }
+/* Forms */
+form          { display:inline; }
+fieldset      { border:0; }
+legend        { display:none; }
+/* Table */
+table         { border:0; border-collapse:collapse; border-spacing:0; empty-cells:show; font-size:100%; }
+caption,th,td { vertical-align:middle; text-align:left; font-weight:normal; }
+/* Content */
+strong        { font-weight:bold; }
+address       { font-style:normal; }
+cite          { font-style:normal; }
+q,
+blockquote    { quotes:none; }
+q:before,
+q:after       { content:''; }
+small,big     { font-size:1em; }
+sup           { font-size:1em; vertical-align:top; }
+/* Lists */
+ul,ol         { list-style:none; }
+/* Tools */
+.hidden       { display:block !important; border:0 !important; margin:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; width:0 !important; height:0 !important; overflow:hidden !important; }
+.nobr         { white-space:nowrap !important; }
+.wrap         { white-space:normal !important; }
+.a-left       { text-align:left !important; }
+.a-center     { text-align:center !important; }
+.a-right      { text-align:right !important; }
+.v-top        { vertical-align:top; }
+.v-middle     { vertical-align:middle; }
+.f-left,
+.left         { float:left !important; }
+.f-right,
+.right        { float:right !important; }
+.f-none       { float:none !important; }
+.f-fix        { float:left; width:100%; }
+.no-display   { display:none; }
+.no-margin    { margin:0 !important; }
+.no-padding   { padding:0 !important; }
+.no-bg        { background:none !important; }
+strong.highlight { color: #cd2127; }
+/* ======================================================================================= */
