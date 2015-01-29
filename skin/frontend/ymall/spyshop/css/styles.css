@@ -91,7 +91,7 @@ z-index: 1;
 .cms-index-index .main { min-height: 0; }
 /* Base Columns */
 .col-left { float:left; width:24%; background: #fff; }
-.col-main { float:left; width:74%; background: #fff; }
+.col-main { float:left; width:74%; /* background: #fff; */ }
 .col-right { float:right; width:24%; background: #fff; }
 .cms-index-index .col-main { margin-bottom: 0 !important; position: relative; }
 /* 1 Column Layout */
@@ -282,9 +282,10 @@ p.required { font-size:10px; text-align:right; color:#f00; }
 .breadcrumbs li { display:inline; color: #282828; }
 .breadcrumbs li a { display:inline; color: #282828; }
 /* Page Heading */
-.page-title { padding:0 0 5px; margin:0 0 10px; text-align: center; display: block; clear: both; background:#f3f3f3; }
+.page-title {  /* padding: 10px 20px 10px 10px; */  margin:0 0 10px; text-align: center; display: block; clear: both;   /* background:#f3f3f3; */ }
 .page-title h1,
-.page-title h2 {  font-size: 20px; font-family: Arial, sans-serif; font-weight:bold; padding: 10px 20px 10px 10px; float: left; clear: both; color: #333333; }
+.page-title h2 {  font-size: 20px; font-family: Arial, sans-serif; font-weight:bold; float: left; clear: both; color: #333333; }
+.page-title-cart  { /* background:#fff; */ }
 .page-title i{ font-style: normal !important; margin-right: 10px; font-size: 18px; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; }
