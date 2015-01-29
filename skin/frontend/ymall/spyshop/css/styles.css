@@ -764,7 +764,7 @@ strong.highlight { color: #cd2127; }
 .products-grid .product-name { margin:0 0 5px; font-weight:bold; font-size:12px !important; color: #000; font-family: Arial, sans-serif; text-align: center; min-height: 37px; text-transform: uppercase; float: none !important; width: auto !important; }
 .products-grid .product-name a { color: #231f20; }
 .products-grid .sku { color: #525252; font-size: 12px; text-transform: uppercase; display: block; text-align: center; border-bottom: 1px solid #DBDBDB; padding-bottom: 7px; margin-bottom: 7px; }
-.products-grid .price-box { margin:5px 0 7px !important; text-align: center; float: none !important; overflow: auto; }
+.products-grid .price-box { /* margin:5px 0 7px !important; */ text-align: center; float: none !important; overflow: auto; }
 .products-grid .price-box .price-label { display: none; }
 .products-grid .price-box .price { font-size: 25px !important; color: #000; font-weight: bold; }
 .products-grid .price-box > p { float: left; }
