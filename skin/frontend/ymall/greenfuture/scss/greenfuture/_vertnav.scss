@@ -1,0 +1,82 @@
+#vertnav { padding: 0 15px 0 0; }
+.vertnav-container {
+  font-size:15px;
+  background:#fff;
+}
+
+.vertnav-container .title{ color: #000000; font-family: sans-serif; font-size: 25px; font-style: italic; font-weight: 400; line-height: 1; margin-bottom: 15px;  }
+.vertnav-container .title span{ font-weight: 400; }
+
+#vertnav li { padding: 2px 0 2px; margin-bottom: 4px; clear: both; }
+#vertnav li ul { padding:0 0 0 17px; }
+#vertnav li .vertnav-cat { display:block; padding:0 0 0 17px; }
+#vertnav li a { color:#272b2c; text-decoration:none; }
+
+#vertnav li:hover > .vertnav-cat,
+#vertnav li.active > .vertnav-cat,
+#vertnav li.open > .vertnav-cat { background:url(../images/red-arrow-right.png) 4px center no-repeat; }
+#vertnav li:hover > .vertnav-cat a,
+#vertnav li.active > .vertnav-cat a,
+#vertnav li.open > .vertnav-cat a { color:#000000; font-weight: bold; }
+
+#vertnav .product-count {
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #c7c5c5;
+    color: #3c3c3c;
+    float: right;
+    font-size: 12px;
+    padding: 3px 6px 1px 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+#vertnav li:hover .product-count,
+#vertnav li.active .product-count,
+#vertnav li.open .product-count { color:#000000; font-weight: bold; }
+
+#vertnav .inactive .vertnav-cat {
+
+}
+
+#vertnav .next .vertnav-cat {
+
+}
+
+#vertnav .prev .vertnav-cat {
+
+}
+
+#vertnav .first .vertnav-cat {
+}
+
+#vertnav .last .vertnav-cat {
+}
+
+#vertnav .only .vertnav-cat {
+}
+
+#vertnav li.parent .vertnav-cat {
+
+}
+
+#vertnav li.active .vertnav-cat {
+
+}
+
+#vertnav li.inactive .vertnav-cat {
+
+}
+
+#vertnav .level0 .vertnav-cat {
+
+}
+
+#vertnav .level1 .vertnav-cat {
+
+}
+
+#vertnav .level2 .vertnav-cat {
+
+}
+
+#vertnav .level3 .vertnav-cat {
+
+}

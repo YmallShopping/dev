@@ -1,0 +1,27 @@
+// Landing page YMALL
+
+.landing-page { font-family: Candara; font-size: 15px; color: #0d0d0d; padding: 3%; }
+.landing-page img { max-width: 100% !important; }
+.landing-page .left { float: left; width: 40%; }
+.landing-page .left .logo { display: block; margin-bottom: 30px; max-width: 100%; }
+.landing-page .left .text { clear: both; display: block; margin: 0 0 30px; }
+.landing-page .left .text h2 { font-size: 30px; color: #222f68; font-weight: bold; } 
+.landing-page .left .text h2 strong { color: #cd2127; }
+.landing-page .left .text .subtitle { display: block; margin-bottom: 15px; }
+.landing-page .left .block-content { display: block; margin-bottom: 15px; }
+.landing-page .left .block-content .input-box { float: left; width: 50%; }
+.landing-page .left .block-content .input-box input.input-text { background: #fff; border: 1px solid #d1d9ec; height: 26px; margin: -1px 0 0 0; padding-left: 2%; padding-right: 2%; width: 96%; }
+.landing-page .left .block-content button.button { float: left; }
+.landing-page .left .block-content button.button span { padding: 0; margin: 0; background: url(../images/landing/button-newsletter.png) no-repeat; width: 108px; height: 36px; }
+.landing-page .left .block-content button.button span span { display: none; }
+.landing-page .left .block-content button.button:hover span { opacity: 0.8; }
+.landing-page .right { float: right; width: 55%; }
+.landing-page .right .progress { float: left; clear: both; margin-top: 30px; max-width: 100%; }
+.landing-page .footer-landing { float: left; width: 100%; clear: both; text-align: center; border-top: 1px solid #d8dee2; margin-top: 20px; padding-top: 20px; padding-bottom: 20px; font-size: 11px; color: #0d0d0d; }
+
+// Responsive for landing page YMALL
+
+@media only screen and (min-width: 0) and (max-width: 800px) {
+  .landing-page .left { float: left; width: 100%; margin-bottom: 25px; }
+  .landing-page .right { float: left; width: 100%; }
+}

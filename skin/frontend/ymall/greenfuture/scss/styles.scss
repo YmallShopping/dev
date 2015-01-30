@@ -33,9 +33,15 @@ $mq-fixed-value: false;
 @import "ymall/reset";
 @import "ymall/layout";
 @import "ymall/header";
+@import "greenfuture/vertnav";
 @import "ymall/global";
-@import "ymall/footer";
+
 
 @import "greenfuture/all";
-@import "greenfuture/responsive";
+//@import "greenfuture/print";
 
+
+@import "ymall/footer";
+@import "ymall/clears";
+@import "ymall/responsive";
+@import "greenfuture/responsive";

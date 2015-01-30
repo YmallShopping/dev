@@ -1,3 +1,4 @@
+body { background:#fff; background-size: 100% auto; font:15px/1.35 Candara, Arial, Helvetica, sans-serif; color:#2b2b2b; text-align:center; overflow-x: hidden; }
 /* Header ================================================================================ */
 .logo { float:left; }
 .header-shadow { padding-bottom: 8px; background: url(../images/header-bkg.png) left bottom repeat-x; margin-bottom: 15px; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; }
@@ -104,3 +105,4 @@
   
   .header-cart .cart-content .actions .total { font-size:15px; font-weight:normal; color: #fff; float: right; background: #212e68; padding: 5px 10px; }
   .header-cart .cart-content .std{ display:none; }
+  
