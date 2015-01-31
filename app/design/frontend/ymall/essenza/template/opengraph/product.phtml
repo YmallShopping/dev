@@ -1,0 +1,7 @@
+<?php $_product = Mage::registry('current_product'); ?>
+<?php if ($_product) : ?>
+    <meta property="og:url" content="<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>"/>
+    <meta property="og:description" content="<?php echo htmlspecialchars($_product->getDescription())?>"/> 
+    <meta property="og:title" content="<?php echo htmlspecialchars($_product->getName())?>"/>
+    <meta property="og:image" content="<?php echo $this->helper('catalog/image')->init($_product, 'image')?>"/>
+<?php endif;?>

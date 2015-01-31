@@ -1,227 +1,110 @@
 <div class="landing-page">
-
 	<div class="left">
-
 		<h1 class="logo"><img src="<?php echo $this->getSkinUrl('images/landing/logo-beta.png') ?>" alt="Ymall Shopping S.R.L."/></h1>
 
-		<div class="map"></div>
-
+		<div class="map"><img src="<?php echo $this->getSkinUrl('images/landing/map-schetch.png') ?>" alt="Ymall Shopping Map" title="Ymall Shopping Map"/></div>
+		<div class="map"><img src="<?php echo $this->getSkinUrl('images/landing/evolution.png') ?>" alt="Primiul mall online din istorie" title="Primiul mall online din istorie"/></div>
+		<br/>
+		<br/>
+		<div class="text">
+			<h2><span>De ce am realizat </span><strong class="highlight">Ymall?</strong></h2>
+			<p>		  
+				Ne-am săturat de site-urile gen <strong>depozit</strong>, unde totul arată la fel şi experienţa de a cumpăra o carte e la fel cu cea de a cumpăra o maşină de spălat. Credem că merităm mai mult de atât şi credem că am reuşit să aducem la un alt nivel diversitatea şi libertatea de exprimare în comerţul online .
+			</p>
+		</div>
 		
-
+		<div class="text">
+			<h2><span>Ce este </span><strong class="highlight">Ymall?</strong></h2>
+			<p>		  
+				Ymall este primul <strong>mall online din istorie.</strong> Reuşim să redăm experienţa de mall online prin existenţa diversităţii magazinelor, hartă interactivă, foodcourt, filme, toate pe aceeaşi platformă. 
+			</p>
+		</div>
 		
+		<div class="text">
+			<h2><span>Partenerii </span><strong class="highlight">Ymall</strong></h2>
+			<p>		  
+				Partenerii Ymall sunt brand-uri cu renume, care pun accent pe imagine şi au ca şi fundament caracteristici precum: inovaţie, profesionalism si standarde înalte de calitate. 
+			</p>
+		</div>
+		
+		<div class="text">
+			<h2><strong class="highlight">Ymall</strong><span> este dedicat:</span></h2>
+			<p>		  
+				Celor care încă simt.<br/>
+				Celor care au timp de ei.<br/>
+				Celor care preferă lucruri noi vs. rutină.<br/>
+				Celor care nu sunt roboţi... încă.<br/>
+			</p>
+		</div>
 	</div>
-
 	<div class="right">
-
-		<h2><span>Primele magazine </span> <strong class="highlight">100% implementate</strong></h2>
+		<h2><span>Primul magazin </span><strong class="highlight">100% implementat</strong></h2>
 
 		<div class="text">
-
 			<h3>ESSENZA</h3>
-
 			<p>		  
-
 				Creativitatea , designul şi tradiţia se amestecă împreună pentru a obţine un produs deosebit : <br/>
-
 				Essenza. ESSENZA înseamnă încălţăminte şi genţi de lux fabricate în România.<br/><br/>
 
 				Etaj: <strong>Demisol</strong><br/>
-
 				Loc pe hartă: <span class="highlight">D10</span>
-
 			</p><br/>
-
-			<button class="button" onclick="setLocation('<?php echo $this->getUrl('',array('_store'=>'essenza')) ?>')"><span><i class="fa fa-arrow-circle-right"></i><span><?php echo $this->__('vizitează') ?></span></span></button>
-
+			<button class="button" onclick="setLocation('<?php echo str_replace('mall/', '', $this->getUrl('essenza')) ?>')"><span><i class="fa fa-arrow-circle-right"></i><span><?php echo $this->__('vizitează') ?></span></span></button>
 		</div>
 
-		<div class="map"><a href="<?php echo $this->getUrl('',array('_store'=>'essenza')) ?>" title="Essenza Shopping YMall - Essenza"><img src="<?php echo $this->getSkinUrl('images/landing/map-essenza.png') ?>" alt="Ymall Shopping Map - Essenza" title="Ymall Shopping Map - Essenza"/></a></div>
-
+		<div class="map"><a href="<?php echo str_replace('mall/', '', $this->getUrl('essenza')) ?>" title="Essenza Shopping YMall - Essenza"><img src="<?php echo $this->getSkinUrl('images/landing/map-essenza.png') ?>" alt="Ymall Shopping Map - Essenza" title="Ymall Shopping Map - Essenza"/></a></div>
 	</div>
-
-	<div class="right">
-
-		<div class="text">
-
-			<h3>Ruxion Stil </h3>
-
-			<p>		  
-
-				Minimum o treime din viaţă o petrecem dormind, şi pentru a avea parte de o odihnă perfectă este nevoie să folosim un suport adaptat<br/> saltelei şi caracteristicilor noastre anatomice. În concluzie o somieră de calitate reprezintă o investiţie pentru o viaţă sănătoasă.<br/><br/>
-
-				Etaj: <strong>Demisol</strong><br/>
-
-				Loc pe hartă: <span class="highlight">D14</span><br/>
-
-				Status: <span class="highlight">Activ</span>
-
-			</p><br/>
-
-			<button class="button" onclick="setLocation('<?php echo $this->getUrl('',array('_store'=>'ruxion')) ?>')"><span><i class="fa fa-arrow-circle-right"></i><span><?php echo $this->__('vizitează') ?></span></span></button>
-
-		</div>
-
-		<div class="map"><a href="<?php echo $this->getUrl('',array('_store'=>'ruxion')) ?>" title="Ruxion Shopping YMall - Ruxion"><img src="<?php echo $this->getSkinUrl('images/landing/map-ruxion.png') ?>" alt="Ymall Shopping Map - Ruxion" title="Ymall Shopping Map - Ruxion"/></a></div>
-
-	</div>
-
-	<div class="right">
-
-		<div class="text">
-
-			<h3>Spy Shop </h3>
-
-			<p>		  
-
-				Având o experiență de peste 8 ani de zile,  Spy Shop este lider pe piața online din România în distributia de <br/>echipamente de securitate, supraveghere și monitorizare. <br/><br/>
-
-				Etaj: <strong>Demisol</strong><br/>
-
-				Loc pe hartă: <span class="highlight">D4</span><br/>
-
-				Status: <span class="highlight">Inactiv</span>
-
-			</p>
-
-		</div>
-
-		<div class="map"><a href="javascript:void(0)" title="Spy Shop Shopping YMall - Spy Shop"><img src="<?php echo $this->getSkinUrl('images/landing/map-spyshop.png') ?>" alt="Ymall Shopping Map - Spy Shop" title="Ymall Shopping Map - Spy Shop"/></a></div>
-
-	</div>
-	
-	<div class="right">
-
-		<div class="text">
-
-			<h3>Green Future - sleep evolution </h3>
-
-			<p>		  
-
-				GREEN FUTURE Group este unul din producatorii de top din Romania de articole premium destinate somnului. Fondata in 2004,  compania a fost construita in jurul unui nucleu de oameni tineri si dinamici. <br/><br/>
-
-				Etaj: <strong>Demisol</strong><br/>
-
-				Loc pe hartă: <span class="highlight">D3</span><br/>
-
-				Status: <span class="highlight">Anunţat</span>
-
-			</p>
-
-		</div>
-
-		<div class="map"><a href="javascript:void(0)" title="Green FutureShopping YMall - Green Future"><img src="<?php echo $this->getSkinUrl('images/landing/map-greenfuture.png') ?>" alt="Ymall Shopping Map - Green Future" title="Ymall Shopping Map - Green Future"/></a></div>
-
-	</div>
-
 </div>
-
 <div class="footer-container">
-
     <div class="footer">
-
         <div class="block block-subscribe closed">
-
     <div class="title">Fă parte <span>din revoluţie</span></div>
-
     <span class="subtitle">Dacă simti şi tu nevoia unei schimbări de la rutina experienţei cumpărăturilor în mediul virtual.</span>
-
-    <form id="newsletter-validate-detail" method="post" action="http://www.ymall.ro/mall/newsletter/subscriber/new/">
-
+    <form id="newsletter-validate-detail" method="post" action="http://ymall.ro/mall/newsletter/subscriber/new/">
         <div class="block-content">
-
             <div class="input-box">
-
                <input type="text" class="input-text required-entry validate-email" title="Fă parte din revoluţie" id="newsletter" name="email">
-
             </div>
-
             <div class="actions">
-
                 <button class="button" title="Aboneaza-te" type="submit"><span><span>Aboneaza-te</span></span></button>
-
             </div>
-
         </div>
-
     </form>
-
     <script type="text/javascript">
-
     //&lt;![CDATA[
-
         var searchForm = new Varien.searchForm('newsletter-validate-detail', 'newsletter', 'Fă parte din revoluţie');
-
         var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
-
     //]]&gt;
-
     </script>
-
 </div>
-
 		<div class="left">
-
 	    	<div class="links">
-
 <ul>
-
 <li class="title">Companie</li>
-
-<li><a href="http://www.ymall.ro/mall/despre-noi/">Despre noi</a></li>
-
-<li class="last"><a href="http://www.ymall.ro/mall/contacts/">Contact</a></li>
-
+<li><a href="http://ymall.ro/mall/despre-noi/">Despre noi</a></li>
+<li class="last"><a href="http://ymall.ro/mall/contacts/">Contact</a></li>
 </ul>
-
 </div>	    	<ul>
-
 <li class="title">Juridic</li>
-
-<li><a href="http://www.ymall.ro/mall/termeni-si-conditii/">Termeni şi condiţii</a></li>
-
+<li><a href="http://ymall.ro/mall/termeni-si-conditii/">Termeni şi condiţii</a></li>
 <li class="last"><a target="_blank" href="http://www.anpc.ro/">ANPC</a></li>
-
 </ul> 
-
-            <a class="logo" title="YMall Shopping S.R.L" href="http://www.ymall.ro/essenza/"><img alt="YMall Shopping S.R.L" src="http://www.ymall.ro/skin/frontend/default/essenza/images/logo-beta.png"></a>
-
+            <a class="logo" title="YMall Shopping S.R.L" href="http://ymall.ro/essenza/"><img alt="YMall Shopping S.R.L" src="http://ymall.ro/skin/frontend/default/essenza/images/logo-beta.png"></a>
 		</div>
-
     	<div class="right">
-
     		<ul class="social">
-
 <li class="title">Follow Us</li>
-
 <li class="facebook"><a target="_blank" href="#"><span>Facebook</span></a></li>
-
 <li class="youtube"><a target="_blank" href="#"><span>Youtube</span></a></li>
-
 <li class="twitter"><a target="_blank" href="#"><span>Twitter</span></a></li>
-
 <li class="linkedin"><a target="_blank" href="#"><span>Linkedin</span></a></li>
-
 </ul> 
-
     	</div>
-
     </div>
-
-    <address>&copy; copyright S.C. Ymall Shopping S.R.L  2014-2015. Toate drepturile rezervate.
-
+    <address>&copy; copyright S.C. Ymall Shopping S.R.L  2014. Toate drepturile rezervate.
 <br>
-
-SC YMALL SHOPPING SRL este operator de date cu caracter personal inregistrat la ANSPDCP cu nr.0026659  din 26/11/2014.
-
-<br/>
-
-® YMALL let's evolve - este marcă înregistrată la Oficiul De Stat Pentru Invenţii Şi Mărci cu numărul: 08055 din data de 27/11/2014.</address>
-
+SC YMALL SHOPPING SRL este operator de date cu caracter personal inregistrat la ANSPDCP cu nr.0026659  din 26/11/2014.</address>
 </div>
-
 <style>
-
 	.page-empty { background: #ededed; padding: 0; }
-
 </style>
-

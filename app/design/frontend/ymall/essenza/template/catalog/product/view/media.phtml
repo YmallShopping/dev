@@ -37,14 +37,14 @@
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
 <p class="product-image">
     <?php
-        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(500,834).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
+        $_img = '<img itemprop="image" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(500,834).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
 </p>
 <?php else: ?>
 <p class="product-image">
     <?php
-        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(500,834).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
+        $_img = '<img itemprop="image" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(500,834).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
 </p>

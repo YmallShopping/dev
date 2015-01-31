@@ -249,7 +249,8 @@ class Mage_Catalog_Block_Product_View_Type_Configurable extends Mage_Catalog_Blo
 
         $config = array(
             'attributes'        => $attributes,
-            'template'          => str_replace('%s', '#{price}', $store->getCurrentCurrency()->getOutputFormat()),
+            // 'template'          => str_replace('%s', '#{price}', $store->getCurrentCurrency()->getOutputFormat()),
+            'template'          => Mage::helper('catalog')->__(''),
             'basePrice'         => $this->_registerJsPrice($this->_convertPrice($currentProduct->getFinalPrice())),
             'oldPrice'          => $this->_registerJsPrice($this->_convertPrice($currentProduct->getPrice())),
             'productId'         => $currentProduct->getId(),
