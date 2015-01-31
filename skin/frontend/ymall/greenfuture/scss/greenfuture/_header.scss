@@ -1,0 +1,61 @@
+/* Home Page Slider */
+.forcefullwidth_wrapper_tp_banner { margin-bottom: 30px !important; margin-top: -6px !important; }
+/* Store Menu */
+.store-menu { padding: 0; width: 1124px; margin: 0 auto; background: #1f1f1f; padding: 20px 0; position: relative; font-family: 'Open Sans', sans-serif; }
+.store-menu .store-logo { float: left; margin: 0 10px 0 20px ; }
+.store-menu .menu { float: right; font-size: 15px; position: absolute; top: 50%; margin-top: -8px; right: 20px; }
+.store-menu .menu li { float: left; margin-left: 15px; }
+.store-menu .menu a { color: #ffffff; }
+.mobile-menu { color: #ffffff; float: right; background: url(../images/store-menu-icon.png) left center no-repeat; padding-left: 35px; height: 19px; line-height: 19px; display: none; cursor: pointer; font-size: 15px; text-transform: uppercase;  position: absolute; top: 50%; margin-top: -9px; right: 20px; }
+/* Mobile Nav */
+.mobile-container {  }
+.header #mobile-nav { background: url(../images/menu-icon.png) no-repeat; width: 41px; height: 41px; float: left; margin: 0; cursor: pointer; clear: left; }
+.header #mobile-nav.active { background: url(../images/menu-icon-hover.png) no-repeat; width: 41px; height: 41px; }
+.mobile-container { position: fixed; z-index: 9999; left: 0; width: 96%; top: 47px; background: #000; padding: 3% 2%; height: 87%; overflow: auto;  }
+.mobile-container .right { float: left; width: 100%; }
+.mobile-container .links { margin-top: 0px; }
+.mobile-container .links li { float: left; border-right: 0; }
+.mobile-container .links li a:hover { background-color: transparent; }
+.mobile-container .social-links { margin-top: 0; }
+/********** < Navigation */
+.nav-container { float: right; margin-top: 7px; }
+#nav { float:left; font-size:20px; }
+/* All Levels */
+#nav li { text-align:left; position:relative; line-height: 1.35; }
+#nav li.over { z-index:998; }
+#nav li.parent { background: url(../images/arrow_down.png) right center no-repeat; }
+#nav li a { display:block; text-decoration:none; color: #fff; }
+#nav li a:hover { text-decoration:none; }
+#nav li a span { display:block; white-space:nowrap; cursor:pointer; }
+#nav li ul a span { white-space:normal; }
+/* 1st Level */
+#nav li { float:left; margin-right: 3px; }
+#nav li a { float:left; padding:1px 0 1px 0; margin: 0 15px 0 7px; font-weight:normal; color:#fff; border-bottom: 3px solid transparent; }
+#nav li a:hover { color:#fff; }
+#nav > li > a { text-transform: uppercase; text-shadow: 1px 1px 1px #231f20; }
+#nav li.over a,
+#nav li.active a { color:#fff; border-bottom: 3px solid #0e3178; }
+#nav > li.first > a { padding-left: 0; }
+/* 2nd Level */
+#nav ul,
+#nav div { position:absolute; width:12em; top:33px; left:-100000px; border:1px solid #efefef; background:#fff; font-size: 15px; box-shadow: 1px 1px 2px 1px #a5a5a5; }
+#nav div ul { position:static; width:auto; border:none; }
+/* 3rd+ leven */
+#nav ul ul,
+#nav ul div { top: -1px; }
+#nav ul li { float:left; width: 92%; padding: 0 4%; border-bottom: 1px solid #efefef; margin-right: 0 !important; }
+#nav ul li.last { border-bottom:0; }
+#nav ul li a { float:left; padding:3px 0; margin: 0 !important; font-weight:normal; color:#888 !important; width: 100%; border-bottom: 0 !important; }
+#nav ul li a:hover { color:#000 !important; }
+#nav ul li.active > a,
+#nav ul li.over > a { color:#000 !important; background-color: #0e3178; }
+#nav ul li.parent > a { background: url(../images/arrow_right_gray.png) right center no-repeat !important; }
+#nav ul li.over,
+#nav ul li.active { background: #0e3178 !important; }
+/* Show menu */
+#nav li ul.shown-sub,
+#nav li div.shown-sub { left: 7px; z-index:999; }
+#nav li .shown-sub ul.shown-sub,
+#nav li .shown-sub li div.shown-sub { left:100px; }
+/********** Navigation > */
+/* ======================================================================================= */
