@@ -35,6 +35,7 @@
     <?php echo $this->getToolbarHtml() ?>
         <table class="data-table" id="my-reviews-table">
             <col width="1" />
+            <col width="1" />
             <col width="210" />
             <col width="1" />
             <col />
@@ -42,8 +43,9 @@
             <tbody>
                 <?php foreach ($this->getCollection() as $_review): ?>
                 <tr>
+                    <td><span class="nobr"><?php echo Mage::getModel('core/website')->load($_review->getStoreId())->getName(); ?></span></td>
                     <td><span class="nobr"><?php echo $this->dateFormat($_review->getReviewCreatedAt()); ?></span></td>
-                    <td><h2 class="product-name"><a href="<?php echo $this->getProductLink() ?>id/<?php echo $_review->getEntityPkValue() ?>"><?php echo $this->escapeHtml($_review->getName()) ?></a></h2></td>
+                    <td><h2 class="product-name"><a href="<?php echo $this->getProductLink(Mage::getModel('core/website')->load($_review->getStoreId())->getCode()) ?>id/<?php echo $_review->getEntityPkValue() ?>"><?php echo $this->escapeHtml($_review->getName()) ?></a></h2></td>
                     <td>
                     <?php if($_review->getSum()): ?>
                         <div class="rating-box">

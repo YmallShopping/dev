@@ -48,7 +48,7 @@ class Mage_Review_Block_Customer_List extends Mage_Customer_Block_Account_Dashbo
     {
         $this->_collection = Mage::getModel('review/review')->getProductCollection();
         $this->_collection
-            ->addStoreFilter(Mage::app()->getStore()->getId())
+            // ->addStoreFilter(Mage::app()->getStore()->getId())
             ->addCustomerFilter(Mage::getSingleton('customer/session')->getCustomerId())
             ->setDateOrder();
     }
@@ -122,9 +122,14 @@ class Mage_Review_Block_Customer_List extends Mage_Customer_Block_Account_Dashbo
      *
      * @return string
      */
-    public function getProductLink()
+    public function getProductLink($_store = null)
     {
-        return Mage::getUrl('catalog/product/view/');
+        if ($_store) {
+            return Mage::getUrl('catalog/product/view/',array('_store'=>$_store));
+        } else {
+            return Mage::getUrl('catalog/product/view/');
+        }
+        
     }
 
     /**

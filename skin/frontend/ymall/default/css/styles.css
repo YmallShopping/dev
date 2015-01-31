@@ -1017,7 +1017,6 @@ button.btn-cart:hover span span{ background: url(../images/cart-icon.png) right 
 /* ======================================================================================= */
 /* Content Styles ================================================================= */
 .product-name { font-size:16px; font-family: Arial,sans-serif; color: #231f20; font-weight:normal; }
-.product-name a { color: #231f20; }
 /* Product Tags */
 .tags-list li { display:inline; }
 /* Advanced Search */
