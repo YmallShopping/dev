@@ -141,7 +141,7 @@ select option { padding-right:10px; }
 select.multiselect option { border-bottom:1px solid #ddd; padding:2px 5px; }
 select.multiselect option:last-child { border-bottom:0; }
 textarea { overflow:auto; }
-input.radio { margin-right:3px; }
+input.radio { margin-right:3px; display: block;}
 input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */

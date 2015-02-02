@@ -106,3 +106,8 @@ body { background:#fff; background-size: 100% auto; font:15px/1.35 Candara, Aria
   .header-cart .cart-content .actions .total { font-size:15px; font-weight:normal; color: #fff; float: right; background: #212e68; padding: 5px 10px; }
   .header-cart .cart-content .std{ display:none; }
   
+  
+  /* BreadCrumbs */
+.breadcrumbs { padding:10px; margin: 0; border: 1px solid #ededed; width: 1104px; margin: 0 auto; }
+.breadcrumbs li { display:inline; color: #282828; }
+.breadcrumbs li a { display:inline; color: #282828; }

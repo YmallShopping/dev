@@ -30,14 +30,20 @@
 $mq-support: true;
 $mq-fixed-value: false;
 
+@import "greenfuture/vars";
 @import "ymall/reset";
 @import "ymall/layout";
 @import "ymall/header";
 @import "greenfuture/vertnav";
 @import "ymall/global";
+@import "ymall/landing";
+@import "ymall/nivo-slider";
 
-
+@import "greenfuture/header";
+@import "greenfuture/layout";
+@import "greenfuture/tabs";
 @import "greenfuture/all";
+
 //@import "greenfuture/print";
 
 

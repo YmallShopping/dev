@@ -2,10 +2,10 @@
 /* Sidebar =============================================================================== */
 .block { border: 1px solid #d5d5d5; }
 .block .block-title { padding:10px 0 10px; border-bottom: 1px solid #d5d5d5; }
-.block .block-title strong { color: #282828; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 400; line-height: 1; padding: 0 15px; display: block; }
+.block .block-title strong { color: #282828; font-family: $main-font; font-size: 20px; font-weight: 400; line-height: 1; padding: 0 15px; display: block; }
 .block .block-title strong span {}
 .block .block-title a { text-decoration:none !important; }
-.block .block-subtitle { color: #231f20; font-size: 15px; font-family: Arial, sans-serif;  font-weight: 400; margin-bottom: 5px; text-transform: uppercase; }
+.block .block-subtitle { color: #231f20; font-size: 15px; font-family: $main-font;  font-weight: 400; margin-bottom: 5px; text-transform: uppercase; }
 .block .block-content { padding:10px 0; }
 .block .block-content li.item { padding:5px 0; }
 .block .btn-remove,
@@ -50,7 +50,7 @@
 .block-layered-nav dd li:hover{ background:url(../images/red-arrow-right.png) 4px center no-repeat; color:#0e3178; }
 .block-layered-nav dd li:hover a{ color:#000; font-weight: bold; }
 .block-layered-nav dd.last { background:none; }
-.block-layered-nav dd li .product-count { background: none repeat scroll 0 0 #fff; border: 1px solid #c7c5c5; color: #3c3c3c; float: right; font-size: 12px; padding: 3px 6px 1px 5px; margin: 0 0 0 0; font-family: 'Open Sans', sans-serif; position: absolute; top: 5px; right: 10px; }
+.block-layered-nav dd li .product-count { background: none repeat scroll 0 0 #fff; border: 1px solid #c7c5c5; color: #3c3c3c; float: right; font-size: 12px; padding: 3px 6px 1px 5px; margin: 0 0 0 0; font-family: $main-font; position: absolute; top: 5px; right: 10px; }
 .block-layered-nav dd li:hover .product-count { color: #000; font-weight: bold; }
 
 /* Color Section */
@@ -224,7 +224,7 @@
 
 /********** < Product Prices */
 .price { white-space:nowrap !important; }
-.price-box { font-family: 'Open Sans', sans-serif; }
+.price-box { font-family: $main-font; }
 .price-box .price { font-weight:normal; color: #1a1a1a; font-size: 20px; }
 
 /* Regular price */
@@ -345,10 +345,10 @@
 .product-view .no-rating { float: right; width: 40%; line-height: 1.1; }
 .product-view .ratings .rating-box { float: right; margin: 0 0 3px;}
 .product-view .ratings .rating-links { clear: both; }
-.product-view .product-name { font-family: 'Open Sans', sans-serif; color: #1a1a1a; font-weight: lighter; font-size: 25px; text-transform: uppercase; float: left; width: 60%; }
-.product-view .product-name h1 { font-family: 'Open Sans', sans-serif; color: #1a1a1a; font-weight: lighter; font-size: 25px; text-transform: uppercase; }
+.product-view .product-name { font-family: $main-font; color: #1a1a1a; font-weight: lighter; font-size: 25px; text-transform: uppercase; float: left; width: 60%; }
+.product-view .product-name h1 { font-family: $main-font; color: #1a1a1a; font-weight: lighter; font-size: 25px; text-transform: uppercase; }
 .product-view .short-description { line-height: 1.2;  }
-.product-view .short-description h2 { color: #1a1a1a; display: block; font-family: "Open Sans",sans-serif; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
+.product-view .short-description h2 { color: #1a1a1a; display: block; font-family: $main-font; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
 .product-view .short-description strong { font-weight: normal; color: #2DA6D2; }
 .product-view .availability { display: block; clear: both; }
 .product-view .availability span { font-weight: normal; font-size: 17px; }
@@ -374,7 +374,7 @@ button.btn-cart:hover span{ background: #000000; }
 .product-view .price-box .price-label { display: none; }
 .product-view .price-box .old-price .price { font-size: 20px; }
 .product-view .qty-container { margin: 0 0 10px; display: block; }
-.product-view .qty-container label { color: #1a1a1a; display: block; font-family: "Open Sans",sans-serif; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
+.product-view .qty-container label { color: #1a1a1a; display: block; font-family: $main-font; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
 .product-view .qty-container input.qty { clear: both; border-right: 1px solid #dbd9d9; text-align: center; font-size: 15px; color: #000; background: #fff; }
 .product-view .qty-description { display: block; clear: both; color: #545454; }
 .product-view .qty-description strong { color: #000; }
@@ -392,7 +392,7 @@ button.btn-cart:hover span{ background: #000000; }
 .product-view .payment-options { float: left; width: 100%; clear: both; margin-top: 20px; }
 /* Product Options */
 .product-options {  }
-.product-options dt label { font-weight:bold; color: #1a1a1a; margin-bottom: 5px;  display: block; font-size: 12px; font-family: 'Open Sans', sans-serif; }
+.product-options dt label { font-weight:bold; color: #1a1a1a; margin-bottom: 5px;  display: block; font-size: 12px; font-family: $main-font; }
 .product-options dt label em { color: #1a1a1a; margin-right: 2px; }
 .product-options dt .qty-holder { float:right; }
 .product-options dt .qty-holder label { vertical-align:middle; }
@@ -471,7 +471,7 @@ button.btn-cart:hover span{ background: #000000; }
 .send-friend {}
 /* ======================================================================================= */
 /* Content Styles ================================================================= */
-.product-name { font-size:12px; font-family: Arial,sans-serif; color: #2b2b2b; font-weight:normal; }
+.product-name { font-size:12px; font-family:$main-font; color: #2b2b2b; font-weight:normal; }
 .product-name a { color: #2b2b2b; }
 .product-name a:hover { text-decoration: underline; }
 /* Product Tags */
@@ -531,7 +531,7 @@ button.btn-cart:hover span{ background: #000000; }
 /* Shopping Cart Table */
 .cart-table  { }
 .cart-table .item-msg { font-size:10px; }
-.cart-table .edit { background: #000; padding: 5px 5px; font-family: Arial, sans-serif; color: #fff; text-transform: uppercase; font-size: 15px; display: block; clear: both; }
+.cart-table .edit { background: #000; padding: 5px 5px; font-family: $main-font; color: #fff; text-transform: uppercase; font-size: 15px; display: block; clear: both; }
 .cart-table tfoot td {  }
 .cart-table tfoot td button.btn-continue { float: left; }
 .cart-table tfoot td button.button span { background: #8c8c8c; color: #fff; }
@@ -552,7 +552,7 @@ button.btn-cart:hover span{ background: #000000; }
 .cart .discount,
 .cart .shipping { display: block; clear: both; width: 96%; padding: 2%; margin-bottom: 0; }
 .cart .discount { background: #e6e6e6; }
-.cart .discount h2 { float: left; font-family: Arial, sans-serif; color: #999999; text-transform: uppercase; font-size: 15px; width: 30%; margin-top: 10px; }
+.cart .discount h2 { float: left; font-family: $main-font; color: #999999; text-transform: uppercase; font-size: 15px; width: 30%; margin-top: 10px; }
 .cart .discount .discount-form { float: left; width: 70%; }
 .cart .discount .discount-form .input-box { float: left; width: 100%; }
 .cart .discount .discount-form input.input-text { float: left; border: 2px solid #fff; width: 95%; padding: 10px 2%; }
@@ -572,10 +572,10 @@ button.btn-cart:hover span{ background: #000000; }
 .cart .totals { float:right; width: 100%; margin-top: 5px; }
 .cart .totals table { width:100%; background: #ededed; margin-bottom: 15px; border: 1px dashed #d8d6d6; font-size: 15px;  }
 .cart .totals table th,
-.cart .totals table td { padding: 5px 10px 5px; font-weight:normal; color: #818181; font-size: 15px; font-family: 'Open Sans', Arial, sans-serif; text-align: left !important; }
-.cart .totals table th { font-weight:normal; color: #818181; font-family: 'Open Sans', Arial, sans-serif;  }
+.cart .totals table td { padding: 5px 10px 5px; font-weight:normal; color: #818181; font-size: 15px; font-family: $main-font; text-align: left !important; }
+.cart .totals table th { font-weight:normal; color: #818181; font-family: $main-font;  }
 .cart .totals table tfoot th {} 
-.cart .totals table tfoot td { color: #1a1a1a; font-family: 'Open Sans', Arial, sans-serif; font-weight: bold; } 
+.cart .totals table tfoot td { color: #1a1a1a; font-family: $main-font; font-weight: bold; } 
 .cart .totals table tfoot td strong{ font-weight:bold; } 
 /* Options Tool Tip */
 .item-options dt { font-weight:bold; font-style:italic; } 
@@ -593,7 +593,7 @@ button.btn-cart:hover span{ background: #000000; }
 /* Checkout ============================================================================== */
 /********** < Common Checkout Styles */
 /* Shipping and Payment methods */
-.sp-methods dt { font-family: Arial,sans-serif; font-weight: normal; margin-bottom: 5px; position: relative; text-transform: uppercase; z-index: 0; }
+.sp-methods dt { font-family: $main-font; font-weight: normal; margin-bottom: 5px; position: relative; text-transform: uppercase; z-index: 0; }
 .sp-methods .price { font-weight:bold; }
 .sp-methods .form-list { padding-left:20px; }
 .sp-methods select.month { width:150px; margin-right:10px; }
@@ -652,7 +652,7 @@ button.btn-cart:hover span{ background: #000000; }
 .block-progress .block-title strong { font-size:13px; color:#0a263c; }
 .block-progress .block-content { background:none; }
 .block-progress dl > div { float: left; width: 25%; }
-.block-progress dt { text-transform: uppercase; color: #000; font-size: 15px; padding: 0 10px; font-family: Arial, sans-serif; }
+.block-progress dt { text-transform: uppercase; color: #000; font-size: 15px; padding: 0 10px; font-family:$main-font; }
 .block-progress dd { padding:15px 10px; margin:0 0 6px; line-height: 1.5; color: #3e3e3e; }
 .block-progress dt.complete {  }
 .block-progress dd.complete {}
@@ -673,14 +673,14 @@ button.btn-cart:hover span{ background: #000000; }
 .opc .buttons-set.disabled button.button { display:none; }
 .opc .buttons-set .please-wait { height:21px; line-height:21px; }
 .opc .ul { list-style:disc outside; padding-left:18px; }
-.opc { position:relative; padding-top: 100px; font-family: 'Open Sans', Arial, sans-serif; }
+.opc { position:relative; padding-top: 100px; font-family: $main-font; }
 .opc .form-list label { margin-bottom: 10px; }
 .opc .step-label { display: block; margin-bottom: 20px; }
 .opc li.section {}
 .opc .step-title { position: absolute; top: 0; left: 0; text-align: center; }
-.opc .step-title .number { float:left; color: #fff; font-size: 15px; font-family: 'Open Sans', Arial, sans-serif; text-align: center; display: block; background: #696969; padding: 10px; margin-right: 1px; }
+.opc .step-title .number { float:left; color: #fff; font-size: 15px; font-family: $main-font; text-align: center; display: block; background: #696969; padding: 10px; margin-right: 1px; }
 .opc .step-title .number i { display: none; }
-.opc .step-title h2 { font-size: 17px; font-weight: normal; color: #aeaeae; clear: both; margin-top: 10px; text-align: center; font-family: Arial, sans-serif; }
+.opc .step-title h2 { font-size: 17px; font-weight: normal; color: #aeaeae; clear: both; margin-top: 10px; text-align: center; font-family: $main-font; }
 .opc .step-title a { display:none; float:right; font-size:11px; line-height:16px; }
 .opc .allow .step-title {  cursor: pointer; }
 .opc .allow .step-title .number { background: #696969; }
@@ -739,7 +739,7 @@ button.btn-cart:hover span{ background: #000000; }
 #opc-review .data-table tfoot tr.last td { border-top: 1px dashed #c8c8c8; }
 #opc-review .data-table tfoot {  }
 #opc-review .data-table thead tr { background: #ededed; border: 1px solid #c8c8c8; }
-.checkout-onepage-success .col-main { font-family: 'Open Sans'; }
+.checkout-onepage-success .col-main { font-family: $main-font; }
 /* Multiple Addresses Checkout */
 .checkout-progress { padding:0 50px; margin:10px 0; }
 .checkout-progress li { float:left; width:20%; border-top:5px solid #ccc; text-align:center; color:#ccc; }
@@ -892,7 +892,7 @@ button.btn-cart:hover span{ background: #000000; }
 .my-wishlist .buttons-set button.btn-add span span {  background: url(../images/cart-btn-red-small.png) left 5px no-repeat; border: 0 none; color: #fff; display: inline-block; padding: 0 5px 0 30px; text-transform: none; width: auto; float: none; }
 .my-wishlist .buttons-set button.btn-add:hover span span {  background: url(../images/cart-btn-red-small.png) left 5px no-repeat; }
 /* Order List/View */
-.my-account .pager { background: none repeat scroll 0 0 #eeeeee; border: 1px solid #d8d6d6; color: #000000; font-family: "Open Sans",sans-serif; margin-bottom: 10px; padding: 5px 3%; }
+.my-account .pager { background: none repeat scroll 0 0 #eeeeee; border: 1px solid #d8d6d6; color: #000000; font-family: $main-font; margin-bottom: 10px; padding: 5px 3%; }
 .my-account .pager .amount { float: left; font-weight: normal; margin-top: 4px; }
 .my-account .pager .amount strong { font-weight: normal; }
 .my-account .pager .limiter { float: right; }
@@ -955,11 +955,11 @@ button.btn-cart:hover span{ background: #000000; }
 /* Store List */
 .stores-container { background: #ebebeb; margin-top: 75px; position: relative; padding: 25px 0; }
 .stores-content { width: 100%; max-width: 1124px; margin: 0 auto; }
-.stores-container .title{ width: 100%; float: left; display: block; text-align: center; font-size: 30px; color: #031435; font-family: 'Open Sans', sans-serif; font-weight: 400; top: -50px; position: absolute; left: 0; }
+.stores-container .title{ width: 100%; float: left; display: block; text-align: center; font-size: 30px; color: #031435; font-family: $main-font; font-weight: 400; top: -50px; position: absolute; left: 0; }
 .store-lists { width: 100%; }
 .store-list li{ width: 433px; }
 .store-list li .info{ display: block; clear: both; background: #282828; padding: 15px 10px; }
-.store-list li .info .store-name { font-size: 24px; color: #ffffff; text-transform: uppercase; font-family: 'Open Sans', sans-serif; font-weight: 400; text-decoration: none; float: left; margin-bottom: 10px; width: 67%; }
+.store-list li .info .store-name { font-size: 24px; color: #ffffff; text-transform: uppercase; font-family: $main-font; font-weight: 400; text-decoration: none; float: left; margin-bottom: 10px; width: 67%; }
 .store-list li .info .store-logo { float: left; margin-right: 3%; background: #e8f2fc; width: 30%; padding: 20px 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

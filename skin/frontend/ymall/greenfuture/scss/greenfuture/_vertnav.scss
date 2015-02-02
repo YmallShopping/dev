@@ -4,7 +4,7 @@
   background:#fff;
 }
 
-.vertnav-container .title{ color: #000000; font-family: sans-serif; font-size: 25px; font-style: italic; font-weight: 400; line-height: 1; margin-bottom: 15px;  }
+.vertnav-container .title{ color: #000000; font-family: $main-font; font-size: 25px; font-style: italic; font-weight: 400; line-height: 1; margin-bottom: 15px;  }
 .vertnav-container .title span{ font-weight: 400; }
 
 #vertnav li { padding: 2px 0 2px; margin-bottom: 4px; clear: both; }
@@ -26,7 +26,7 @@
     float: right;
     font-size: 12px;
     padding: 3px 6px 1px 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $main-font;
 }
 #vertnav li:hover .product-count,
 #vertnav li.active .product-count,
