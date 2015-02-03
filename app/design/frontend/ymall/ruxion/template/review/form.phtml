@@ -34,7 +34,6 @@
             <h3><?php echo $this->__("You're reviewing:"); ?> <span><?php echo $this->escapeHtml($this->getProductInfo()->getName()) ?></span></h3>
             <?php if( $this->getRatings() && $this->getRatings()->getSize()): ?>
             <div class="stars-table">
-                <h4><?php echo $this->__('How do you rate this product?') ?> <em class="required">*</em></h4>
                 <span id="input-message-box"></span>
                 <table class="data-table" id="product-review-table">
                     <col />
@@ -45,7 +44,7 @@
                     <col width="1" />
                     <thead>
                         <tr>
-                            <th>&nbsp;</th>
+                            <th class="a-left"> <h4><?php echo $this->__('How do you rate this product?') ?> <em class="required">*</em></h4></th>
                             <th><span class="nobr"><?php echo $this->__('1 star') ?></span></th>
                             <th><span class="nobr"><?php echo $this->__('2 stars') ?></span></th>
                             <th><span class="nobr"><?php echo $this->__('3 stars') ?></span></th>

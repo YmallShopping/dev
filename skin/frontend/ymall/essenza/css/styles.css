@@ -1064,7 +1064,10 @@ button.btn-cart:hover span{ background: #000000; }
 .product-view .box-reviews .form-add h3 { font-weight: normal; margin-bottom: 15px; }
 .product-view .box-reviews .form-list { float: left; width: 48%; }
 .stars-table { float: right; width: 48%; margin-bottom: 20px; }
-.stars-table .data-table th { text-align: center; font-size: 13px; }
+.stars-table .data-table th { text-align: center; font-size: 13px; border-bottom: 1px dashed #c9c9c9; }
+.stars-table .data-table tbody { border: 1px dashed #c9c9c9; border-width: 0px 1px; }
+.stars-table .data-table tbody th { text-align: left; border: 1px dashed #c9c9c9; border-width: 1px 0; }
+.stars-table .data-table tbody td { border: 1px dashed #c9c9c9; border-width: 1px 0; }
 .product-view .box-reviews dl { margin:15px 0; }
 .product-view .box-reviews dt a { display: block; margin-bottom: 5px; }
 .product-view .box-reviews dt a,
