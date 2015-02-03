@@ -99,6 +99,7 @@
 
 	.product-view .box-reviews .form-list { float: left; width: 100%; }
 	.stars-table { float: right; width: 100%; }
+	.product-view .box-reviews .form-add .buttons-set{ width: auto; }
 
 	.information-boxes li.first .tooltip { margin-left: 0; } 
 	.information-boxes li.first .tooltip:after { left: 16px; }

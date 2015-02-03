@@ -1061,10 +1061,11 @@ button.btn-cart:hover span{ background: #000000; }
 /* Block: Reviews */
 .product-view .box-reviews {}
 .product-view .box-reviews .form-add {}
+.product-view .box-reviews .form-add .buttons-set{ width: 48%; }
 .product-view .box-reviews .form-add h3 { font-weight: normal; margin-bottom: 15px; }
-.product-view .box-reviews .form-list { float: left; width: 48%; }
-.stars-table { float: right; width: 48%; margin-bottom: 20px; }
-.stars-table .data-table th { text-align: center; font-size: 13px; border-bottom: 1px dashed #c9c9c9; }
+.product-view .box-reviews .form-list { float: left; width: 48%; clear: both; }
+.stars-table { float: left; width: 48%; margin-bottom: 20px; }
+.stars-table .data-table th { text-align: center; font-size: 13px; border-bottom: 1px dashed #c9c9c9; white-space: normal; }
 .stars-table .data-table tbody { border: 1px dashed #c9c9c9; border-width: 0px 1px; }
 .stars-table .data-table tbody th { text-align: left; border: 1px dashed #c9c9c9; border-width: 1px 0; }
 .stars-table .data-table tbody td { border: 1px dashed #c9c9c9; border-width: 1px 0; }
