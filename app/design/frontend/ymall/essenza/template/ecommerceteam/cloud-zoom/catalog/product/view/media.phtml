@@ -79,7 +79,7 @@ if ($zoomHeight) {
         <li>
             <a href='<?php echo $this->helper('catalog/image')->init($product, 'image', $_image->getFile())->resize($bigImageWidth, $bigImageHeight);?>' class='cloud-zoom-gallery' title='<?php echo $this->htmlEscape($_image->getLabel()) ?>'
             rel="useZoom: 'zoom1', smallImage: '<?php echo $this->helper('catalog/image')->init($product, 'image', $_image->getFile())->resize(600, 427);?>' ">
-            <img itemprop="image" src="<?php echo $this->helper('catalog/image')->init($product, 'thumbnail', $_image->getFile())->resize(56, 56);?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?> " />
+            <img src="<?php echo $this->helper('catalog/image')->init($product, 'thumbnail', $_image->getFile())->resize(56, 56);?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?> " />
             </a>
         </li>
     <?php endforeach; ?>

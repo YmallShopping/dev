@@ -36,8 +36,8 @@
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
-<div class="product-view">
-    <div class="product-essential">
+<div class="product-view" >
+    <div class="product-essential" itemscope itemtype="http://data-vocabulary.org/Product">
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
         <?php echo $this->getBlockHtml('formkey') ?>
         <div class="no-display">
@@ -47,13 +47,13 @@
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
         </div>
-         <div class="product-shop" itemscope itemtype="http://data-vocabulary.org/Product"> 
+         <div class="product-shop"> 
 		 <meta itemprop="url" content="<?php echo $_product->getUrlModel()->getUrl($_product, array('_ignore_category'=>true)); ?>" />
 		    <div class="top-section">
                 <div class="product-name">
                     <h1><span itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span></h1>
                 </div>
-                <?php echo $this->getReviewsSummaryHtml($_product, false, true)?> 
+                <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
             </div>
             <?php echo $this->getChildHtml('product_type_data') ?>
             <?php echo $this->getTierPriceHtml() ?>
@@ -136,7 +136,9 @@
                     <div class="std" ><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
             <?php endif;?>
-            
+
+            <span class="no-display" itemprop="description"><?php echo strip_tags($_product->getDescription()) ?></span>
+
             <ul class="information-boxes">
                 <li class="first">
                     <i class="fa fa-truck"></i>
