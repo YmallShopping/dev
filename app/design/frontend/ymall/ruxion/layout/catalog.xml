@@ -43,7 +43,6 @@ Default layout, loads most of the pages
 -->
 
     <default>
-
         <!-- Mage_Catalog -->
         <reference name="left">
 

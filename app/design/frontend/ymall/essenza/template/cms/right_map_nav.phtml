@@ -1,0 +1,22 @@
+<div class="right-map">
+	<div class="map">
+		<a href="<?php echo $this->getUrl('',array('_store'=>'ruxion')); ?>"><img class="main-img" src="<?php echo $this->getSkinUrl('images/mapslider/ruxion_map.png') ?>" alt="" /></a>
+		<img class="preload no-display" src="<?php echo $this->getSkinUrl('images/mapslider/ruxion_map_hover.png') ?>" alt="" />
+	</div>
+	<div class="map-disabled">
+		<img class="main-img" src="<?php echo $this->getSkinUrl('images/mapslider/map_spyshop.png') ?>" alt="" />
+	</div>
+	<div class="map-disabled">
+		<img class="main-img" src="<?php echo $this->getSkinUrl('images/mapslider/map_greenfuture.png') ?>" alt="" />
+	</div>
+</div>
+
+<script>
+	jQuery('.map').each(function(){
+		jQuery(this).hover(function() {
+			jQuery(this).find('.main-img').attr({"src":"<?php echo $this->getSkinUrl('images/mapslider/ruxion_map_hover.png') ?>","style":"margin:-14px 0 -22px;"});
+		}, function() {
+			jQuery(this).find('.main-img').attr({"src":"<?php echo $this->getSkinUrl('images/mapslider/ruxion_map.png') ?>","style":"margin:0;"});
+		});
+	});
+</script>

@@ -113,6 +113,7 @@ strong.highlight { color: #cd2127; }
 .col4-set .col-4 { float:right; width:23.5%; }
 /* ======================================================================================= */
 .page .widget { margin: 0 auto; width: 1084px; padding: 20px; border: 1px dashed #d8d6d6; display: block; margin-bottom: 30px; }
+.page .widget:last-child { padding: 0; margin: 0; border: 0; width: 0; }
 .page .widget ul { float: left; width: 100%;  margin-bottom: 10px; }
 .page .widget li { float: left; margin-right: 15px; color: #000000; font-family: 'Open Sans'; }
 .page .widget li a { color: #000000; font-size: 12px; }
@@ -1864,4 +1865,13 @@ button.btn-cart:hover span{ background: #000000; }
 @media only screen and (min-width: 0) and (max-width: 800px) {
 	.landing-page .left { float: left; width: 100%; margin-bottom: 25px; }
 	.landing-page .right { float: left; width: 100%; }
+}
+
+/* Right Map Slider */
+.right-map { position: fixed; right: 5px; top: 15%; z-index: 9999; }
+.right-map .map { position: relative; z-index: 10; display: block; clear: both; margin-bottom: 15px; }
+.right-map .map-disabled { position: relative; z-index: 0; display: block; clear: both; margin-bottom: 15px; }
+
+@media only screen and (min-width: 0) and (max-width: 1715px) {
+	.right-map { display: none; }
 }

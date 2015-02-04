@@ -1,0 +1,971 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"strp",
+				"strpos"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"n",
+				"inherit"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"re",
+				"repeat"
+			],
+			[
+				"coun",
+				"countA"
+			],
+			[
+				"ar",
+				"array	$… = array (…)"
+			],
+			[
+				"_pos",
+				"_postCollections"
+			],
+			[
+				"_",
+				"_postCollection"
+			],
+			[
+				"jso",
+				"json_encode"
+			],
+			[
+				"appe",
+				"appendTo"
+			],
+			[
+				"su",
+				"substr"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"_p",
+				"_pCollection"
+			],
+			[
+				"sub",
+				"subject"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"_s",
+				"_storeId"
+			],
+			[
+				"_c",
+				"_collection"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"borde",
+				"border"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"end",
+				"endforeach"
+			],
+			[
+				"_im",
+				"_images"
+			],
+			[
+				"a",
+				"array	$… = array (…)"
+			],
+			[
+				"redeem",
+				"redeemed"
+			],
+			[
+				"js",
+				"json_decode"
+			],
+			[
+				"pre",
+				"pre"
+			],
+			[
+				"succes",
+				"succesfully"
+			],
+			[
+				"_ac",
+				"_availableCats"
+			],
+			[
+				"txe",
+				"text-align"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"getT",
+				"getThumbnailUrl"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ca",
+				"catalog"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"items_",
+				"items_before"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"exp",
+				"explode"
+			],
+			[
+				"hi",
+				"hideAccount"
+			],
+			[
+				"ele",
+				"elementClassName"
+			],
+			[
+				"bord",
+				"border-width"
+			],
+			[
+				"sr",
+				"storeCode"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"list-sty",
+				"list-style-type"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"dashe",
+				"dashed"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"cu",
+				"customer"
+			],
+			[
+				"_co",
+				"_controller"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"wit",
+				"white-space"
+			],
+			[
+				"das",
+				"dashed"
+			],
+			[
+				"coup",
+				"coupon"
+			],
+			[
+				"store",
+				"store_menu"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"_i",
+				"_item"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"getWarran",
+				"getWarrantyId"
+			],
+			[
+				"ti",
+				"ticketingreports"
+			],
+			[
+				"_col",
+				"_colors"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"last",
+				"lastSize"
+			],
+			[
+				"col",
+				"colorAttr"
+			],
+			[
+				"eleme",
+				"elements"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"array_p",
+				"array_pop"
+			],
+			[
+				"_image",
+				"_imageDynamicPath"
+			],
+			[
+				"iss",
+				"isset"
+			],
+			[
+				"ticke",
+				"ticketing"
+			],
+			[
+				"array_fil",
+				"array_filter"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"str_",
+				"str_replace"
+			],
+			[
+				"coupo",
+				"coupons"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"san",
+				"sans-serif"
+			],
+			[
+				"stri",
+				"strip_tags"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"so",
+				"solid"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"qui",
+				"quick-access"
+			],
+			[
+				"rbg",
+				"rgba()"
+			],
+			[
+				"sho",
+				"showQuickAccess"
+			],
+			[
+				"Sa",
+				"Sans"
+			],
+			[
+				"os",
+				"Oswald"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"w",
+				"website"
+			],
+			[
+				"v",
+				"visibility"
+			],
+			[
+				"pr",
+				"product"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"num",
+				"number_format"
+			],
+			[
+				"customer",
+				"customer"
+			],
+			[
+				"ara",
+				"array"
+			],
+			[
+				"product",
+				"product_id"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"upda",
+				"updateCustomerGroup"
+			],
+			[
+				"recipe_",
+				"recipe_items"
+			],
+			[
+				"_r",
+				"_ruleProducts"
+			],
+			[
+				"_pr",
+				"_currentProduct"
+			],
+			[
+				"in",
+				"in_array"
+			],
+			[
+				"op",
+				"option"
+			],
+			[
+				"stoc",
+				"stockCollection"
+			],
+			[
+				"tr",
+				"trim"
+			],
+			[
+				"_we",
+				"_website"
+			],
+			[
+				"_w",
+				"_websiteCollection"
+			],
+			[
+				"key",
+				"keyItem"
+			],
+			[
+				"_e",
+				"_replaceArray"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"inchir",
+				"inchirieri"
+			],
+			[
+				"clien",
+				"Clienti"
+			],
+			[
+				"id_",
+				"id_client"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax css",
+				"Set Syntax: CSS"
+			],
+			[
+				"sideba",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp/htdocs/beckmen-vineyards",
+		"/D/xampp/htdocs/beckmen-vineyards/shop",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/code",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/code/core",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design/frontend",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design/frontend/base",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design/frontend/base/default",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design/frontend/base/default/template",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design/frontend/base/default/template/cake"
+	],
+	"file_history":
+	[
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/ShippingController.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/TrackingController.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Shipment.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/ShipmentController.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Shipping.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/header.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/IndexController.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/cake.log",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/js.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/index.ctp",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/MagentoController.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/system.log",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/.htaccess 4",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/.htaccess 3",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/list 2.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/list-alldeals.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/green-future.ro-20150203083327.csv",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/form.mini.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/list.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/search.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/wordpress.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/styles.css",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/code/core/Mage/Customer/controllers/AccountController.php",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design/frontend/base/default/template/cake/js.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/responsive 2.css",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/responsive.css",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/styles 4.css",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/styles 3.css",
+		"/D/green-future.ro-20150203075947.csv",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/price 2.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/price.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Mage_Review.csv",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/catalog.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/catalog 2.xml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/ruxion/layout/catalog.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/styles 2.css",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/review.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/header 3.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/header 2.phtml",
+		"/D/xampp/htdocs/ymall/app/code/core/Mage/Review/Block/Customer/List.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/List 2.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/description.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/media.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/view.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/view 2.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/description 2.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/essenza/template/review/product/view/list.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/essenza/template/review/form.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/default/template/review/customer/view.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/default/template/review/customer/list.phtml",
+		"/D/xampp/htdocs/ymall/app/locale/ro_RO/Mage_Review.csv",
+		"/D/xampp/htdocs/ymall/app/locale/ro_RO/Mage_Catalog.csv",
+		"/D/xampp/htdocs/ymall/app/code/core/Mage/Review/Block/Product/View.php",
+		"/D/xampp/htdocs/ymall/app/code/core/Mage/Catalog/Block/Product/View.php",
+		"/D/xampp/htdocs/ymall/app/code/core/Mage/Catalog/Block/Product/Abstract.php",
+		"/D/xampp/htdocs/ymall/skin/frontend/ymall/essenza/css/styles.css",
+		"/D/xampp/htdocs/ymall/skin/frontend/ymall/ruxion/css/styles.css",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/ruxion/template/review/form.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/topmenu.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/page.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/catalogsearch.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Post.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/View.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Abstract 2.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/List.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Image.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Abstract 3.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Collection.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Post 2.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/default.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Post 3.php",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/essenza/template/catalog/product/view.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Collection 2.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Abstract 4.php",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/ruxion/template/catalog/product/view.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Category.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/.htaccess 2",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/.htaccess",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Abstract.php",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/ruxion/template/catalog/product/list.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/ruxion/template/catalog/product/list-home.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/default/layout/review.xml",
+		"/D/xampp/htdocs/ymall/skin/frontend/ymall/default/css/styles.css",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/essenza/layout/catalog.xml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/ruxion/template/page/html/header.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/essenza/template/page/html/header.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/spyshop/template/page/html/head.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/essenza/template/page/html/head.phtml",
+		"/D/xampp/htdocs/ymall/app/design/frontend/ymall/ruxion/template/page/html/head.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/recipe.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/head.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/steps.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/footer.phtml",
+		"/D/xampp/htdocs/test2/app/code/community/Fishpig/Wordpress/Block/Search/Result.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Result 2.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Result.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/result.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Observer.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Fishpig_Wordpress_Addon_IntegratedSearch.xml",
+		"/D/Temp/fishpig_wordpress_addon_integratedsearch-1.2.3.1/app/etc/modules/Fishpig_Wordpress_Addon_IntegratedSearch.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/1column.phtml",
+		"/D/green-future.ro-20150130071251.csv",
+		"/C/Users/Luci/AppData/Local/Temp/green-future.ro-20150130071012.csv",
+		"/C/Users/Luci/AppData/Local/Temp/green-future.ro-20150130055534.csv",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/code/core/Mage/Checkout/Block/Cart/Abstract.php",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/code/core/Mage/Checkout/Block/Cart/Minicart.php",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/design/frontend/rwd/default/template/checkout/cart/sidebar.phtml",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/code/core/Mage/Checkout/Block/Cart/Sidebar.php",
+		"/D/xampp/htdocs/app/code/local/Dan/Cake/etc/config.xml",
+		"/D/xampp/htdocs/ymall/.gitignore",
+		"/D/xampp/htdocs/beckmen-vineyards/.htaccess",
+		"/D/xampp/htdocs/beckmen-vineyards/.gitignore",
+		"/D/xampp/htdocs/beckmen-vineyards/shop/app/etc/local.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/groupdeals.css",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/popup-subscribe 2.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/popup-subscribe.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/popup.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/groupdeals.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/customer.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/config 2.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Observer 2.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/groupdeals 2.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/customer 2.xml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/config.xml",
+		"/D/Work/Work/Dev-Inc/Extensii/Completed/latest versions/gdtheme/Group Deals Theme/app/design/frontend/default/groupdeals/template/groupdeals/product/view.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/Account.php",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/form-agent.phtml",
+		"/C/Users/Luci/AppData/Local/Temp/fz3temp-1/form.phtml"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"3px 0 0 3px",
+			"JustLoggedout",
+			"Îţi spui părerea",
+			".stars-table .data-table th",
+			"+",
+			".product-name a { color: #231f20; }",
+			"itemprop=\"image\"",
+			"RON",
+			"Ron",
+			"ron",
+			"span itemprop",
+			"itemprop=\"priceCurrency\" content=\"RON\"",
+			"itemprop=\"price\"",
+			"You're reviewing:",
+			"You're reviewing",
+			"Îţi spui părerea",
+			"<?php echo $this->getProductData()->getProductUrl() ?>",
+			".stars-table .data-table th",
+			"item.label",
+			" item.label",
+			"box",
+			"type",
+			"$",
+			"_postCollection",
+			"getFullSizeImage",
+			"getFeaturedImage",
+			"_wrapperBlock",
+			"getWrapperBlock",
+			"##",
+			"\n##",
+			".product-name a",
+			"; ",
+			"getName",
+			"project",
+			"$",
+			"project",
+			"()\n",
+			"getPostListHtml",
+			"width",
+			"90",
+			"simple",
+			"minicart_visible_items",
+			"\\",
+			"span",
+			"customer",
+			"$_coreHelper->formatPrice",
+			"class=\"price\"",
+			"'",
+			"\"",
+			"'",
+			"setNLocation('<?php echo $_productUrl; ?>','_blank')",
+			"setNLocation('<?php echo $_productUrl ?>','_blank')\"",
+			"_blank",
+			"setPLocation",
+			"setLocation",
+			"$this->__('View Deal')",
+			"$_product->getProductUrl()",
+			"$_product->getProductUrl().'?crc='.$crcId",
+			"$_product->getProductUrl()",
+			"3d4244",
+			".gd-popup ul li.main-city",
+			"35px",
+			"Details",
+			"Add to Cart",
+			".gd-normal-list .gd-grid button.btn-cart span",
+			".col1-layout .gd-normal-list .gd-grid li.gd-item .gd-add-to-box .gd-price-box",
+			"getUrlPath",
+			"getProductUrl",
+			"$_product->getProductUrl()",
+			"        <reference name=\"root\">\n            <action method=\"setTemplate\"><template>page/2columns-left.phtml</template></action>\n        </reference>",
+			"image slider",
+			"subject",
+			"currentPage",
+			"                i",
+			"                ",
+			"$this->_redirect('*/*/');",
+			"Submit",
+			"Comment",
+			"Telephone",
+			"Email",
+			"Name",
+			"Submit",
+			"button",
+			"ContactName",
+			"Name",
+			"6px",
+			".gd-normal-list .gd-grid button.btn-cart span",
+			"refreshIndexes",
+			".gd-view .gd-product-shop .gd-add-to-box .gd-buy .gd-add-to-cart button.gd-button",
+			"attachment",
+			"image",
+			"formatPrice: function(price, showSign)",
+			"store",
+			"getCurrentStore",
+			"$collection = Mage::getResourceModel($this->_getCollectionClass())",
+			"Dan_Slider",
+			"$this->_getStoreRestrictions()",
+			"240",
+			"000000",
+			"1e1e1e",
+			".product-collateral > dl > dt",
+			"1.4",
+			"1.6",
+			"2",
+			"2.9",
+			"3",
+			"98",
+			"47",
+			"4",
+			".store-menu .menu",
+			"_option",
+			"prd-price-container-fix",
+			"240",
+			"1d1f1f",
+			"5px",
+			".menu ",
+			"user_id",
+			"Workout",
+			"runworkout_form",
+			"Workout",
+			"runworkout_content",
+			"Workout",
+			"default",
+			"Mage::getModel('runworkout/runworkout')",
+			"Workout",
+			"default",
+			"created_at",
+			"status"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			",",
+			"",
+			"\n            <li>\n                <label for=\"telephone\"><?php echo Mage::helper('contacts')->__('Telephone') ?></label>\n                <div class=\"input-box\">\n                    <input name=\"telephone\" id=\"telephone\" title=\"<?php echo Mage::helper('contacts')->__('Telephone') ?>\" value=\"\" class=\"input-text\" type=\"tel\" />\n                </div>\n            </li>",
+			"pauline",
+			"/>';\n",
+			"if(defined('MAGENTO_ROOT')):require_once(MAGENTO_ROOT.'/app/code/community/Devinc/License/Helper/Devinc.php');else:require_once(dirname(dirname(dirname(dirname(dirname(__FILE__))))).DS.'Helper/Devinc.php');endif;",
+			"if(defined('MAGENTO_ROOT')):require_once(MAGENTO_ROOT.'/app/code/community/Devinc/License/Helper/Devinc.php');else:require_once(dirname(dirname(dirname(dirname(__FILE__)))).DS.'Helper/Devinc.php');endif;",
+			"if(defined('MAGENTO_ROOT')):require_once(MAGENTO_ROOT.'/app/code/community/Devinc/License/Helper/Devinc.php');else:require_once(dirname(dirname(dirname(dirname(dirname(__FILE__))))).DS.'Helper/Devinc.php');endif;",
+			"if(defined('MAGENTO_ROOT')):require_once(MAGENTO_ROOT.'/app/code/community/Devinc/License/Helper/Devinc.php');else:require_once(dirname(dirname(__FILE__)).DS.'Helper/Devinc.php');endif;",
+			"if(defined('MAGENTO_ROOT')):require_once(MAGENTO_ROOT.'/app/code/community/Devinc/License/Helper/Devinc.php');else:require_once(dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))).DS.'Helper/Devinc.php');endif;\n",
+			"		\n",
+			"/**\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": ".project.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

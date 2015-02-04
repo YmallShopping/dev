@@ -49,6 +49,7 @@ Default layout, loads most of the pages
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
                 <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/responsive.css</stylesheet></action>
+                <action method="addCss"><stylesheet>css/jquery.bxslider.css</stylesheet></action>
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
                 <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
@@ -56,6 +57,7 @@ Default layout, loads most of the pages
                 <action method="addItem"><type>skin_js</type><name>js/ie6.js</name><params/><if>lt IE 7</if></action>
                 <action method="addItem"><type>skin_js</type><name>js/jquery-1.8.2.min.js</name><params/></action>
                 <action method="addItem"><type>skin_js</type><name>js/jquery.scrollTo.min.js</name><params/></action>
+                <action method="addItem"><type>skin_js</type><name>js/jquery.bxslider.min.js</name><params/></action>
                 <action method="addItem"><type>skin_js</type><name>js/jquery-noconflict.js</name><params/></action>
                 <action method="addItem"><type>skin_js</type><name>fancybox/lib/jquery.mousewheel-3.0.6.pack.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>fancybox/source/jquery.fancybox.pack.js</name></action>
