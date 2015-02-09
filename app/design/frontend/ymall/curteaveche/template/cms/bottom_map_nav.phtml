@@ -1,0 +1,84 @@
+<div class="bottom-map">
+	<ul class="bxslider">
+	  <li>
+			<div class="image">
+				<a href="<?php echo $this->getUrl('',array('_store'=>'ruxion')) ?>"><img src="<?php echo $this->getSkinUrl('images/mapslider/s_map_ruxion.png') ?>" alt=""></a>
+			</div>
+			<div class="text">
+				<h3>Ruxion Stil - Somiere</h3><br>
+				<p>
+					Etaj: <strong>Demisol</strong><br>
+					Loc pe hartă: <span class="highlight">D14</span><br>
+					Status: <span class="highlight">Activ</span>
+				</p><br>
+				<button onclick="setLocation('<?php echo $this->getUrl('',array('_store'=>'ruxion')) ?>')" class="button"><span><i class="fa fa-arrow-circle-right"></i><span>vizitează</span></span></button>
+			</div>
+	  </li>
+	  <li>
+			<div class="image">
+				<img src="<?php echo $this->getSkinUrl('images/mapslider/s_map_spyshop.png') ?>" alt="">
+			</div>
+			<div class="text">
+				<h3>Spy Shop - Echipamente de securitate</h3><br>
+				<p>
+					Etaj: <strong>Demisol</strong><br>
+					Loc pe hartă: <span class="highlight">D4</span><br>
+					Status: <span class="highlight">Inactiv</span><br>
+					Lansare: <span class="highlight">22.02.2015</span>
+				</p>
+			</div>
+	  </li>
+	  <li>
+			<div class="image">
+				<img src="<?php echo $this->getSkinUrl('images/mapslider/s_map_greenfuture.png') ?>" alt="">
+			</div>
+			<div class="text">
+				<h3>Green Future</h3><br>
+				<p>
+					Etaj: <strong>Demisol</strong><br>
+					Loc pe hartă: <span class="highlight">D3</span><br>
+					Status: <span class="highlight">Inactiv</span><br>
+					Lansare: <span class="highlight">28.02.2015</span>
+				</p>
+			</div>
+	  </li>
+	</ul>
+</div>
+
+<script>
+	jQuery(document).ready(function(){
+		jQuery('.bxslider').bxSlider({
+			// GENERAL
+			mode: 'horizontal',
+			useCSS: false,
+			tickerHover: true,
+			infiniteLoop: true,
+
+			// PAGER
+			pager: false,
+
+			// CONTROLS
+			controls: true,
+			nextText: 'Next',
+			prevText: 'Prev',
+			nextSelector: null,
+			prevSelector: null,
+			autoControls: false,
+			startText: 'Start',
+			stopText: 'Stop',
+			autoControlsCombine: false,
+			autoControlsSelector: null,
+
+			// AUTO
+			auto: true,
+			pause: 7000,
+
+			// CAROUSEL
+			minSlides: 1,
+			maxSlides: 2,
+			moveSlides: 1,
+			slideWidth: 532,
+  			slideMargin: 20,
+		});
+	});
+</script>
